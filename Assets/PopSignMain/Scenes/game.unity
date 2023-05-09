@@ -2930,7 +2930,7 @@ RectTransform:
   m_GameObject: {fileID: 399984490}
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.23000005, y: 0.23000005, z: 0.38000005}
+  m_LocalScale: {x: 0.23, y: 0.23, z: 0.38000005}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5075749627703603650}
@@ -2940,7 +2940,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130, y: -25}
+  m_AnchoredPosition: {x: 130, y: -15}
   m_SizeDelta: {x: 1920, y: 1079.9999}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &399984492
@@ -7565,8 +7565,8 @@ MonoBehaviour:
   _configAssetCPU: {fileID: 4900000, guid: 1a6169be4f688231182390ef6c4122b2, type: 3}
   _configAssetGPU: {fileID: 4900000, guid: d1c2a5074cb12172d9cbc3098fe038ba, type: 3}
   _screen: {fileID: 399984493}
-  _width: 1280
-  _height: 720
+  _width: 1920
+  _height: 1080
   _fps: 30
   _multiHandLandmarksAnnotationController: {fileID: 1320290061}
 --- !u!114 &1270330340

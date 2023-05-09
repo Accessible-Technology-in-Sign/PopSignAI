@@ -31,7 +31,8 @@ public class HandsMediaPipe : MonoBehaviour
 
     void Awake()
     {
-        
+        if(UnityEngine.Screen.height >= 2300)
+            _screen.gameObject.transform.localScale = new Vector3(0.34f, 0.34f, 0.34f);
     }
 
     private IEnumerator Start()
