@@ -197,7 +197,7 @@ public class AnimationManager : MonoBehaviour
         else if( gameObject.name == "PlayMain" )
         {
             CustomizeLevelManager.switchOff();
-            SceneManager.LoadScene( "map" );
+            SceneManager.LoadScene( "howtoplay" );
         }
     }
 
