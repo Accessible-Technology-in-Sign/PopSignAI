@@ -1417,7 +1417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f916bfc085b715c439617ad6659a2326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFPS: 15
+  targetFPS: 10
 --- !u!114 &142917910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1433,11 +1433,12 @@ MonoBehaviour:
   _configAssetCPU: {fileID: 4900000, guid: a901443779a96c97890cab1b274b506f, type: 3}
   _configAssetGPU: {fileID: 4900000, guid: 8eaa695afee89c8eea9241f8a5ab9645, type: 3}
   _screen: {fileID: 399984493}
-  _width: 640
-  _height: 480
-  _fps: 15
+  _width: 1920
+  _height: 1080
+  _fps: 10
   _multiHandLandmarksAnnotationController: {fileID: 1320290061}
   _saveFile: 0
+  _centerAtNose: 0
 --- !u!4 &142917911
 Transform:
   m_ObjectHideFlags: 0
@@ -1465,7 +1466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27a81064d954fbd43a81a05cdaeec8ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelName: TfLiteModels/model.tflite
+  modelName: TfLiteModels/2d_cnn_level0_holistic.tflite
   maxFrames: 0
   sessionNumber: 0
   recordingFrameNumber: 0
@@ -7534,7 +7535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1270330337
 Transform:
   m_ObjectHideFlags: 0
@@ -10998,7 +10999,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1872838313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11006,7 +11007,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872838312}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a19cc6d86af749047908bd374e792575, type: 3}
   m_Name: 

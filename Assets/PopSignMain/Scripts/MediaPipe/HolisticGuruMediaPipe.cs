@@ -20,6 +20,7 @@ public class HolisticGuruMediaPipe : MonoBehaviour
     [SerializeField] private int _fps;
     [SerializeField] private MultiHandLandmarkListAnnotationController _multiHandLandmarksAnnotationController;
     [SerializeField] private bool _saveFile = false;
+    [SerializeField] private bool _centerAtNose = false;
 #if UNITY_EDITOR
     private bool useGPU = false;
 #else
@@ -78,8 +79,8 @@ public class HolisticGuruMediaPipe : MonoBehaviour
         _inputPixelData = new Color32[_width * _height];
             
         _screen.texture = _webCamTexture;
-        //yield return MediapipeResourceManager.Instance.resourceManager.PrepareAssetAsync("face_detection_short_range.bytes");
-        //yield return MediapipeResourceManager.Instance.resourceManager.PrepareAssetAsync("face_landmark.bytes");
+        yield return MediapipeResourceManager.Instance.resourceManager.PrepareAssetAsync("face_detection_short_range.bytes");
+        yield return MediapipeResourceManager.Instance.resourceManager.PrepareAssetAsync("face_landmark.bytes");
         yield return MediapipeResourceManager.Instance.resourceManager.PrepareAssetAsync("hand_landmark_full.bytes");
         yield return MediapipeResourceManager.Instance.resourceManager.PrepareAssetAsync("hand_recrop.bytes");
         yield return MediapipeResourceManager.Instance.resourceManager.PrepareAssetAsync("handedness.txt");
@@ -104,8 +105,8 @@ public class HolisticGuruMediaPipe : MonoBehaviour
         leftHandLandmarksStream.StartPolling().AssertOk();
         var rightHandLandmarksStream = new OutputStream<NormalizedLandmarkListPacket, NormalizedLandmarkList>(_graph, "right_hand_landmarks");
         rightHandLandmarksStream.StartPolling().AssertOk();
-        //var faceLandmarksStream = new OutputStream<NormalizedLandmarkListPacket, NormalizedLandmarkList>(_graph, "face_landmarks");
-        //faceLandmarksStream.StartPolling().AssertOk();
+        var faceLandmarksStream = new OutputStream<NormalizedLandmarkListPacket, NormalizedLandmarkList>(_graph, "face_landmarks");
+        faceLandmarksStream.StartPolling().AssertOk();
 
 
         var sidePacket = new SidePacket();
@@ -143,22 +144,27 @@ public class HolisticGuruMediaPipe : MonoBehaviour
                     float[] currentFrame = new float[108];
                     string currentString = "";
 
-                    if (poseLandmarks != null)
+                    float noseX = 0f;
+                    float noseY = 0f;
+                    if (_centerAtNose)
                     {
-                        if (_saveFile)
-                        {
-                            if (currentString != "")
-                            {
-                                currentString += ",";
-                            }
-                            currentString += poseLandmarks.ToString().Insert(3, "pose");
-                        }
+                        noseX = 1f - poseLandmarks.Landmark[0].Y;
+                        noseY = 1f - poseLandmarks.Landmark[0].X;
+                    }
 
-                        for (int i = 0; i < poseLandmarks.Landmark.Count; i++)
+                    if (_saveFile)
+                    {
+                        if (currentString != "")
                         {
-                            currentFrame[i*2] = 1f - poseLandmarks.Landmark[i].X;
-                            currentFrame[i*2+1] = 1f - poseLandmarks.Landmark[i].Y;
+                            currentString += ",";
                         }
+                        currentString += poseLandmarks.ToString().Insert(3, "pose");
+                    }
+
+                    for (int i = 0; i < poseLandmarks.Landmark.Count; i++)
+                    {
+                        currentFrame[i*2] = 1f - poseLandmarks.Landmark[i].Y - noseX;
+                        currentFrame[i*2+1] = 1f - poseLandmarks.Landmark[i].X - -noseY;
                     }
 
                     if (leftHandLandmarks != null)
@@ -174,8 +180,8 @@ public class HolisticGuruMediaPipe : MonoBehaviour
 
                         for (int i = 0; i < leftHandLandmarks.Landmark.Count; i++)
                         {
-                            currentFrame[i*2 + 66] = 1f - leftHandLandmarks.Landmark[i].X;
-                            currentFrame[i*2 + 67] = 1f - leftHandLandmarks.Landmark[i].Y;
+                            currentFrame[i*2 + 66] = leftHandLandmarks.Landmark[i].Y - noseX;
+                            currentFrame[i*2 + 67] = 1f - leftHandLandmarks.Landmark[i].X - noseY;
                         }
                     }else if (rightHandLandmarks != null)
                     {
@@ -190,8 +196,13 @@ public class HolisticGuruMediaPipe : MonoBehaviour
 
                         for (int i = 0; i < rightHandLandmarks.Landmark.Count; i++)
                         {
-                            currentFrame[i * 2 + 66] = 1f - rightHandLandmarks.Landmark[i].X;
-                            currentFrame[i * 2 + 67] = 1f - rightHandLandmarks.Landmark[i].Y;
+                            currentFrame[i * 2 + 66] = 1f - rightHandLandmarks.Landmark[i].Y - noseX;
+                            currentFrame[i * 2 + 67] = 1f - rightHandLandmarks.Landmark[i].X - noseY;
+
+                            if(i == 0)
+                            {
+                                Debug.Log("Right Hand = " + currentFrame[66] + " " + currentFrame[67]);
+                            }
                         }
                     }
 
