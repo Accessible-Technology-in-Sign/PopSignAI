@@ -15,8 +15,8 @@
     "violetframeNumber":67,
     "violetfolderName":"MacarthurBates/elephant", 
     "violetImageName":"WordIcons/elephant", 
-    "yellowfileName":"yellow",
+    "yellowfileName":"owl",
     "yellowframeNumber": 43,
-    "yellowfolderName":"MacarthurBates/yellow",
-    "yellowImageName":"WordIcons/yellow"
+    "yellowfolderName":"MacarthurBates/owl",
+    "yellowImageName":"WordIcons/owl"
 }

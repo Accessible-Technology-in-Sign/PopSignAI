@@ -6,7 +6,8 @@ public static class TfLiteManager
 {
     public static ITfLiteManager Instance;
 
-    public static string[,] LABELS = { { "dad", "elephant", "red", "where", "yellow" },
+    public static string[,] LABELS = { //{ "dad", "elephant", "red", "where", "yellow" },
+                                       { "dad", "elephant", "owl", "red", "where" },
                                        { "chocolate", "for", "french fries", "sleep", "stuck" },
                                        { "alligator", "animal", "another", "boy", "shhh" },
                                        { "dad", "flower", "frog", "giraffe", "wait" },

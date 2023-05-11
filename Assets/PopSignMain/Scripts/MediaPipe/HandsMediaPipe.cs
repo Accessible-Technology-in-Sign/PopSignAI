@@ -56,6 +56,29 @@ public class HandsMediaPipe : MonoBehaviour
 
         var webcamDevice = WebCamTexture.devices[defaultSource];
 
+#if UNITY_EDITOR
+        Debug.LogWarning("HandsMediaPipe: DOWNGRADING CAMERA IN EDITOR!");
+        _width = 1280;
+        _height = 720;
+
+#else
+        float maxres = 0f;
+        foreach (var res in webcamDevice.availableResolutions)
+        {
+            if(res.height > maxres)
+            {
+                Debug.Log("Res Widths " + res.width + " Res h " + res.height);
+                maxres = res.height;
+            }
+        }
+        if (maxres < _height)
+        {
+            Debug.LogWarning("HandsMediaPipe: CAMERA TOO LOW RES! DOWNGRADING TO 720P!");
+            _width = 1280;
+            _height = 720;
+        }
+#endif
+
         _webCamTexture = new WebCamTexture(webcamDevice.name, _width, _height, _fps);
         _webCamTexture.Play();
 

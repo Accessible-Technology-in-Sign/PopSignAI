@@ -7962,8 +7962,8 @@ MonoBehaviour:
   _configAssetCPU: {fileID: 4900000, guid: 1a6169be4f688231182390ef6c4122b2, type: 3}
   _configAssetGPU: {fileID: 4900000, guid: d1c2a5074cb12172d9cbc3098fe038ba, type: 3}
   _screen: {fileID: 399984493}
-  _width: 1280
-  _height: 720
+  _width: 1920
+  _height: 1080
   _fps: 30
   _multiHandLandmarksAnnotationController: {fileID: 1320290061}
 --- !u!114 &1270330340
