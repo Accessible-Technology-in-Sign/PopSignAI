@@ -31,6 +31,7 @@ public class InGamePracticeScreen : MonoBehaviour
 
 		sharedVideoManager = VideoManager.getVideoManager();
 		sharedVideoManager.curtVideoIndex = 0;
+		backButton.SetActive(false);
 		changePracticeScreenVideo();
 		viewed[0] = true;
 	}
