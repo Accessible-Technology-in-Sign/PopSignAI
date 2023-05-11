@@ -10,7 +10,9 @@ public static class TfLiteManager
                                        { "chocolate", "for", "french fries", "sleep", "stuck" },
                                        { "alligator", "animal", "another", "boy", "shhh" },
                                        { "dad", "flower", "frog", "giraffe", "wait" },
-                                       { "hungry", "make", "pretty", "tiger", "tree" },
-                                       { "have to", "lion", "please", "sad", "scissors" },
+                                       //{ "hungry", "make", "pretty", "tiger", "tree" },
+                                       { "find", "hungry", "make", "tiger", "tree" },
+                                       //{ "have to", "lion", "please", "sad", "scissors" },
+                                       { "have to", "lion", "napkin", "please", "scissors" },
                                        { "dance", "food", "hot", "where", "yellow" }};
 }

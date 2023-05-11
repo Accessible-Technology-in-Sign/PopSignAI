@@ -15,8 +15,8 @@
 	"violetframeNumber":32,
 	"violetfolderName":"MacarthurBates/hungry",
 	"violetImageName":"WordIcons/hungry",
-	"yellowfileName":"pretty",
+	"yellowfileName":"find",
 	"yellowframeNumber":68,
-	"yellowfolderName":"MacarthurBates/pretty",
-	"yellowImageName":"WordIcons/pretty"
+	"yellowfolderName":"MacarthurBates/find",
+	"yellowImageName":"WordIcons/find"
 }

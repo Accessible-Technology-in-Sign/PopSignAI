@@ -15,8 +15,8 @@
 	"violetframeNumber":32,
 	"violetfolderName":"MacarthurBates/please",
 	"violetImageName":"WordIcons/please",
-	"yellowfileName":"sad",
+	"yellowfileName":"napkin",
 	"yellowframeNumber":68,
-	"yellowfolderName":"MacarthurBates/sad",
-	"yellowImageName":"WordIcons/sad"
+	"yellowfolderName":"MacarthurBates/napkin",
+	"yellowImageName":"WordIcons/napkin"
 }
