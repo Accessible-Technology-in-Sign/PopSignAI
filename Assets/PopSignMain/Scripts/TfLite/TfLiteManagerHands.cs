@@ -7,8 +7,8 @@ using UnityEngine.Networking;
 
 public class TfLiteManagerHands : MonoBehaviour, ITfLiteManager
 {
-
-	[SerializeField, FilePopup("*.tflite")] string modelName;
+	[SerializeField] string modelFolder;
+	private string currentModelName;
 
 	[HideInInspector]
     public float[,,,] data;
@@ -27,9 +27,6 @@ public class TfLiteManagerHands : MonoBehaviour, ITfLiteManager
 	[HideInInspector]
 	public int recordingFrameNumber = 0;
 
-	public static string[] LABELS = { "dad", "elephant", "red", "where", "yellow" };
-	//public static string[] LABELS = { "chocolate", "for", "frenchfries", "sleep", "stuck" };
-
 	private Interpreter interpreter;
 	private float timer = 0f;
 
@@ -43,16 +40,16 @@ public class TfLiteManagerHands : MonoBehaviour, ITfLiteManager
 	// Start is called before the first frame update
 	void Awake()
     {
-        if(TfLiteManager.Instance == null)
-        {
-			TfLiteManager.Instance = this;
-        }
+		TfLiteManager.Instance = this;
 
 		var options = new InterpreterOptions()
 		{
 			threads = 1,
 		};
-		interpreter = new Interpreter(FileUtil.LoadFile(modelName), options);
+
+		currentModelName = "TfLiteModels/" + modelFolder + "/" + PlayerPrefs.GetInt("OpenLevel") + ".tflite";
+		Debug.Log(currentModelName);
+		interpreter = new Interpreter(FileUtil.LoadFile(currentModelName), options);
 		maxFrames = interpreter.GetInputTensorInfo(0).shape[1];
 		inputSize = interpreter.GetInputTensorInfo(0).shape[2];
 	}
@@ -134,7 +131,7 @@ public class TfLiteManagerHands : MonoBehaviour, ITfLiteManager
 		{
 			threads = 1,
 		};
-		interpreter = new Interpreter(FileUtil.LoadFile(modelName), options);
+		interpreter = new Interpreter(FileUtil.LoadFile(currentModelName), options);
 
 		var info = interpreter.GetInputTensorInfo(0);
 
@@ -156,12 +153,13 @@ public class TfLiteManagerHands : MonoBehaviour, ITfLiteManager
 		//label1: 
 		float max = 0f;
 		string answer = "";
+		var level = (int)PlayerPrefs.GetInt("OpenLevel");
 		for (int i = 0; i < 5; i++)
 		{
 			if (outputs[0, i] > max)
 			{
 				max = outputs[0, i];
-				answer = LABELS[i];
+				answer = TfLiteManager.LABELS[level-1, i];
 
 			}
 		}

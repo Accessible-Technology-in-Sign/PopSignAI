@@ -16,12 +16,7 @@ public class MediapipeResourceManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            resourceManager = new StreamingAssetsResourceManager();
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        resourceManager = new StreamingAssetsResourceManager();
     }
 }

@@ -492,62 +492,62 @@ public void explode(GameObject gameObject)
     //gameObject.GetComponent<Detonator>().Explode();
 }
 
-public IEnumerator clearDisconnectedBalls()
-{
-    mainscript.Instance.newBall2 = null;
-    yield return new WaitForSeconds( Mathf.Clamp( (float)countOfPreparedToDestroy / 50, 0.6f, (float)countOfPreparedToDestroy / 50 ) );
-    connectNearBallsGlobal();
-    int willDestroy = 0;
-    // destringAloneBall = true;
-    Camera.main.GetComponent<mainscript>().arraycounter = 0;
-    GameObject[] fixedBalls = GameObject.FindObjectsOfType(typeof(GameObject)) as GameObject[]; // detect alone balls
-    Camera.main.GetComponent<mainscript>().controlArray.Clear();
-    foreach(GameObject obj in fixedBalls) {
-        if(obj!=null) {
-            if(obj.layer == BallLayer) {
-                if(obj.GetComponent<ball>().nearBalls.Count>0) {
-                    //      if(droppingDown) yield return new WaitForSeconds(1f);
-                    yield return new WaitForEndOfFrame();
-                    ArrayList b = new ArrayList();
-                    obj.GetComponent<ball>().checkNearestBall(b);
-                    if(b.Count >0 && BallWhiffed == false)
-                    {
-                        willDestroy++;
-                        if ((PlayerPrefs.GetInt("OpenLevel") == 3 || PlayerPrefs.GetInt("OpenLevel") == 6 ||
-                            PlayerPrefs.GetInt("OpenLevel") == 7 || PlayerPrefs.GetInt("OpenLevel") == 8 ||
-                            PlayerPrefs.GetInt("OpenLevel") == 10 || PlayerPrefs.GetInt("OpenLevel") == 11 ||
-                            PlayerPrefs.GetInt("OpenLevel") == 12 || PlayerPrefs.GetInt("OpenLevel") == 14 || 
-                            PlayerPrefs.GetInt("OpenLevel") == 16 || PlayerPrefs.GetInt("OpenLevel") == 17 ||  
-                            PlayerPrefs.GetInt("OpenLevel") == 18 ||  PlayerPrefs.GetInt("OpenLevel") == 19 ||  
-                            PlayerPrefs.GetInt("OpenLevel") == 21 ||  PlayerPrefs.GetInt("OpenLevel") == 23) &&
-                            (LevelData.mode != ModeGame.Vertical))
+    public IEnumerator clearDisconnectedBalls()
+    {
+        mainscript.Instance.newBall2 = null;
+        yield return new WaitForSeconds( Mathf.Clamp( (float)countOfPreparedToDestroy / 50, 0.6f, (float)countOfPreparedToDestroy / 50 ) );
+        connectNearBallsGlobal();
+        int willDestroy = 0;
+        // destringAloneBall = true;
+        Camera.main.GetComponent<mainscript>().arraycounter = 0;
+        GameObject[] fixedBalls = GameObject.FindObjectsOfType(typeof(GameObject)) as GameObject[]; // detect alone balls
+        Camera.main.GetComponent<mainscript>().controlArray.Clear();
+        foreach(GameObject obj in fixedBalls) {
+            if(obj!=null) {
+                if(obj.layer == BallLayer) {
+                    if(obj.GetComponent<ball>().nearBalls.Count>0) {
+                        //      if(droppingDown) yield return new WaitForSeconds(1f);
+                        yield return new WaitForEndOfFrame();
+                        ArrayList b = new ArrayList();
+                        obj.GetComponent<ball>().checkNearestBall(b);
+                        if(b.Count >0 && BallWhiffed == false)
                         {
-                            TargetCounter++;
-                        }
-                        //loop through array b, sum their total values (* some modifier if necessary) and add to point total
+                            willDestroy++;
+                            if ((PlayerPrefs.GetInt("OpenLevel") == 3 || PlayerPrefs.GetInt("OpenLevel") == 6 ||
+                                PlayerPrefs.GetInt("OpenLevel") == 7 || PlayerPrefs.GetInt("OpenLevel") == 8 ||
+                                PlayerPrefs.GetInt("OpenLevel") == 10 || PlayerPrefs.GetInt("OpenLevel") == 11 ||
+                                PlayerPrefs.GetInt("OpenLevel") == 12 || PlayerPrefs.GetInt("OpenLevel") == 14 || 
+                                PlayerPrefs.GetInt("OpenLevel") == 16 || PlayerPrefs.GetInt("OpenLevel") == 17 ||  
+                                PlayerPrefs.GetInt("OpenLevel") == 18 ||  PlayerPrefs.GetInt("OpenLevel") == 19 ||  
+                                PlayerPrefs.GetInt("OpenLevel") == 21 ||  PlayerPrefs.GetInt("OpenLevel") == 23) &&
+                                (LevelData.mode != ModeGame.Vertical))
+                            {
+                                TargetCounter++;
+                            }
+                            //loop through array b, sum their total values (* some modifier if necessary) and add to point total
                         
-                        destroy (b);
+                            destroy (b);
+                        }
                     }
                 }
             }
         }
+        // destringAloneBall = false;
+        StartCoroutine(getBallsForMesh());
+        droppingDown = false;
+
+        if(LevelData.mode == ModeGame.Vertical)
+            creatorBall.Instance.MoveLevelDown();
+        else if( LevelData.mode == ModeGame.Animals )
+            creatorBall.Instance.MoveLevelDown();
+        else if( LevelData.mode == ModeGame.Rounded )
+            CheckBallsBorderCross();
+
+        yield return new WaitForSeconds( 0.0f );
+        GetColorsInGame();
+        mainscript.Instance.newBall = null;
+        SetColorsForNewBall();
     }
-    // destringAloneBall = false;
-    StartCoroutine(getBallsForMesh());
-    droppingDown = false;
-
-    if(LevelData.mode == ModeGame.Vertical)
-        creatorBall.Instance.MoveLevelDown();
-    else if( LevelData.mode == ModeGame.Animals )
-        creatorBall.Instance.MoveLevelDown();
-    else if( LevelData.mode == ModeGame.Rounded )
-        CheckBallsBorderCross();
-
-    yield return new WaitForSeconds( 0.0f );
-    GetColorsInGame();
-    mainscript.Instance.newBall = null;
-    SetColorsForNewBall();
-}
 
 public void SetColorsForNewBall()
 {

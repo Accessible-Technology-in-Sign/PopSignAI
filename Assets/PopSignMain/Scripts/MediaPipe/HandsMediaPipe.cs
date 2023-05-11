@@ -109,6 +109,8 @@ public class HandsMediaPipe : MonoBehaviour
 
         var screenRect = _screen.GetComponent<RectTransform>().rect;
 
+        bool isFirstLevel = PlayerPrefs.GetInt("OpenLevel") == 1;
+
         while (true)
         {
             _inputTexture.SetPixels32(_webCamTexture.GetPixels32(_inputPixelData));
@@ -128,23 +130,47 @@ public class HandsMediaPipe : MonoBehaviour
                     {
                         foreach (var landmarks in handLandmarks)
                         {
-                            
-                            var currentFrame = new float[63];
 
-                            for (int i = 0; i < landmarks.Landmark.Count; i++)
+                            float[] currentFrame;
+
+                            if (isFirstLevel)
                             {
-                                if (handedness[0].Classification[0].Label.Contains("Left"))
-                                {
-                                    currentFrame[i * 3] = 1.0f - landmarks.Landmark[i].Y;
-                                } else
-                                {
-                                    currentFrame[i * 3] = landmarks.Landmark[i].Y;
-                                }
-                                currentFrame[i*3 + 1] = 1.0f - landmarks.Landmark[i].X;
 
-                                 if (i == 0)
-                                    Debug.Log(currentFrame[i * 3] + " " + currentFrame[i * 3 + 1] + " " + landmarks.Landmark[i].Z);
-                                currentFrame[i*3 + 2] = landmarks.Landmark[i].Z;
+                                currentFrame = new float[63];
+
+                                for (int i = 0; i < landmarks.Landmark.Count; i++)
+                                {
+                                    if (handedness[0].Classification[0].Label.Contains("Left"))
+                                    {
+                                        currentFrame[i * 3] = 1.0f - landmarks.Landmark[i].Y;
+                                    }
+                                    else
+                                    {
+                                        currentFrame[i * 3] = landmarks.Landmark[i].Y;
+                                    }
+                                    currentFrame[i * 3 + 1] = 1.0f - landmarks.Landmark[i].X;
+
+                                    if (i == 0)
+                                        Debug.Log(currentFrame[i * 3] + " " + currentFrame[i * 3 + 1] + " " + landmarks.Landmark[i].Z);
+                                    currentFrame[i * 3 + 2] = landmarks.Landmark[i].Z;
+                                }
+                            }
+                            else
+                            {
+                                currentFrame = new float[42];
+
+                                for (int i = 0; i < landmarks.Landmark.Count; i++)
+                                {
+                                    if (handedness[0].Classification[0].Label.Contains("Left"))
+                                    {
+                                        currentFrame[i * 2] = 1.0f - landmarks.Landmark[i].Y;
+                                    }
+                                    else
+                                    {
+                                        currentFrame[i * 2] = landmarks.Landmark[i].Y;
+                                    }
+                                    currentFrame[i * 2 + 1] = 1.0f - landmarks.Landmark[i].X;
+                                }
                             }
 
                             TfLiteManager.Instance.AddDataToList(currentFrame);

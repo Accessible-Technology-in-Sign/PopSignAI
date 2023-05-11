@@ -157,7 +157,7 @@ public class AnimationManager : MonoBehaviour
         }
         else if( gameObject.name == "NextLevel")
         {
-            if (CustomizeLevelManager.Instance.tryingToCustomize)
+            if (CustomizeLevelManager.Instance != null && CustomizeLevelManager.Instance.tryingToCustomize)
             {
                 CustomizeLevelManager.reset();
                 SceneManager.LoadScene("wordlist");
@@ -167,7 +167,7 @@ public class AnimationManager : MonoBehaviour
                 PlayerPrefs.SetInt("OpenLevel", PlayerPrefs.GetInt("OpenLevel") + 1);
                 PlayerPrefs.Save();
 
-                int randomizeLevels = PlayerPrefs.GetInt("RandomizeLevel", 0); //Added for randomized levels
+                int randomizeLevels = PlayerPrefs.GetInt("RandomizeLevel", 1); //Added for randomized levels
 
                 //Added or statement to check if randomizedLevels = 1 to see if practice should be shown before every level
                 if (PlayerPrefs.GetInt("OpenLevel") % PRACTICE_LEVEL_INTERVAL == 0 || randomizeLevels == 1) {

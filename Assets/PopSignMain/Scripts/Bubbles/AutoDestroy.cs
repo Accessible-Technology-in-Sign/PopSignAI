@@ -1,23 +1,23 @@
-﻿// using UnityEngine;
+﻿ using UnityEngine;
 
 
-// public class AutoDestroy : MonoBehaviour
-// {
+ public class AutoDestroy : MonoBehaviour
+ {
 
-//     // Use this for initialization
-//     void OnEnable()
-//     {
-//         Invoke("Hide", 3);
-//     }
+     // Use this for initialization
+     void OnEnable()
+     {
+         //Invoke("Hide", 3);
+     }
 
-//     void Hide()
-//     {
-//         gameObject.SetActive(false);
-//     }
+     void Hide()
+     {
+         //gameObject.SetActive(false);
+     }
 
-//     // Update is called once per frame
-//     void Update()
-//     {
+     // Update is called once per frame
+     void Update()
+     {
 
-//     }
-// }
+     }
+}

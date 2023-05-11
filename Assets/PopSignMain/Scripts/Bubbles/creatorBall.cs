@@ -268,7 +268,7 @@ IEnumerator MoveUpDownCor( bool inGameCheck = false )
                 distCovered = ( Time.time - startTime ) / speed;
                 Meshes.transform.position = Vector3.Lerp( startPos, targetPos, distCovered );
                 yield return new WaitForEndOfFrame();
-                if( startPos.y > targetPos.y && (PlayerPrefs.GetInt("OpenLevel") == 1 || PlayerPrefs.GetInt("OpenLevel") == 2 ))
+                if( startPos.y > targetPos.y && (PlayerPrefs.GetInt("OpenLevel") == 1 || PlayerPrefs.GetInt("OpenLevel") == 3 ))
                 {
                     if( mainscript.Instance.TopBorder.transform.position.y <= 5) break;
                 }
