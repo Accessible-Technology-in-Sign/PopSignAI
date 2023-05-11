@@ -22,6 +22,7 @@ public class LevelData
     //List of mission in this map
     public static List<Mission> requestMissions = new List<Mission>();
     public static ModeGame mode = ModeGame.Vertical;
+    public static bool isFreezeMode = false;
     private static float limitAmount = 40;
 
     public static float LimitAmount
