@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class HowToPlay : MonoBehaviour
 {
+    [SerializeField] private bool isInGame = false;
     public GameObject page1;
     public GameObject page2;
     public GameObject page3;
     public GameObject page4;
     public GameObject page5;
     public GameObject page6;
+
     int currentPage;
 
     void Start()
@@ -48,7 +50,16 @@ public class HowToPlay : MonoBehaviour
                 currentPage += 1;
                 break;
             case 6:
-                GoToLevelSelection();
+                if (isInGame)
+                {
+                    currentPage = 1;
+                    this.GetComponent<AnimationManager>().CloseMenu();
+                }
+                else
+                {
+                    GoToLevelSelection();
+
+                }
                 return;
             default:
                 break;
@@ -67,7 +78,15 @@ public class HowToPlay : MonoBehaviour
         switch (currentPage)
         {
             case 1:
-                SceneManager.LoadScene("opening");
+                if (isInGame)
+                {
+                    this.GetComponent<AnimationManager>().CloseMenu();
+                }
+                else
+                {
+                    SceneManager.LoadScene("opening");
+
+                }
                 return;
             case 2:
                 page2.SetActive(false);

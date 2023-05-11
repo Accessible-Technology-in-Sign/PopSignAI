@@ -68,7 +68,7 @@ public class AnimationManager : MonoBehaviour
 			      LogPlayTime ();
             SceneManager.LoadScene( "map" );
         }
-        else if ( gameObject.name == "MenuInGamePause" || gameObject.name == "MenuReview")
+        else if ( gameObject.name == "MenuInGamePause" || gameObject.name == "MenuReview" || gameObject.name == "MenuHowToPlay")
         {
           GamePlay.Instance.GameStatus = GameState.Playing;
         }
