@@ -1034,12 +1034,12 @@ GameObject:
   - component: {fileID: 1164279966}
   - component: {fileID: 1164279965}
   m_Layer: 5
-  m_Name: WelcomeText (1)
+  m_Name: Don
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1164279964
 RectTransform:
   m_ObjectHideFlags: 0

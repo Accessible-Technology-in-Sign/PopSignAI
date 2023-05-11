@@ -15,7 +15,7 @@
 	"violetframeNumber":32,
 	"violetfolderName":"MacarthurBates/please",
 	"violetImageName":"WordIcons/please",
-	"yellowfileName":"sad ",
+	"yellowfileName":"sad",
 	"yellowframeNumber":68,
 	"yellowfolderName":"MacarthurBates/sad",
 	"yellowImageName":"WordIcons/sad"

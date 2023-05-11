@@ -21,7 +21,7 @@ with open('FullWordBank.txt', 'r+') as f:
             if len(word) > 5:
                 font = ImageFont.truetype('MagallanesCondLight.otf', size=95)
                 word_size = font.getsize(word)
-                if len(word) > 7:
+                if len(word) >= 7:
                     font = ImageFont.truetype('MagallanesCondLight.otf', size=60)
                     word_size = font.getsize(word)
         # calculate where the image should be drawn
