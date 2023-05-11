@@ -128,7 +128,7 @@ public class GamePlay : MonoBehaviour {
       }
       */
       GameObject.Find( "Canvas" ).transform.Find( "LevelCleared" ).gameObject.SetActive( false );
-      GameObject.Find( "Canvas" ).transform.Find( "MenuComplete" ).gameObject.SetActive( true );
+      GameObject.Find( "MenuCanvas" ).transform.Find( "MenuComplete" ).gameObject.SetActive( true );
       if(mainscript.Instance.stars < 3)
         GameObject.Find( "MenuComplete" ).transform.Find( "Image/LevelCompleteStars/CompleteStar3" ).gameObject.SetActive( true );
       if(mainscript.Instance.stars < 2)
@@ -149,7 +149,7 @@ public class GamePlay : MonoBehaviour {
         yield return new WaitForSeconds( 1.5f );
         GameObject.Find( "Canvas" ).transform.Find( "OutOfMoves" ).gameObject.SetActive( false );
         // if(LevelData.LimitAmount <= 0)
-			  GameObject.Find( "Canvas" ).transform.Find( "MenuGameOver" ).gameObject.SetActive( true );
+			  GameObject.Find( "MenuCanvas" ).transform.Find( "MenuGameOver" ).gameObject.SetActive( true );
         yield return new WaitForSeconds( 0.1f );
     }
 
