@@ -123,7 +123,7 @@ public class HandsMediaPipe : MonoBehaviour
 
             if (handLandmarksStream.TryGetNext(out var handLandmarks))
             {
-                if (TfLiteManager.Instance.IsRecording())
+                if (TfLiteManager.Instance.IsRecording() && !GamePlay.Instance.InGamePauseTriggered)
                 {
                     if (handLandmarks != null && handLandmarks.Count > 0)
                     {

@@ -21,6 +21,7 @@ public enum GameState
 public class GamePlay : MonoBehaviour {
   public static GamePlay Instance;
   private GameState gameStatus;
+    public bool InGamePauseTriggered = false;
   bool winStarted;
 	private VideoManager sharedVideoManager;
 

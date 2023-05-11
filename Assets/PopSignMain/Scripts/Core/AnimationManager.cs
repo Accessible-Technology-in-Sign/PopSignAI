@@ -68,7 +68,7 @@ public class AnimationManager : MonoBehaviour
 			      LogPlayTime ();
             SceneManager.LoadScene( "map" );
         }
-        else if ( gameObject.name == "MenuInGamePause")
+        else if ( gameObject.name == "MenuInGamePause" || gameObject.name == "MenuReview")
         {
           GamePlay.Instance.GameStatus = GameState.Playing;
         }
@@ -81,9 +81,10 @@ public class AnimationManager : MonoBehaviour
         }
         SoundBase.Instance.GetComponent<AudioSource>().PlayOneShot( SoundBase.Instance.swish[1] );
         gameObject.SetActive( false );
-  }
+        GamePlay.Instance.InGamePauseTriggered = false;
+    }
 
-	private void LogPlayTime()
+    private void LogPlayTime()
 	{
 		string playDates;
 		string theDate = System.DateTime.Now.ToString ("yyyyMMdd");
@@ -262,6 +263,7 @@ public class AnimationManager : MonoBehaviour
         if( !menuSettings.activeSelf ) menuSettings.SetActive( true );
         else menuSettings.SetActive( false );
         GamePlay.Instance.GameStatus = GameState.BlockedGame;
+        GamePlay.Instance.InGamePauseTriggered = true;
     }
 
     public void CloseCongrats()

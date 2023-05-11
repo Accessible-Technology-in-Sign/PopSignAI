@@ -106,8 +106,9 @@ public class ball : MonoBehaviour
             // If the current video doesn't exist or is not the video that matches the current ball, set it to the right video
             if (this.sharedVideoManager.curtVideo == null || this.sharedVideoManager.curtVideo.fileName != ballVideo.fileName)
             {
-                this.sharedVideoManager.curtVideo = ballVideo;
-                this.sharedVideoManager.shouldChangeVideo = true;
+                // This is how PopSign Updated videos. PopSignAI doesn't do any of this
+                //this.sharedVideoManager.curtVideo = ballVideo;
+                //this.sharedVideoManager.shouldChangeVideo = true;
             }
         }
 
