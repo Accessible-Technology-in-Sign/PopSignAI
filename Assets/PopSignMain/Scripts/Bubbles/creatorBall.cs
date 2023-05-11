@@ -254,8 +254,20 @@ IEnumerator MoveUpDownCor( bool inGameCheck = false )
 
             float targetY = 0;
             table.Sort();
-            if( !inGameCheck ) targetY = lineY - table[0] + 2.5f;
-            else targetY = lineY - table[0] + 1.5f;
+                if (!inGameCheck)
+                    targetY = lineY - table[0] + 2.5f;
+                else
+                {
+                    targetY = lineY - table[0] + 1.5f;
+                    if(table[table.Count - 1] <= 2f && targetY < 0f)
+                    {
+                        targetY = 0f;
+                    }
+                    if(table[table.Count-1] + targetY < 2f)
+                    {
+                        targetY = -(table[table.Count - 1] - 2f);
+                    }
+                }
             GameObject Meshes = GameObject.Find( "-Meshes" );
             Vector3 targetPos = Meshes.transform.position + Vector3.up * targetY;
             float startTime = Time.time;
