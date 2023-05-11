@@ -109,7 +109,7 @@ public class HandsMediaPipe : MonoBehaviour
 
         var screenRect = _screen.GetComponent<RectTransform>().rect;
 
-        bool isFirstLevel = PlayerPrefs.GetInt("OpenLevel") == 1;
+        bool isFirstLevel = false; //PlayerPrefs.GetInt("OpenLevel") == 1;
 
         while (true)
         {
