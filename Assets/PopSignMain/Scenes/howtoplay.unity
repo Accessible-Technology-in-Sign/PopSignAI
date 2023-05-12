@@ -861,6 +861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1500abe7a08f6a4889ad71064e29079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInGame: 0
   page1: {fileID: 634225372}
   page2: {fileID: 1806663270}
   page3: {fileID: 1568142860}
@@ -898,6 +899,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 956158783}
     m_Modifications:
+    - target: {fileID: 858237012446136774, guid: b5e936b01ea798e40a51aff301aeb87c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 858237012446136774, guid: b5e936b01ea798e40a51aff301aeb87c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 858237012446136774, guid: b5e936b01ea798e40a51aff301aeb87c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 858237012446136775, guid: b5e936b01ea798e40a51aff301aeb87c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1018,5 +1034,20 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1449526234}
+    - target: {fileID: 858237014343534603, guid: b5e936b01ea798e40a51aff301aeb87c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 858237014343534603, guid: b5e936b01ea798e40a51aff301aeb87c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 858237014343534603, guid: b5e936b01ea798e40a51aff301aeb87c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5e936b01ea798e40a51aff301aeb87c, type: 3}
