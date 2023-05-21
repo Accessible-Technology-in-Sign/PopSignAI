@@ -53,17 +53,24 @@ public class HowToPlay : MonoBehaviour
                 if (isInGame)
                 {
                     currentPage = 1;
+                    page6.SetActive(false);
+                    page1.SetActive(true);
+                    ReplaceNextTexture();
                     this.GetComponent<AnimationManager>().CloseMenu();
                 }
                 else
                 {
                     GoToLevelSelection();
-
                 }
                 return;
             default:
                 break;
         }
+        ReplaceNextTexture();
+    }
+
+    private void ReplaceNextTexture()
+    {
         RawImage curtCircle = (RawImage)GameObject.Find("Circle" + currentPage).GetComponent<RawImage>();
         RawImage prevCircle = (RawImage)GameObject.Find("Circle" + (currentPage == 1 ? 6 : currentPage - 1)).GetComponent<RawImage>();
 

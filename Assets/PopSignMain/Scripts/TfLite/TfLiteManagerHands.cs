@@ -164,6 +164,12 @@ public class TfLiteManagerHands : MonoBehaviour, ITfLiteManager
 			}
 		}
 
+		//This to help test out the game inside of unity
+		//Holding down different buttons results in specific signs
+#if UNITY_EDITOR
+		answer = OverrideOutputInEditor(answer, level);
+#endif
+
 		Debug.Log("Max Probability " + max);
 		Debug.Log("results!!!!!!!!!!!!!!!!!! " + answer);
 
@@ -196,5 +202,31 @@ public class TfLiteManagerHands : MonoBehaviour, ITfLiteManager
 		}
 		sWriter.Close();
 		recordingFrameNumber++;
+	}
+
+	private string OverrideOutputInEditor(string answer, int level)
+    {
+		if (Input.GetKey(KeyCode.Alpha1))
+		{
+			answer = TfLiteManager.LABELS[level - 1, 0];
+		}
+		else if (Input.GetKey(KeyCode.Alpha2))
+		{
+			answer = TfLiteManager.LABELS[level - 1, 1];
+		}
+		else if (Input.GetKey(KeyCode.Alpha3))
+		{
+			answer = TfLiteManager.LABELS[level - 1, 2];
+		}
+		else if (Input.GetKey(KeyCode.Alpha4))
+		{
+			answer = TfLiteManager.LABELS[level - 1, 3];
+		}
+		else if (Input.GetKey(KeyCode.Alpha5))
+		{
+			answer = TfLiteManager.LABELS[level - 1, 4];
+		}
+
+		return answer;
 	}
 }
