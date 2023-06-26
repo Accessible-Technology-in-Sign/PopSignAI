@@ -46,3 +46,9 @@ Note: this isn't every file and directory in the project, just the ones that I f
 ├── PlayerPrefsEditor: files for the plugin that allows us to edit PlayerPrefs in the Unity editor  
 ├── ProjectSettings: settings for our Unity project  
 └── UnityPackageManager: contains our manifest.json (needed for Android build)  
+
+## PopSignAI Setup
+1. Full holistic_backup
+2. Go to https://drive.google.com/drive/folders/1vauJWZtZJembjhGDiR_-rOxGdMIIA8yi?usp=sharing and download the file
+3. Unpack Plugins.zip in the MediaPipe folder and place it under Packages/com.github.homuler.mediapipe/Runtime
+4. Unpack Plugins.zip in the Tflite folder and place it under Packages/com.github.asus4.tflite/
