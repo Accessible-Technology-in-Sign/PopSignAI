@@ -20,11 +20,16 @@ namespace Mediapipe.Unity
     [SerializeField] private Color _color = Color.green;
     [SerializeField] private float _radius = 15.0f;
 
+#if UNITY_EDITOR
     private void OnValidate()
     {
-      ApplyColor(_color);
-      ApplyRadius(_radius);
+      if (!UnityEditor.PrefabUtility.IsPartOfAnyPrefab(this))
+      {
+        ApplyColor(_color);
+        ApplyRadius(_radius);
+      }
     }
+#endif
 
     public void SetColor(Color color)
     {
@@ -79,17 +84,6 @@ namespace Mediapipe.Unity
     public void Draw(NormalizedLandmarkList targets, bool visualizeZ = true)
     {
       Draw(targets.Landmark, visualizeZ);
-    }
-
-    public void Draw(IList<AnnotatedKeyPoint> targets, Vector2 focalLength, Vector2 principalPoint, float zScale, bool visualizeZ = true)
-    {
-      if (ActivateFor(targets))
-      {
-        CallActionForAll(targets, (annotation, target) =>
-        {
-          if (annotation != null) { annotation.Draw(target, focalLength, principalPoint, zScale, visualizeZ); }
-        });
-      }
     }
 
     public void Draw(IList<mplt.RelativeKeypoint> targets, float threshold = 0.0f)

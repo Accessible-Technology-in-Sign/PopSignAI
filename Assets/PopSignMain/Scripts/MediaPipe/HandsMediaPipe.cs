@@ -17,6 +17,11 @@ public class HandsMediaPipe : MonoBehaviour
     [SerializeField] private int _height;
     [SerializeField] private int _fps;
     [SerializeField] private MultiHandLandmarkListAnnotationController _multiHandLandmarksAnnotationController;
+
+
+    [SerializeField] private bool enableCoordinateDebugging;
+    [SerializeField] private Text coordinateDebugger;
+
 #if UNITY_EDITOR
     private bool useGPU = false;
 #else
@@ -125,7 +130,11 @@ public class HandsMediaPipe : MonoBehaviour
         var sidePacket = new SidePacket();
         sidePacket.Emplace("input_horizontally_flipped", new BoolPacket(false));
         sidePacket.Emplace("input_rotation", new IntPacket(0));
+#if UNITY_IOS
+        sidePacket.Emplace("input_vertically_flipped", new BoolPacket(false));
+#else
         sidePacket.Emplace("input_vertically_flipped", new BoolPacket(true));
+#endif
         sidePacket.Emplace("num_hands", new IntPacket(1));
 
         _graph.StartRun(sidePacket).AssertOk();
@@ -167,7 +176,20 @@ public class HandsMediaPipe : MonoBehaviour
                                 {
                                     currentFrame[i * 2] = landmarks.Landmark[i].Y;
                                 }
+
                                 currentFrame[i * 2 + 1] = 1.0f - landmarks.Landmark[i].X;
+
+                                //We flip x and y for iOS
+#if UNITY_IOS
+                                currentFrame[i * 2] = 1.0f - currentFrame[i * 2];
+                                currentFrame[i * 2 + 1] = 1.0f - currentFrame[i * 2 + 1];
+#endif
+                            }
+
+
+                            if (enableCoordinateDebugging && coordinateDebugger != null)
+                            {
+                                coordinateDebugger.text = currentFrame[0].ToString("0.00") + ", " + currentFrame[1].ToString("0.00");
                             }
 
                             TfLiteManager.Instance.AddDataToList(currentFrame);

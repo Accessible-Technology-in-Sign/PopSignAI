@@ -27,23 +27,24 @@ namespace Mediapipe {
             "CkFtZWRpYXBpcGUvY2FsY3VsYXRvcnMvdXRpbC9sYWJlbHNfdG9fcmVuZGVy",
             "X2RhdGFfY2FsY3VsYXRvci5wcm90bxIJbWVkaWFwaXBlGiRtZWRpYXBpcGUv",
             "ZnJhbWV3b3JrL2NhbGN1bGF0b3IucHJvdG8aGm1lZGlhcGlwZS91dGlsL2Nv",
-            "bG9yLnByb3RvIpYECiNMYWJlbHNUb1JlbmRlckRhdGFDYWxjdWxhdG9yT3B0",
+            "bG9yLnByb3RvItoECiNMYWJlbHNUb1JlbmRlckRhdGFDYWxjdWxhdG9yT3B0",
             "aW9ucxIfCgVjb2xvchgBIAMoCzIQLm1lZGlhcGlwZS5Db2xvchIUCgl0aGlj",
-            "a25lc3MYAiABKAE6ATISGgoOZm9udF9oZWlnaHRfcHgYAyABKAU6AjUwEh8K",
-            "FGhvcml6b250YWxfb2Zmc2V0X3B4GAcgASgFOgEwEh0KEnZlcnRpY2FsX29m",
-            "ZnNldF9weBgIIAEoBToBMBIZCg5tYXhfbnVtX2xhYmVscxgEIAEoBToBMRIU",
-            "Cglmb250X2ZhY2UYBSABKAU6ATASUwoIbG9jYXRpb24YBiABKA4yNy5tZWRp",
-            "YXBpcGUuTGFiZWxzVG9SZW5kZXJEYXRhQ2FsY3VsYXRvck9wdGlvbnMuTG9j",
-            "YXRpb246CFRPUF9MRUZUEh8KEHVzZV9kaXNwbGF5X25hbWUYCSABKAg6BWZh",
-            "bHNlEisKHGRpc3BsYXlfY2xhc3NpZmljYXRpb25fc2NvcmUYCiABKAg6BWZh",
-            "bHNlIikKCExvY2F0aW9uEgwKCFRPUF9MRUZUEAASDwoLQk9UVE9NX0xFRlQQ",
-            "ATJdCgNleHQSHC5tZWRpYXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMYzOrEgQEg",
-            "ASgLMi4ubWVkaWFwaXBlLkxhYmVsc1RvUmVuZGVyRGF0YUNhbGN1bGF0b3JP",
-            "cHRpb25z"));
+            "a25lc3MYAiABKAE6ATISJwoNb3V0bGluZV9jb2xvchgMIAMoCzIQLm1lZGlh",
+            "cGlwZS5Db2xvchIZChFvdXRsaW5lX3RoaWNrbmVzcxgLIAEoARIaCg5mb250",
+            "X2hlaWdodF9weBgDIAEoBToCNTASHwoUaG9yaXpvbnRhbF9vZmZzZXRfcHgY",
+            "ByABKAU6ATASHQoSdmVydGljYWxfb2Zmc2V0X3B4GAggASgFOgEwEhkKDm1h",
+            "eF9udW1fbGFiZWxzGAQgASgFOgExEhQKCWZvbnRfZmFjZRgFIAEoBToBMBJT",
+            "Cghsb2NhdGlvbhgGIAEoDjI3Lm1lZGlhcGlwZS5MYWJlbHNUb1JlbmRlckRh",
+            "dGFDYWxjdWxhdG9yT3B0aW9ucy5Mb2NhdGlvbjoIVE9QX0xFRlQSHwoQdXNl",
+            "X2Rpc3BsYXlfbmFtZRgJIAEoCDoFZmFsc2USKwocZGlzcGxheV9jbGFzc2lm",
+            "aWNhdGlvbl9zY29yZRgKIAEoCDoFZmFsc2UiKQoITG9jYXRpb24SDAoIVE9Q",
+            "X0xFRlQQABIPCgtCT1RUT01fTEVGVBABMl0KA2V4dBIcLm1lZGlhcGlwZS5D",
+            "YWxjdWxhdG9yT3B0aW9ucxjM6sSBASABKAsyLi5tZWRpYXBpcGUuTGFiZWxz",
+            "VG9SZW5kZXJEYXRhQ2FsY3VsYXRvck9wdGlvbnM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, global::Mediapipe.ColorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.LabelsToRenderDataCalculatorOptions), global::Mediapipe.LabelsToRenderDataCalculatorOptions.Parser, new[]{ "Color", "Thickness", "FontHeightPx", "HorizontalOffsetPx", "VerticalOffsetPx", "MaxNumLabels", "FontFace", "Location", "UseDisplayName", "DisplayClassificationScore" }, null, new[]{ typeof(global::Mediapipe.LabelsToRenderDataCalculatorOptions.Types.Location) }, new pb::Extension[] { global::Mediapipe.LabelsToRenderDataCalculatorOptions.Extensions.Ext }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.LabelsToRenderDataCalculatorOptions), global::Mediapipe.LabelsToRenderDataCalculatorOptions.Parser, new[]{ "Color", "Thickness", "OutlineColor", "OutlineThickness", "FontHeightPx", "HorizontalOffsetPx", "VerticalOffsetPx", "MaxNumLabels", "FontFace", "Location", "UseDisplayName", "DisplayClassificationScore" }, null, new[]{ typeof(global::Mediapipe.LabelsToRenderDataCalculatorOptions.Types.Location) }, new pb::Extension[] { global::Mediapipe.LabelsToRenderDataCalculatorOptions.Extensions.Ext }, null)
           }));
     }
     #endregion
@@ -88,6 +89,8 @@ namespace Mediapipe {
       _hasBits0 = other._hasBits0;
       color_ = other.color_.Clone();
       thickness_ = other.thickness_;
+      outlineColor_ = other.outlineColor_.Clone();
+      outlineThickness_ = other.outlineThickness_;
       fontHeightPx_ = other.fontHeightPx_;
       horizontalOffsetPx_ = other.horizontalOffsetPx_;
       verticalOffsetPx_ = other.verticalOffsetPx_;
@@ -147,6 +150,51 @@ namespace Mediapipe {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearThickness() {
       _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "outline_color" field.</summary>
+    public const int OutlineColorFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::Mediapipe.Color> _repeated_outlineColor_codec
+        = pb::FieldCodec.ForMessage(98, global::Mediapipe.Color.Parser);
+    private readonly pbc::RepeatedField<global::Mediapipe.Color> outlineColor_ = new pbc::RepeatedField<global::Mediapipe.Color>();
+    /// <summary>
+    /// Color of outline around each character, if any. One per label, as with
+    /// color attribute.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Mediapipe.Color> OutlineColor {
+      get { return outlineColor_; }
+    }
+
+    /// <summary>Field number for the "outline_thickness" field.</summary>
+    public const int OutlineThicknessFieldNumber = 11;
+    private readonly static double OutlineThicknessDefaultValue = 0D;
+
+    private double outlineThickness_;
+    /// <summary>
+    /// Thickness of outline around each character.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double OutlineThickness {
+      get { if ((_hasBits0 & 512) != 0) { return outlineThickness_; } else { return OutlineThicknessDefaultValue; } }
+      set {
+        _hasBits0 |= 512;
+        outlineThickness_ = value;
+      }
+    }
+    /// <summary>Gets whether the "outline_thickness" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOutlineThickness {
+      get { return (_hasBits0 & 512) != 0; }
+    }
+    /// <summary>Clears the value of the "outline_thickness" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOutlineThickness() {
+      _hasBits0 &= ~512;
     }
 
     /// <summary>Field number for the "font_height_px" field.</summary>
@@ -412,6 +460,8 @@ namespace Mediapipe {
       }
       if(!color_.Equals(other.color_)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Thickness, other.Thickness)) return false;
+      if(!outlineColor_.Equals(other.outlineColor_)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(OutlineThickness, other.OutlineThickness)) return false;
       if (FontHeightPx != other.FontHeightPx) return false;
       if (HorizontalOffsetPx != other.HorizontalOffsetPx) return false;
       if (VerticalOffsetPx != other.VerticalOffsetPx) return false;
@@ -429,6 +479,8 @@ namespace Mediapipe {
       int hash = 1;
       hash ^= color_.GetHashCode();
       if (HasThickness) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Thickness);
+      hash ^= outlineColor_.GetHashCode();
+      if (HasOutlineThickness) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(OutlineThickness);
       if (HasFontHeightPx) hash ^= FontHeightPx.GetHashCode();
       if (HasHorizontalOffsetPx) hash ^= HorizontalOffsetPx.GetHashCode();
       if (HasVerticalOffsetPx) hash ^= VerticalOffsetPx.GetHashCode();
@@ -492,6 +544,11 @@ namespace Mediapipe {
         output.WriteRawTag(80);
         output.WriteBool(DisplayClassificationScore);
       }
+      if (HasOutlineThickness) {
+        output.WriteRawTag(89);
+        output.WriteDouble(OutlineThickness);
+      }
+      outlineColor_.WriteTo(output, _repeated_outlineColor_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -539,6 +596,11 @@ namespace Mediapipe {
         output.WriteRawTag(80);
         output.WriteBool(DisplayClassificationScore);
       }
+      if (HasOutlineThickness) {
+        output.WriteRawTag(89);
+        output.WriteDouble(OutlineThickness);
+      }
+      outlineColor_.WriteTo(ref output, _repeated_outlineColor_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -551,6 +613,10 @@ namespace Mediapipe {
       int size = 0;
       size += color_.CalculateSize(_repeated_color_codec);
       if (HasThickness) {
+        size += 1 + 8;
+      }
+      size += outlineColor_.CalculateSize(_repeated_outlineColor_codec);
+      if (HasOutlineThickness) {
         size += 1 + 8;
       }
       if (HasFontHeightPx) {
@@ -592,6 +658,10 @@ namespace Mediapipe {
       color_.Add(other.color_);
       if (other.HasThickness) {
         Thickness = other.Thickness;
+      }
+      outlineColor_.Add(other.outlineColor_);
+      if (other.HasOutlineThickness) {
+        OutlineThickness = other.OutlineThickness;
       }
       if (other.HasFontHeightPx) {
         FontHeightPx = other.FontHeightPx;
@@ -672,6 +742,14 @@ namespace Mediapipe {
             DisplayClassificationScore = input.ReadBool();
             break;
           }
+          case 89: {
+            OutlineThickness = input.ReadDouble();
+            break;
+          }
+          case 98: {
+            outlineColor_.AddEntriesFrom(input, _repeated_outlineColor_codec);
+            break;
+          }
         }
       }
     #endif
@@ -725,6 +803,14 @@ namespace Mediapipe {
           }
           case 80: {
             DisplayClassificationScore = input.ReadBool();
+            break;
+          }
+          case 89: {
+            OutlineThickness = input.ReadDouble();
+            break;
+          }
+          case 98: {
+            outlineColor_.AddEntriesFrom(ref input, _repeated_outlineColor_codec);
             break;
           }
         }

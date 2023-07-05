@@ -28,22 +28,25 @@ namespace Mediapipe {
             "Y2tldF9jYWxjdWxhdG9yLnByb3RvEgltZWRpYXBpcGUaJG1lZGlhcGlwZS9m",
             "cmFtZXdvcmsvY2FsY3VsYXRvci5wcm90bxowbWVkaWFwaXBlL2ZyYW1ld29y",
             "ay9mb3JtYXRzL2NsYXNzaWZpY2F0aW9uLnByb3RvGiptZWRpYXBpcGUvZnJh",
-            "bWV3b3JrL2Zvcm1hdHMvbGFuZG1hcmsucHJvdG8i5QMKI0NvbnN0YW50U2lk",
-            "ZVBhY2tldENhbGN1bGF0b3JPcHRpb25zElEKBnBhY2tldBgBIAMoCzJBLm1l",
-            "ZGlhcGlwZS5Db25zdGFudFNpZGVQYWNrZXRDYWxjdWxhdG9yT3B0aW9ucy5D",
-            "b25zdGFudFNpZGVQYWNrZXQaiwIKEkNvbnN0YW50U2lkZVBhY2tldBITCglp",
-            "bnRfdmFsdWUYASABKAVIABIVCgtmbG9hdF92YWx1ZRgCIAEoAkgAEhQKCmJv",
-            "b2xfdmFsdWUYAyABKAhIABIWCgxzdHJpbmdfdmFsdWUYBCABKAlIABIWCgx1",
-            "aW50NjRfdmFsdWUYBSABKARIABJCChljbGFzc2lmaWNhdGlvbl9saXN0X3Zh",
-            "bHVlGAYgASgLMh0ubWVkaWFwaXBlLkNsYXNzaWZpY2F0aW9uTGlzdEgAEjYK",
-            "E2xhbmRtYXJrX2xpc3RfdmFsdWUYByABKAsyFy5tZWRpYXBpcGUuTGFuZG1h",
-            "cmtMaXN0SABCBwoFdmFsdWUyXQoDZXh0EhwubWVkaWFwaXBlLkNhbGN1bGF0",
-            "b3JPcHRpb25zGIWq7ooBIAEoCzIuLm1lZGlhcGlwZS5Db25zdGFudFNpZGVQ",
-            "YWNrZXRDYWxjdWxhdG9yT3B0aW9uc0IMogIJTWVkaWFQaXBl"));
+            "bWV3b3JrL2Zvcm1hdHMvbGFuZG1hcmsucHJvdG8aNG1lZGlhcGlwZS9mcmFt",
+            "ZXdvcmsvZm9ybWF0cy90aW1lX3Nlcmllc19oZWFkZXIucHJvdG8ivgQKI0Nv",
+            "bnN0YW50U2lkZVBhY2tldENhbGN1bGF0b3JPcHRpb25zElEKBnBhY2tldBgB",
+            "IAMoCzJBLm1lZGlhcGlwZS5Db25zdGFudFNpZGVQYWNrZXRDYWxjdWxhdG9y",
+            "T3B0aW9ucy5Db25zdGFudFNpZGVQYWNrZXQa5AIKEkNvbnN0YW50U2lkZVBh",
+            "Y2tldBITCglpbnRfdmFsdWUYASABKAVIABIVCgtmbG9hdF92YWx1ZRgCIAEo",
+            "AkgAEhQKCmJvb2xfdmFsdWUYAyABKAhIABIWCgxzdHJpbmdfdmFsdWUYBCAB",
+            "KAlIABIWCgx1aW50NjRfdmFsdWUYBSABKARIABJCChljbGFzc2lmaWNhdGlv",
+            "bl9saXN0X3ZhbHVlGAYgASgLMh0ubWVkaWFwaXBlLkNsYXNzaWZpY2F0aW9u",
+            "TGlzdEgAEjYKE2xhbmRtYXJrX2xpc3RfdmFsdWUYByABKAsyFy5tZWRpYXBp",
+            "cGUuTGFuZG1hcmtMaXN0SAASFgoMZG91YmxlX3ZhbHVlGAkgASgBSAASPwoY",
+            "dGltZV9zZXJpZXNfaGVhZGVyX3ZhbHVlGAogASgLMhsubWVkaWFwaXBlLlRp",
+            "bWVTZXJpZXNIZWFkZXJIAEIHCgV2YWx1ZTJdCgNleHQSHC5tZWRpYXBpcGUu",
+            "Q2FsY3VsYXRvck9wdGlvbnMYharuigEgASgLMi4ubWVkaWFwaXBlLkNvbnN0",
+            "YW50U2lkZVBhY2tldENhbGN1bGF0b3JPcHRpb25z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, global::Mediapipe.ClassificationReflection.Descriptor, global::Mediapipe.LandmarkReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, global::Mediapipe.ClassificationReflection.Descriptor, global::Mediapipe.LandmarkReflection.Descriptor, global::Mediapipe.TimeSeriesHeaderReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.ConstantSidePacketCalculatorOptions), global::Mediapipe.ConstantSidePacketCalculatorOptions.Parser, new[]{ "Packet" }, null, null, new pb::Extension[] { global::Mediapipe.ConstantSidePacketCalculatorOptions.Extensions.Ext }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.ConstantSidePacketCalculatorOptions.Types.ConstantSidePacket), global::Mediapipe.ConstantSidePacketCalculatorOptions.Types.ConstantSidePacket.Parser, new[]{ "IntValue", "FloatValue", "BoolValue", "StringValue", "Uint64Value", "ClassificationListValue", "LandmarkListValue" }, new[]{ "Value" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.ConstantSidePacketCalculatorOptions), global::Mediapipe.ConstantSidePacketCalculatorOptions.Parser, new[]{ "Packet" }, null, null, new pb::Extension[] { global::Mediapipe.ConstantSidePacketCalculatorOptions.Extensions.Ext }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.ConstantSidePacketCalculatorOptions.Types.ConstantSidePacket), global::Mediapipe.ConstantSidePacketCalculatorOptions.Types.ConstantSidePacket.Parser, new[]{ "IntValue", "FloatValue", "BoolValue", "StringValue", "Uint64Value", "ClassificationListValue", "LandmarkListValue", "DoubleValue", "TimeSeriesHeaderValue" }, new[]{ "Value" }, null, null, null)})
           }));
     }
     #endregion
@@ -287,6 +290,12 @@ namespace Mediapipe {
             case ValueOneofCase.LandmarkListValue:
               LandmarkListValue = other.LandmarkListValue.Clone();
               break;
+            case ValueOneofCase.DoubleValue:
+              DoubleValue = other.DoubleValue;
+              break;
+            case ValueOneofCase.TimeSeriesHeaderValue:
+              TimeSeriesHeaderValue = other.TimeSeriesHeaderValue.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -452,6 +461,44 @@ namespace Mediapipe {
           }
         }
 
+        /// <summary>Field number for the "double_value" field.</summary>
+        public const int DoubleValueFieldNumber = 9;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double DoubleValue {
+          get { return HasDoubleValue ? (double) value_ : 0D; }
+          set {
+            value_ = value;
+            valueCase_ = ValueOneofCase.DoubleValue;
+          }
+        }
+        /// <summary>Gets whether the "double_value" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDoubleValue {
+          get { return valueCase_ == ValueOneofCase.DoubleValue; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "double_value" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDoubleValue() {
+          if (HasDoubleValue) {
+            ClearValue();
+          }
+        }
+
+        /// <summary>Field number for the "time_series_header_value" field.</summary>
+        public const int TimeSeriesHeaderValueFieldNumber = 10;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Mediapipe.TimeSeriesHeader TimeSeriesHeaderValue {
+          get { return valueCase_ == ValueOneofCase.TimeSeriesHeaderValue ? (global::Mediapipe.TimeSeriesHeader) value_ : null; }
+          set {
+            value_ = value;
+            valueCase_ = value == null ? ValueOneofCase.None : ValueOneofCase.TimeSeriesHeaderValue;
+          }
+        }
+
         private object value_;
         /// <summary>Enum of possible cases for the "value" oneof.</summary>
         public enum ValueOneofCase {
@@ -463,6 +510,8 @@ namespace Mediapipe {
           Uint64Value = 5,
           ClassificationListValue = 6,
           LandmarkListValue = 7,
+          DoubleValue = 9,
+          TimeSeriesHeaderValue = 10,
         }
         private ValueOneofCase valueCase_ = ValueOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -500,6 +549,8 @@ namespace Mediapipe {
           if (Uint64Value != other.Uint64Value) return false;
           if (!object.Equals(ClassificationListValue, other.ClassificationListValue)) return false;
           if (!object.Equals(LandmarkListValue, other.LandmarkListValue)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(DoubleValue, other.DoubleValue)) return false;
+          if (!object.Equals(TimeSeriesHeaderValue, other.TimeSeriesHeaderValue)) return false;
           if (ValueCase != other.ValueCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -515,6 +566,8 @@ namespace Mediapipe {
           if (HasUint64Value) hash ^= Uint64Value.GetHashCode();
           if (valueCase_ == ValueOneofCase.ClassificationListValue) hash ^= ClassificationListValue.GetHashCode();
           if (valueCase_ == ValueOneofCase.LandmarkListValue) hash ^= LandmarkListValue.GetHashCode();
+          if (HasDoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
+          if (valueCase_ == ValueOneofCase.TimeSeriesHeaderValue) hash ^= TimeSeriesHeaderValue.GetHashCode();
           hash ^= (int) valueCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -562,6 +615,14 @@ namespace Mediapipe {
             output.WriteRawTag(58);
             output.WriteMessage(LandmarkListValue);
           }
+          if (HasDoubleValue) {
+            output.WriteRawTag(73);
+            output.WriteDouble(DoubleValue);
+          }
+          if (valueCase_ == ValueOneofCase.TimeSeriesHeaderValue) {
+            output.WriteRawTag(82);
+            output.WriteMessage(TimeSeriesHeaderValue);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -600,6 +661,14 @@ namespace Mediapipe {
             output.WriteRawTag(58);
             output.WriteMessage(LandmarkListValue);
           }
+          if (HasDoubleValue) {
+            output.WriteRawTag(73);
+            output.WriteDouble(DoubleValue);
+          }
+          if (valueCase_ == ValueOneofCase.TimeSeriesHeaderValue) {
+            output.WriteRawTag(82);
+            output.WriteMessage(TimeSeriesHeaderValue);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -630,6 +699,12 @@ namespace Mediapipe {
           }
           if (valueCase_ == ValueOneofCase.LandmarkListValue) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(LandmarkListValue);
+          }
+          if (HasDoubleValue) {
+            size += 1 + 8;
+          }
+          if (valueCase_ == ValueOneofCase.TimeSeriesHeaderValue) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeSeriesHeaderValue);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -670,6 +745,15 @@ namespace Mediapipe {
                 LandmarkListValue = new global::Mediapipe.LandmarkList();
               }
               LandmarkListValue.MergeFrom(other.LandmarkListValue);
+              break;
+            case ValueOneofCase.DoubleValue:
+              DoubleValue = other.DoubleValue;
+              break;
+            case ValueOneofCase.TimeSeriesHeaderValue:
+              if (TimeSeriesHeaderValue == null) {
+                TimeSeriesHeaderValue = new global::Mediapipe.TimeSeriesHeader();
+              }
+              TimeSeriesHeaderValue.MergeFrom(other.TimeSeriesHeaderValue);
               break;
           }
 
@@ -726,6 +810,19 @@ namespace Mediapipe {
                 LandmarkListValue = subBuilder;
                 break;
               }
+              case 73: {
+                DoubleValue = input.ReadDouble();
+                break;
+              }
+              case 82: {
+                global::Mediapipe.TimeSeriesHeader subBuilder = new global::Mediapipe.TimeSeriesHeader();
+                if (valueCase_ == ValueOneofCase.TimeSeriesHeaderValue) {
+                  subBuilder.MergeFrom(TimeSeriesHeaderValue);
+                }
+                input.ReadMessage(subBuilder);
+                TimeSeriesHeaderValue = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -777,6 +874,19 @@ namespace Mediapipe {
                 }
                 input.ReadMessage(subBuilder);
                 LandmarkListValue = subBuilder;
+                break;
+              }
+              case 73: {
+                DoubleValue = input.ReadDouble();
+                break;
+              }
+              case 82: {
+                global::Mediapipe.TimeSeriesHeader subBuilder = new global::Mediapipe.TimeSeriesHeader();
+                if (valueCase_ == ValueOneofCase.TimeSeriesHeaderValue) {
+                  subBuilder.MergeFrom(TimeSeriesHeaderValue);
+                }
+                input.ReadMessage(subBuilder);
+                TimeSeriesHeaderValue = subBuilder;
                 break;
               }
             }

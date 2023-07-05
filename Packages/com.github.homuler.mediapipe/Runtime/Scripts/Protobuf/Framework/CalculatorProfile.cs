@@ -37,7 +37,7 @@ namespace Mediapipe {
             "cHJvY2Vzc19pbnB1dF9sYXRlbmN5GAUgASgLMhgubWVkaWFwaXBlLlRpbWVI",
             "aXN0b2dyYW0SOAoWcHJvY2Vzc19vdXRwdXRfbGF0ZW5jeRgGIAEoCzIYLm1l",
             "ZGlhcGlwZS5UaW1lSGlzdG9ncmFtEjcKFWlucHV0X3N0cmVhbV9wcm9maWxl",
-            "cxgHIAMoCzIYLm1lZGlhcGlwZS5TdHJlYW1Qcm9maWxlIukGCgpHcmFwaFRy",
+            "cxgHIAMoCzIYLm1lZGlhcGlwZS5TdHJlYW1Qcm9maWxlIuEHCgpHcmFwaFRy",
             "YWNlEhEKCWJhc2VfdGltZRgBIAEoAxIWCg5iYXNlX3RpbWVzdGFtcBgCIAEo",
             "AxIXCg9jYWxjdWxhdG9yX25hbWUYAyADKAkSEwoLc3RyZWFtX25hbWUYBCAD",
             "KAkSPwoQY2FsY3VsYXRvcl90cmFjZRgFIAMoCzIlLm1lZGlhcGlwZS5HcmFw",
@@ -51,18 +51,20 @@ namespace Mediapipe {
             "bWUYBSABKAMSNgoLaW5wdXRfdHJhY2UYBiADKAsyIS5tZWRpYXBpcGUuR3Jh",
             "cGhUcmFjZS5TdHJlYW1UcmFjZRI3CgxvdXRwdXRfdHJhY2UYByADKAsyIS5t",
             "ZWRpYXBpcGUuR3JhcGhUcmFjZS5TdHJlYW1UcmFjZRIRCgl0aHJlYWRfaWQY",
-            "CCABKAUijwIKCUV2ZW50VHlwZRILCgdVTktOT1dOEAASCAoET1BFThABEgsK",
+            "CCABKAUihwMKCUV2ZW50VHlwZRILCgdVTktOT1dOEAASCAoET1BFThABEgsK",
             "B1BST0NFU1MQAhIJCgVDTE9TRRADEg0KCU5PVF9SRUFEWRAEEhUKEVJFQURZ",
             "X0ZPUl9QUk9DRVNTEAUSEwoPUkVBRFlfRk9SX0NMT1NFEAYSDQoJVEhST1RU",
             "TEVEEAcSDwoLVU5USFJPVFRMRUQQCBIRCg1DUFVfVEFTS19VU0VSEAkSEwoP",
             "Q1BVX1RBU0tfU1lTVEVNEAoSDAoIR1BVX1RBU0sQCxIMCghEU1BfVEFTSxAM",
             "EgwKCFRQVV9UQVNLEA0SEwoPR1BVX0NBTElCUkFUSU9OEA4SEQoNUEFDS0VU",
-            "X1FVRVVFRBAPIqcBCgxHcmFwaFByb2ZpbGUSKgoLZ3JhcGhfdHJhY2UYASAD",
-            "KAsyFS5tZWRpYXBpcGUuR3JhcGhUcmFjZRI5ChNjYWxjdWxhdG9yX3Byb2Zp",
-            "bGVzGAIgAygLMhwubWVkaWFwaXBlLkNhbGN1bGF0b3JQcm9maWxlEjAKBmNv",
-            "bmZpZxgDIAEoCzIgLm1lZGlhcGlwZS5DYWxjdWxhdG9yR3JhcGhDb25maWdC",
-            "NAoaY29tLmdvb2dsZS5tZWRpYXBpcGUucHJvdG9CFkNhbGN1bGF0b3JQcm9m",
-            "aWxlUHJvdG8="));
+            "X1FVRVVFRBAPEhMKD0dQVV9UQVNLX0lOVk9LRRAQEhMKD1RQVV9UQVNLX0lO",
+            "Vk9LRRAREhMKD0NQVV9UQVNLX0lOVk9LRRASEhwKGEdQVV9UQVNLX0lOVk9L",
+            "RV9BRFZBTkNFRBATEhkKFVRQVV9UQVNLX0lOVk9LRV9BU1lOQxAUIqcBCgxH",
+            "cmFwaFByb2ZpbGUSKgoLZ3JhcGhfdHJhY2UYASADKAsyFS5tZWRpYXBpcGUu",
+            "R3JhcGhUcmFjZRI5ChNjYWxjdWxhdG9yX3Byb2ZpbGVzGAIgAygLMhwubWVk",
+            "aWFwaXBlLkNhbGN1bGF0b3JQcm9maWxlEjAKBmNvbmZpZxgDIAEoCzIgLm1l",
+            "ZGlhcGlwZS5DYWxjdWxhdG9yR3JhcGhDb25maWdCNAoaY29tLmdvb2dsZS5t",
+            "ZWRpYXBpcGUucHJvdG9CFkNhbGN1bGF0b3JQcm9maWxlUHJvdG8="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1640,6 +1642,11 @@ namespace Mediapipe {
         [pbr::OriginalName("TPU_TASK")] TpuTask = 13,
         [pbr::OriginalName("GPU_CALIBRATION")] GpuCalibration = 14,
         [pbr::OriginalName("PACKET_QUEUED")] PacketQueued = 15,
+        [pbr::OriginalName("GPU_TASK_INVOKE")] GpuTaskInvoke = 16,
+        [pbr::OriginalName("TPU_TASK_INVOKE")] TpuTaskInvoke = 17,
+        [pbr::OriginalName("CPU_TASK_INVOKE")] CpuTaskInvoke = 18,
+        [pbr::OriginalName("GPU_TASK_INVOKE_ADVANCED")] GpuTaskInvokeAdvanced = 19,
+        [pbr::OriginalName("TPU_TASK_INVOKE_ASYNC")] TpuTaskInvokeAsync = 20,
       }
 
       /// <summary>

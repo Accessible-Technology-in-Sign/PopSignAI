@@ -26,15 +26,15 @@ namespace Mediapipe {
           string.Concat(
             "CkBtZWRpYXBpcGUvY2FsY3VsYXRvcnMvdXRpbC9yZWN0X3RvX3JlbmRlcl9z",
             "Y2FsZV9jYWxjdWxhdG9yLnByb3RvEgltZWRpYXBpcGUaJG1lZGlhcGlwZS9m",
-            "cmFtZXdvcmsvY2FsY3VsYXRvci5wcm90byKcAQoiUmVjdFRvUmVuZGVyU2Nh",
+            "cmFtZXdvcmsvY2FsY3VsYXRvci5wcm90byLFAQoiUmVjdFRvUmVuZGVyU2Nh",
             "bGVDYWxjdWxhdG9yT3B0aW9ucxIYCgptdWx0aXBsaWVyGAEgASgCOgQwLjAx",
-            "MlwKA2V4dBIcLm1lZGlhcGlwZS5DYWxjdWxhdG9yT3B0aW9ucxjx5eWOASAB",
-            "KAsyLS5tZWRpYXBpcGUuUmVjdFRvUmVuZGVyU2NhbGVDYWxjdWxhdG9yT3B0",
-            "aW9ucw=="));
+            "EicKGHByb2Nlc3NfdGltZXN0YW1wX2JvdW5kcxgCIAEoCDoFZmFsc2UyXAoD",
+            "ZXh0EhwubWVkaWFwaXBlLkNhbGN1bGF0b3JPcHRpb25zGPHl5Y4BIAEoCzIt",
+            "Lm1lZGlhcGlwZS5SZWN0VG9SZW5kZXJTY2FsZUNhbGN1bGF0b3JPcHRpb25z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RectToRenderScaleCalculatorOptions), global::Mediapipe.RectToRenderScaleCalculatorOptions.Parser, new[]{ "Multiplier" }, null, null, new pb::Extension[] { global::Mediapipe.RectToRenderScaleCalculatorOptions.Extensions.Ext }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RectToRenderScaleCalculatorOptions), global::Mediapipe.RectToRenderScaleCalculatorOptions.Parser, new[]{ "Multiplier", "ProcessTimestampBounds" }, null, null, new pb::Extension[] { global::Mediapipe.RectToRenderScaleCalculatorOptions.Extensions.Ext }, null)
           }));
     }
     #endregion
@@ -78,6 +78,7 @@ namespace Mediapipe {
     public RectToRenderScaleCalculatorOptions(RectToRenderScaleCalculatorOptions other) : this() {
       _hasBits0 = other._hasBits0;
       multiplier_ = other.multiplier_;
+      processTimestampBounds_ = other.processTimestampBounds_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -121,6 +122,37 @@ namespace Mediapipe {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "process_timestamp_bounds" field.</summary>
+    public const int ProcessTimestampBoundsFieldNumber = 2;
+    private readonly static bool ProcessTimestampBoundsDefaultValue = false;
+
+    private bool processTimestampBounds_;
+    /// <summary>
+    /// When true, Process is called for every new timestamp bound, with or without
+    /// new packets.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ProcessTimestampBounds {
+      get { if ((_hasBits0 & 2) != 0) { return processTimestampBounds_; } else { return ProcessTimestampBoundsDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        processTimestampBounds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "process_timestamp_bounds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasProcessTimestampBounds {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "process_timestamp_bounds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearProcessTimestampBounds() {
+      _hasBits0 &= ~2;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -137,6 +169,7 @@ namespace Mediapipe {
         return true;
       }
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Multiplier, other.Multiplier)) return false;
+      if (ProcessTimestampBounds != other.ProcessTimestampBounds) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,6 +178,7 @@ namespace Mediapipe {
     public override int GetHashCode() {
       int hash = 1;
       if (HasMultiplier) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Multiplier);
+      if (HasProcessTimestampBounds) hash ^= ProcessTimestampBounds.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,6 +201,10 @@ namespace Mediapipe {
         output.WriteRawTag(13);
         output.WriteFloat(Multiplier);
       }
+      if (HasProcessTimestampBounds) {
+        output.WriteRawTag(16);
+        output.WriteBool(ProcessTimestampBounds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -181,6 +219,10 @@ namespace Mediapipe {
         output.WriteRawTag(13);
         output.WriteFloat(Multiplier);
       }
+      if (HasProcessTimestampBounds) {
+        output.WriteRawTag(16);
+        output.WriteBool(ProcessTimestampBounds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -193,6 +235,9 @@ namespace Mediapipe {
       int size = 0;
       if (HasMultiplier) {
         size += 1 + 4;
+      }
+      if (HasProcessTimestampBounds) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -208,6 +253,9 @@ namespace Mediapipe {
       }
       if (other.HasMultiplier) {
         Multiplier = other.Multiplier;
+      }
+      if (other.HasProcessTimestampBounds) {
+        ProcessTimestampBounds = other.ProcessTimestampBounds;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -228,6 +276,10 @@ namespace Mediapipe {
             Multiplier = input.ReadFloat();
             break;
           }
+          case 16: {
+            ProcessTimestampBounds = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -245,6 +297,10 @@ namespace Mediapipe {
             break;
           case 13: {
             Multiplier = input.ReadFloat();
+            break;
+          }
+          case 16: {
+            ProcessTimestampBounds = input.ReadBool();
             break;
           }
         }

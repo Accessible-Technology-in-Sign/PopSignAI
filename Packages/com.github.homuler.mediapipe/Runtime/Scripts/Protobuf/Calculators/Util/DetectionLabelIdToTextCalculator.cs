@@ -27,16 +27,19 @@ namespace Mediapipe {
             "CkZtZWRpYXBpcGUvY2FsY3VsYXRvcnMvdXRpbC9kZXRlY3Rpb25fbGFiZWxf",
             "aWRfdG9fdGV4dF9jYWxjdWxhdG9yLnByb3RvEgltZWRpYXBpcGUaJG1lZGlh",
             "cGlwZS9mcmFtZXdvcmsvY2FsY3VsYXRvci5wcm90bxoebWVkaWFwaXBlL3V0",
-            "aWwvbGFiZWxfbWFwLnByb3RvIvEBCidEZXRlY3Rpb25MYWJlbElkVG9UZXh0",
+            "aWwvbGFiZWxfbWFwLnByb3RvIu4CCidEZXRlY3Rpb25MYWJlbElkVG9UZXh0",
             "Q2FsY3VsYXRvck9wdGlvbnMSFgoObGFiZWxfbWFwX3BhdGgYASABKAkSDQoF",
-            "bGFiZWwYAiADKAkSFQoNa2VlcF9sYWJlbF9pZBgDIAEoCBImCglsYWJlbF9t",
-            "YXAYBCABKAsyEy5tZWRpYXBpcGUuTGFiZWxNYXAyYAoDZXh0EhwubWVkaWFw",
-            "aXBlLkNhbGN1bGF0b3JPcHRpb25zGLCLjnggASgLMjIubWVkaWFwaXBlLkRl",
-            "dGVjdGlvbkxhYmVsSWRUb1RleHRDYWxjdWxhdG9yT3B0aW9ucw=="));
+            "bGFiZWwYAiADKAkSFQoNa2VlcF9sYWJlbF9pZBgDIAEoCBJXCgtsYWJlbF9p",
+            "dGVtcxgEIAMoCzJCLm1lZGlhcGlwZS5EZXRlY3Rpb25MYWJlbElkVG9UZXh0",
+            "Q2FsY3VsYXRvck9wdGlvbnMuTGFiZWxJdGVtc0VudHJ5GkoKD0xhYmVsSXRl",
+            "bXNFbnRyeRILCgNrZXkYASABKAMSJgoFdmFsdWUYAiABKAsyFy5tZWRpYXBp",
+            "cGUuTGFiZWxNYXBJdGVtOgI4ATJgCgNleHQSHC5tZWRpYXBpcGUuQ2FsY3Vs",
+            "YXRvck9wdGlvbnMYsIuOeCABKAsyMi5tZWRpYXBpcGUuRGV0ZWN0aW9uTGFi",
+            "ZWxJZFRvVGV4dENhbGN1bGF0b3JPcHRpb25z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, global::Mediapipe.LabelMapReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.DetectionLabelIdToTextCalculatorOptions), global::Mediapipe.DetectionLabelIdToTextCalculatorOptions.Parser, new[]{ "LabelMapPath", "Label", "KeepLabelId", "LabelMap" }, null, null, new pb::Extension[] { global::Mediapipe.DetectionLabelIdToTextCalculatorOptions.Extensions.Ext }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.DetectionLabelIdToTextCalculatorOptions), global::Mediapipe.DetectionLabelIdToTextCalculatorOptions.Parser, new[]{ "LabelMapPath", "Label", "KeepLabelId", "LabelItems" }, null, null, new pb::Extension[] { global::Mediapipe.DetectionLabelIdToTextCalculatorOptions.Extensions.Ext }, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -82,7 +85,7 @@ namespace Mediapipe {
       labelMapPath_ = other.labelMapPath_;
       label_ = other.label_.Clone();
       keepLabelId_ = other.keepLabelId_;
-      labelMap_ = other.labelMap_ != null ? other.labelMap_.Clone() : null;
+      labelItems_ = other.labelItems_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -170,19 +173,18 @@ namespace Mediapipe {
       _hasBits0 &= ~1;
     }
 
-    /// <summary>Field number for the "label_map" field.</summary>
-    public const int LabelMapFieldNumber = 4;
-    private global::Mediapipe.LabelMap labelMap_;
+    /// <summary>Field number for the "label_items" field.</summary>
+    public const int LabelItemsFieldNumber = 4;
+    private static readonly pbc::MapField<long, global::Mediapipe.LabelMapItem>.Codec _map_labelItems_codec
+        = new pbc::MapField<long, global::Mediapipe.LabelMapItem>.Codec(pb::FieldCodec.ForInt64(8, 0L), pb::FieldCodec.ForMessage(18, global::Mediapipe.LabelMapItem.Parser), 34);
+    private readonly pbc::MapField<long, global::Mediapipe.LabelMapItem> labelItems_ = new pbc::MapField<long, global::Mediapipe.LabelMapItem>();
     /// <summary>
-    /// Label map.
+    /// Identifying information for each classification label.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Mediapipe.LabelMap LabelMap {
-      get { return labelMap_; }
-      set {
-        labelMap_ = value;
-      }
+    public pbc::MapField<long, global::Mediapipe.LabelMapItem> LabelItems {
+      get { return labelItems_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -203,7 +205,7 @@ namespace Mediapipe {
       if (LabelMapPath != other.LabelMapPath) return false;
       if(!label_.Equals(other.label_)) return false;
       if (KeepLabelId != other.KeepLabelId) return false;
-      if (!object.Equals(LabelMap, other.LabelMap)) return false;
+      if (!LabelItems.Equals(other.LabelItems)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -214,7 +216,7 @@ namespace Mediapipe {
       if (HasLabelMapPath) hash ^= LabelMapPath.GetHashCode();
       hash ^= label_.GetHashCode();
       if (HasKeepLabelId) hash ^= KeepLabelId.GetHashCode();
-      if (labelMap_ != null) hash ^= LabelMap.GetHashCode();
+      hash ^= LabelItems.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -242,10 +244,7 @@ namespace Mediapipe {
         output.WriteRawTag(24);
         output.WriteBool(KeepLabelId);
       }
-      if (labelMap_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(LabelMap);
-      }
+      labelItems_.WriteTo(output, _map_labelItems_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -265,10 +264,7 @@ namespace Mediapipe {
         output.WriteRawTag(24);
         output.WriteBool(KeepLabelId);
       }
-      if (labelMap_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(LabelMap);
-      }
+      labelItems_.WriteTo(ref output, _map_labelItems_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -286,9 +282,7 @@ namespace Mediapipe {
       if (HasKeepLabelId) {
         size += 1 + 1;
       }
-      if (labelMap_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LabelMap);
-      }
+      size += labelItems_.CalculateSize(_map_labelItems_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -308,12 +302,7 @@ namespace Mediapipe {
       if (other.HasKeepLabelId) {
         KeepLabelId = other.KeepLabelId;
       }
-      if (other.labelMap_ != null) {
-        if (labelMap_ == null) {
-          LabelMap = new global::Mediapipe.LabelMap();
-        }
-        LabelMap.MergeFrom(other.LabelMap);
-      }
+      labelItems_.Add(other.labelItems_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -342,10 +331,7 @@ namespace Mediapipe {
             break;
           }
           case 34: {
-            if (labelMap_ == null) {
-              LabelMap = new global::Mediapipe.LabelMap();
-            }
-            input.ReadMessage(LabelMap);
+            labelItems_.AddEntriesFrom(input, _map_labelItems_codec);
             break;
           }
         }
@@ -376,10 +362,7 @@ namespace Mediapipe {
             break;
           }
           case 34: {
-            if (labelMap_ == null) {
-              LabelMap = new global::Mediapipe.LabelMap();
-            }
-            input.ReadMessage(LabelMap);
+            labelItems_.AddEntriesFrom(ref input, _map_labelItems_codec);
             break;
           }
         }

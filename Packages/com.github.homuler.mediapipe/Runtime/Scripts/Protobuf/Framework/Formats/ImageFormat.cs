@@ -25,11 +25,13 @@ namespace Mediapipe {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5tZWRpYXBpcGUvZnJhbWV3b3JrL2Zvcm1hdHMvaW1hZ2VfZm9ybWF0LnBy",
-            "b3RvEgltZWRpYXBpcGUiuQEKC0ltYWdlRm9ybWF0IqkBCgZGb3JtYXQSCwoH",
+            "b3RvEgltZWRpYXBpcGUixgEKC0ltYWdlRm9ybWF0IrYBCgZGb3JtYXQSCwoH",
             "VU5LTk9XThAAEggKBFNSR0IQARIJCgVTUkdCQRACEgkKBUdSQVk4EAMSCgoG",
             "R1JBWTE2EAQSDQoJWUNCQ1I0MjBQEAUSDwoLWUNCQ1I0MjBQMTAQBhIKCgZT",
             "UkdCNDgQBxILCgdTUkdCQTY0EAgSCwoHVkVDMzJGMRAJEgsKB1ZFQzMyRjIQ",
-            "DBIICgRMQUI4EAoSCQoFU0JHUkEQCw=="));
+            "DBILCgdWRUMzMkY0EA0SCAoETEFCOBAKEgkKBVNCR1JBEAtCNgoiY29tLmdv",
+            "b2dsZS5tZWRpYXBpcGUuZm9ybWF0cy5wcm90b0IQSW1hZ2VGb3JtYXRQcm90",
+            "bw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -248,6 +250,10 @@ namespace Mediapipe {
         /// Two floats per pixel.
         /// </summary>
         [pbr::OriginalName("VEC32F2")] Vec32F2 = 12,
+        /// <summary>
+        /// Four floats per pixel.
+        /// </summary>
+        [pbr::OriginalName("VEC32F4")] Vec32F4 = 13,
         /// <summary>
         /// LAB, interleaved: one byte for L, then one byte for a, then one
         /// byte for b for each pixel.

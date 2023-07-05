@@ -26,15 +26,18 @@ namespace Mediapipe {
           string.Concat(
             "CjBtZWRpYXBpcGUvY2FsY3VsYXRvcnMvY29yZS9nYXRlX2NhbGN1bGF0b3Iu",
             "cHJvdG8SCW1lZGlhcGlwZRokbWVkaWFwaXBlL2ZyYW1ld29yay9jYWxjdWxh",
-            "dG9yLnByb3RvIp0BChVHYXRlQ2FsY3VsYXRvck9wdGlvbnMSHgoWZW1wdHlf",
-            "cGFja2V0c19hc19hbGxvdxgBIAEoCBIUCgVhbGxvdxgCIAEoCDoFZmFsc2Uy",
-            "TgoDZXh0EhwubWVkaWFwaXBlLkNhbGN1bGF0b3JPcHRpb25zGN+f6HwgASgL",
-            "MiAubWVkaWFwaXBlLkdhdGVDYWxjdWxhdG9yT3B0aW9uc0IMogIJTWVkaWFQ",
-            "aXBl"));
+            "dG9yLnByb3RvItICChVHYXRlQ2FsY3VsYXRvck9wdGlvbnMSHgoWZW1wdHlf",
+            "cGFja2V0c19hc19hbGxvdxgBIAEoCBIUCgVhbGxvdxgCIAEoCDoFZmFsc2US",
+            "WgoSaW5pdGlhbF9nYXRlX3N0YXRlGAMgASgOMioubWVkaWFwaXBlLkdhdGVD",
+            "YWxjdWxhdG9yT3B0aW9ucy5HYXRlU3RhdGU6EkdBVEVfVU5JTklUSUFMSVpF",
+            "RCJXCglHYXRlU3RhdGUSDwoLVU5TUEVDSUZJRUQQABIWChJHQVRFX1VOSU5J",
+            "VElBTElaRUQQARIOCgpHQVRFX0FMTE9XEAISEQoNR0FURV9ESVNBTExPVxAD",
+            "Mk4KA2V4dBIcLm1lZGlhcGlwZS5DYWxjdWxhdG9yT3B0aW9ucxjfn+h8IAEo",
+            "CzIgLm1lZGlhcGlwZS5HYXRlQ2FsY3VsYXRvck9wdGlvbnM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.GateCalculatorOptions), global::Mediapipe.GateCalculatorOptions.Parser, new[]{ "EmptyPacketsAsAllow", "Allow" }, null, null, new pb::Extension[] { global::Mediapipe.GateCalculatorOptions.Extensions.Ext }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.GateCalculatorOptions), global::Mediapipe.GateCalculatorOptions.Parser, new[]{ "EmptyPacketsAsAllow", "Allow", "InitialGateState" }, null, new[]{ typeof(global::Mediapipe.GateCalculatorOptions.Types.GateState) }, new pb::Extension[] { global::Mediapipe.GateCalculatorOptions.Extensions.Ext }, null)
           }));
     }
     #endregion
@@ -79,6 +82,7 @@ namespace Mediapipe {
       _hasBits0 = other._hasBits0;
       emptyPacketsAsAllow_ = other.emptyPacketsAsAllow_;
       allow_ = other.allow_;
+      initialGateState_ = other.initialGateState_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -151,6 +155,33 @@ namespace Mediapipe {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "initial_gate_state" field.</summary>
+    public const int InitialGateStateFieldNumber = 3;
+    private readonly static global::Mediapipe.GateCalculatorOptions.Types.GateState InitialGateStateDefaultValue = global::Mediapipe.GateCalculatorOptions.Types.GateState.GateUninitialized;
+
+    private global::Mediapipe.GateCalculatorOptions.Types.GateState initialGateState_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Mediapipe.GateCalculatorOptions.Types.GateState InitialGateState {
+      get { if ((_hasBits0 & 4) != 0) { return initialGateState_; } else { return InitialGateStateDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        initialGateState_ = value;
+      }
+    }
+    /// <summary>Gets whether the "initial_gate_state" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInitialGateState {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "initial_gate_state" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInitialGateState() {
+      _hasBits0 &= ~4;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -168,6 +199,7 @@ namespace Mediapipe {
       }
       if (EmptyPacketsAsAllow != other.EmptyPacketsAsAllow) return false;
       if (Allow != other.Allow) return false;
+      if (InitialGateState != other.InitialGateState) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -177,6 +209,7 @@ namespace Mediapipe {
       int hash = 1;
       if (HasEmptyPacketsAsAllow) hash ^= EmptyPacketsAsAllow.GetHashCode();
       if (HasAllow) hash ^= Allow.GetHashCode();
+      if (HasInitialGateState) hash ^= InitialGateState.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -203,6 +236,10 @@ namespace Mediapipe {
         output.WriteRawTag(16);
         output.WriteBool(Allow);
       }
+      if (HasInitialGateState) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) InitialGateState);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -221,6 +258,10 @@ namespace Mediapipe {
         output.WriteRawTag(16);
         output.WriteBool(Allow);
       }
+      if (HasInitialGateState) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) InitialGateState);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -236,6 +277,9 @@ namespace Mediapipe {
       }
       if (HasAllow) {
         size += 1 + 1;
+      }
+      if (HasInitialGateState) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InitialGateState);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -254,6 +298,9 @@ namespace Mediapipe {
       }
       if (other.HasAllow) {
         Allow = other.Allow;
+      }
+      if (other.HasInitialGateState) {
+        InitialGateState = other.InitialGateState;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -276,6 +323,10 @@ namespace Mediapipe {
           }
           case 16: {
             Allow = input.ReadBool();
+            break;
+          }
+          case 24: {
+            InitialGateState = (global::Mediapipe.GateCalculatorOptions.Types.GateState) input.ReadEnum();
             break;
           }
         }
@@ -301,10 +352,29 @@ namespace Mediapipe {
             Allow = input.ReadBool();
             break;
           }
+          case 24: {
+            InitialGateState = (global::Mediapipe.GateCalculatorOptions.Types.GateState) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the GateCalculatorOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      public enum GateState {
+        [pbr::OriginalName("UNSPECIFIED")] Unspecified = 0,
+        [pbr::OriginalName("GATE_UNINITIALIZED")] GateUninitialized = 1,
+        [pbr::OriginalName("GATE_ALLOW")] GateAllow = 2,
+        [pbr::OriginalName("GATE_DISALLOW")] GateDisallow = 3,
+      }
+
+    }
+    #endregion
 
     #region Extensions
     /// <summary>Container for extensions for other messages declared in the GateCalculatorOptions message type.</summary>

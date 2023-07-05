@@ -55,40 +55,40 @@ namespace Mediapipe {
             "b2dfZHVyYXRpb25fZXZlbnRzGA0gASgIQgIYARIgChh0cmFjZV9sb2dfaW50",
             "ZXJ2YWxfY291bnQYDiABKAUSGgoSdHJhY2VfbG9nX2Rpc2FibGVkGA8gASgI",
             "EhUKDXRyYWNlX2VuYWJsZWQYECABKAgSIAoYdHJhY2VfbG9nX2luc3RhbnRf",
-            "ZXZlbnRzGBEgASgIEhkKEWNhbGN1bGF0b3JfZmlsdGVyGBIgASgJIvAKChVD",
+            "ZXZlbnRzGBEgASgIEhkKEWNhbGN1bGF0b3JfZmlsdGVyGBIgASgJIvQKChVD",
             "YWxjdWxhdG9yR3JhcGhDb25maWcSMwoEbm9kZRgBIAMoCzIlLm1lZGlhcGlw",
             "ZS5DYWxjdWxhdG9yR3JhcGhDb25maWcuTm9kZRI2Cg5wYWNrZXRfZmFjdG9y",
-            "eRgGIAMoCzIeLm1lZGlhcGlwZS5QYWNrZXRGYWN0b3J5Q29uZmlnEjoKEHBh",
+            "eRgGIAMoCzIeLm1lZGlhcGlwZS5QYWNrZXRGYWN0b3J5Q29uZmlnEj4KEHBh",
             "Y2tldF9nZW5lcmF0b3IYByADKAsyIC5tZWRpYXBpcGUuUGFja2V0R2VuZXJh",
-            "dG9yQ29uZmlnEhMKC251bV90aHJlYWRzGAggASgFEjYKDnN0YXR1c19oYW5k",
-            "bGVyGAkgAygLMh4ubWVkaWFwaXBlLlN0YXR1c0hhbmRsZXJDb25maWcSFAoM",
-            "aW5wdXRfc3RyZWFtGAogAygJEhUKDW91dHB1dF9zdHJlYW0YDyADKAkSGQoR",
-            "aW5wdXRfc2lkZV9wYWNrZXQYECADKAkSGgoSb3V0cHV0X3NpZGVfcGFja2V0",
-            "GBEgAygJEhYKDm1heF9xdWV1ZV9zaXplGAsgASgFEhcKD3JlcG9ydF9kZWFk",
-            "bG9jaxgVIAEoCBJBChRpbnB1dF9zdHJlYW1faGFuZGxlchgMIAEoCzIjLm1l",
-            "ZGlhcGlwZS5JbnB1dFN0cmVhbUhhbmRsZXJDb25maWcSQwoVb3V0cHV0X3N0",
-            "cmVhbV9oYW5kbGVyGA0gASgLMiQubWVkaWFwaXBlLk91dHB1dFN0cmVhbUhh",
-            "bmRsZXJDb25maWcSKwoIZXhlY3V0b3IYDiADKAsyGS5tZWRpYXBpcGUuRXhl",
-            "Y3V0b3JDb25maWcSMgoPcHJvZmlsZXJfY29uZmlnGBIgASgLMhkubWVkaWFw",
-            "aXBlLlByb2ZpbGVyQ29uZmlnEg8KB3BhY2thZ2UYEyABKAkSDAoEdHlwZRgU",
-            "IAEoCRItCgdvcHRpb25zGOkHIAEoCzIbLm1lZGlhcGlwZS5NZWRpYVBpcGVP",
-            "cHRpb25zEiwKDWdyYXBoX29wdGlvbnMY6gcgAygLMhQuZ29vZ2xlLnByb3Rv",
-            "YnVmLkFueRrmBAoETm9kZRIMCgRuYW1lGAEgASgJEhIKCmNhbGN1bGF0b3IY",
-            "AiABKAkSFAoMaW5wdXRfc3RyZWFtGAMgAygJEhUKDW91dHB1dF9zdHJlYW0Y",
-            "BCADKAkSGQoRaW5wdXRfc2lkZV9wYWNrZXQYBSADKAkSGgoSb3V0cHV0X3Np",
-            "ZGVfcGFja2V0GAYgAygJEi0KB29wdGlvbnMYByABKAsyHC5tZWRpYXBpcGUu",
-            "Q2FsY3VsYXRvck9wdGlvbnMSKgoMbm9kZV9vcHRpb25zGAggAygLMhQuZ29v",
-            "Z2xlLnByb3RvYnVmLkFueRIUCgxzb3VyY2VfbGF5ZXIYCSABKAUSGAoQYnVm",
-            "ZmVyX3NpemVfaGludBgKIAEoBRJBChRpbnB1dF9zdHJlYW1faGFuZGxlchgL",
-            "IAEoCzIjLm1lZGlhcGlwZS5JbnB1dFN0cmVhbUhhbmRsZXJDb25maWcSQwoV",
-            "b3V0cHV0X3N0cmVhbV9oYW5kbGVyGAwgASgLMiQubWVkaWFwaXBlLk91dHB1",
-            "dFN0cmVhbUhhbmRsZXJDb25maWcSNQoRaW5wdXRfc3RyZWFtX2luZm8YDSAD",
-            "KAsyGi5tZWRpYXBpcGUuSW5wdXRTdHJlYW1JbmZvEhAKCGV4ZWN1dG9yGA4g",
-            "ASgJEjYKD3Byb2ZpbGVyX2NvbmZpZxgPIAEoCzIZLm1lZGlhcGlwZS5Qcm9m",
-            "aWxlckNvbmZpZ0ICGAESFQoNbWF4X2luX2ZsaWdodBgQIAEoBRIUCgxvcHRp",
-            "b25fdmFsdWUYESADKAkSFwoOZXh0ZXJuYWxfaW5wdXQY7QcgAygJQi0KGmNv",
-            "bS5nb29nbGUubWVkaWFwaXBlLnByb3RvQg9DYWxjdWxhdG9yUHJvdG9QAGIG",
-            "cHJvdG8z"));
+            "dG9yQ29uZmlnQgIYARITCgtudW1fdGhyZWFkcxgIIAEoBRI2Cg5zdGF0dXNf",
+            "aGFuZGxlchgJIAMoCzIeLm1lZGlhcGlwZS5TdGF0dXNIYW5kbGVyQ29uZmln",
+            "EhQKDGlucHV0X3N0cmVhbRgKIAMoCRIVCg1vdXRwdXRfc3RyZWFtGA8gAygJ",
+            "EhkKEWlucHV0X3NpZGVfcGFja2V0GBAgAygJEhoKEm91dHB1dF9zaWRlX3Bh",
+            "Y2tldBgRIAMoCRIWCg5tYXhfcXVldWVfc2l6ZRgLIAEoBRIXCg9yZXBvcnRf",
+            "ZGVhZGxvY2sYFSABKAgSQQoUaW5wdXRfc3RyZWFtX2hhbmRsZXIYDCABKAsy",
+            "Iy5tZWRpYXBpcGUuSW5wdXRTdHJlYW1IYW5kbGVyQ29uZmlnEkMKFW91dHB1",
+            "dF9zdHJlYW1faGFuZGxlchgNIAEoCzIkLm1lZGlhcGlwZS5PdXRwdXRTdHJl",
+            "YW1IYW5kbGVyQ29uZmlnEisKCGV4ZWN1dG9yGA4gAygLMhkubWVkaWFwaXBl",
+            "LkV4ZWN1dG9yQ29uZmlnEjIKD3Byb2ZpbGVyX2NvbmZpZxgSIAEoCzIZLm1l",
+            "ZGlhcGlwZS5Qcm9maWxlckNvbmZpZxIPCgdwYWNrYWdlGBMgASgJEgwKBHR5",
+            "cGUYFCABKAkSLQoHb3B0aW9ucxjpByABKAsyGy5tZWRpYXBpcGUuTWVkaWFQ",
+            "aXBlT3B0aW9ucxIsCg1ncmFwaF9vcHRpb25zGOoHIAMoCzIULmdvb2dsZS5w",
+            "cm90b2J1Zi5Bbnka5gQKBE5vZGUSDAoEbmFtZRgBIAEoCRISCgpjYWxjdWxh",
+            "dG9yGAIgASgJEhQKDGlucHV0X3N0cmVhbRgDIAMoCRIVCg1vdXRwdXRfc3Ry",
+            "ZWFtGAQgAygJEhkKEWlucHV0X3NpZGVfcGFja2V0GAUgAygJEhoKEm91dHB1",
+            "dF9zaWRlX3BhY2tldBgGIAMoCRItCgdvcHRpb25zGAcgASgLMhwubWVkaWFw",
+            "aXBlLkNhbGN1bGF0b3JPcHRpb25zEioKDG5vZGVfb3B0aW9ucxgIIAMoCzIU",
+            "Lmdvb2dsZS5wcm90b2J1Zi5BbnkSFAoMc291cmNlX2xheWVyGAkgASgFEhgK",
+            "EGJ1ZmZlcl9zaXplX2hpbnQYCiABKAUSQQoUaW5wdXRfc3RyZWFtX2hhbmRs",
+            "ZXIYCyABKAsyIy5tZWRpYXBpcGUuSW5wdXRTdHJlYW1IYW5kbGVyQ29uZmln",
+            "EkMKFW91dHB1dF9zdHJlYW1faGFuZGxlchgMIAEoCzIkLm1lZGlhcGlwZS5P",
+            "dXRwdXRTdHJlYW1IYW5kbGVyQ29uZmlnEjUKEWlucHV0X3N0cmVhbV9pbmZv",
+            "GA0gAygLMhoubWVkaWFwaXBlLklucHV0U3RyZWFtSW5mbxIQCghleGVjdXRv",
+            "chgOIAEoCRI2Cg9wcm9maWxlcl9jb25maWcYDyABKAsyGS5tZWRpYXBpcGUu",
+            "UHJvZmlsZXJDb25maWdCAhgBEhUKDW1heF9pbl9mbGlnaHQYECABKAUSFAoM",
+            "b3B0aW9uX3ZhbHVlGBEgAygJEhcKDmV4dGVybmFsX2lucHV0GO0HIAMoCUIt",
+            "Chpjb20uZ29vZ2xlLm1lZGlhcGlwZS5wcm90b0IPQ2FsY3VsYXRvclByb3Rv",
+            "UABiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorOptionsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Mediapipe.MediapipeOptionsReflection.Descriptor, global::Mediapipe.PacketFactoryReflection.Descriptor, global::Mediapipe.PacketGeneratorReflection.Descriptor, global::Mediapipe.StatusHandlerReflection.Descriptor, global::Mediapipe.StreamHandlerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -2232,7 +2232,9 @@ namespace Mediapipe {
     /// PacketGenerators can take as a input side packet the output side
     /// packet of another PacketGenerator.  The graph of PacketGenerators
     /// must be a directed acyclic graph.
+    /// DEPRECATED: Use a Node to generate side packets.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Mediapipe.PacketGeneratorConfig> PacketGenerator {
@@ -2350,7 +2352,7 @@ namespace Mediapipe {
     /// is empty and no other nodes are running (to prevent possible deadlocks due
     /// to a incorrectly specified value). This global parameter is set to 100
     /// packets by default to enable pipelining. If any node indicates that it
-    /// buffers packets before emitting them, then the max(node_buffer_size,
+    /// buffers packets before emitting them, then the max(buffer_size_hint,
     /// max_queue_size) is used. Set this parameter to -1 to disable throttling
     /// (i.e. the graph will use as much memory as it requires). If not specified,
     /// the limit is 100 packets.

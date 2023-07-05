@@ -27,18 +27,21 @@ namespace Mediapipe {
             "CjhtZWRpYXBpcGUvY2FsY3VsYXRvcnMvaW1hZ2Uvd2FycF9hZmZpbmVfY2Fs",
             "Y3VsYXRvci5wcm90bxIJbWVkaWFwaXBlGiRtZWRpYXBpcGUvZnJhbWV3b3Jr",
             "L2NhbGN1bGF0b3IucHJvdG8aHm1lZGlhcGlwZS9ncHUvZ3B1X29yaWdpbi5w",
-            "cm90byK4AgobV2FycEFmZmluZUNhbGN1bGF0b3JPcHRpb25zEkYKC2JvcmRl",
+            "cm90byLQAwobV2FycEFmZmluZUNhbGN1bGF0b3JPcHRpb25zEkYKC2JvcmRl",
             "cl9tb2RlGAEgASgOMjEubWVkaWFwaXBlLldhcnBBZmZpbmVDYWxjdWxhdG9y",
             "T3B0aW9ucy5Cb3JkZXJNb2RlEi0KCmdwdV9vcmlnaW4YAiABKA4yGS5tZWRp",
-            "YXBpcGUuR3B1T3JpZ2luLk1vZGUiSwoKQm9yZGVyTW9kZRIWChJCT1JERVJf",
-            "VU5TUEVDSUZJRUQQABIPCgtCT1JERVJfWkVSTxABEhQKEEJPUkRFUl9SRVBM",
-            "SUNBVEUQAjJVCgNleHQSHC5tZWRpYXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMY",
-            "x7uYsgEgASgLMiYubWVkaWFwaXBlLldhcnBBZmZpbmVDYWxjdWxhdG9yT3B0",
-            "aW9ucw=="));
+            "YXBpcGUuR3B1T3JpZ2luLk1vZGUSSwoNaW50ZXJwb2xhdGlvbhgDIAEoDjI0",
+            "Lm1lZGlhcGlwZS5XYXJwQWZmaW5lQ2FsY3VsYXRvck9wdGlvbnMuSW50ZXJw",
+            "b2xhdGlvbiJLCgpCb3JkZXJNb2RlEhYKEkJPUkRFUl9VTlNQRUNJRklFRBAA",
+            "Eg8KC0JPUkRFUl9aRVJPEAESFAoQQk9SREVSX1JFUExJQ0FURRACIkkKDUlu",
+            "dGVycG9sYXRpb24SFQoRSU5URVJfVU5TUEVDSUZJRUQQABIQCgxJTlRFUl9M",
+            "SU5FQVIQARIPCgtJTlRFUl9DVUJJQxACMlUKA2V4dBIcLm1lZGlhcGlwZS5D",
+            "YWxjdWxhdG9yT3B0aW9ucxjHu5iyASABKAsyJi5tZWRpYXBpcGUuV2FycEFm",
+            "ZmluZUNhbGN1bGF0b3JPcHRpb25z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, global::Mediapipe.GpuOriginReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.WarpAffineCalculatorOptions), global::Mediapipe.WarpAffineCalculatorOptions.Parser, new[]{ "BorderMode", "GpuOrigin" }, null, new[]{ typeof(global::Mediapipe.WarpAffineCalculatorOptions.Types.BorderMode) }, new pb::Extension[] { global::Mediapipe.WarpAffineCalculatorOptions.Extensions.Ext }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.WarpAffineCalculatorOptions), global::Mediapipe.WarpAffineCalculatorOptions.Parser, new[]{ "BorderMode", "GpuOrigin", "Interpolation" }, null, new[]{ typeof(global::Mediapipe.WarpAffineCalculatorOptions.Types.BorderMode), typeof(global::Mediapipe.WarpAffineCalculatorOptions.Types.Interpolation) }, new pb::Extension[] { global::Mediapipe.WarpAffineCalculatorOptions.Extensions.Ext }, null)
           }));
     }
     #endregion
@@ -83,6 +86,7 @@ namespace Mediapipe {
       _hasBits0 = other._hasBits0;
       borderMode_ = other.borderMode_;
       gpuOrigin_ = other.gpuOrigin_;
+      interpolation_ = other.interpolation_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -159,6 +163,39 @@ namespace Mediapipe {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "interpolation" field.</summary>
+    public const int InterpolationFieldNumber = 3;
+    private readonly static global::Mediapipe.WarpAffineCalculatorOptions.Types.Interpolation InterpolationDefaultValue = global::Mediapipe.WarpAffineCalculatorOptions.Types.Interpolation.InterUnspecified;
+
+    private global::Mediapipe.WarpAffineCalculatorOptions.Types.Interpolation interpolation_;
+    /// <summary>
+    /// Sampling method for neighboring pixels.
+    /// INTER_LINEAR (bilinear) linearly interpolates from the nearest 4 neighbors.
+    /// INTER_CUBIC (bicubic) interpolates a small neighborhood with cubic weights.
+    /// INTER_UNSPECIFIED or unset interpreted as INTER_LINEAR.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Mediapipe.WarpAffineCalculatorOptions.Types.Interpolation Interpolation {
+      get { if ((_hasBits0 & 4) != 0) { return interpolation_; } else { return InterpolationDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        interpolation_ = value;
+      }
+    }
+    /// <summary>Gets whether the "interpolation" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInterpolation {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "interpolation" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInterpolation() {
+      _hasBits0 &= ~4;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -176,6 +213,7 @@ namespace Mediapipe {
       }
       if (BorderMode != other.BorderMode) return false;
       if (GpuOrigin != other.GpuOrigin) return false;
+      if (Interpolation != other.Interpolation) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -185,6 +223,7 @@ namespace Mediapipe {
       int hash = 1;
       if (HasBorderMode) hash ^= BorderMode.GetHashCode();
       if (HasGpuOrigin) hash ^= GpuOrigin.GetHashCode();
+      if (HasInterpolation) hash ^= Interpolation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -211,6 +250,10 @@ namespace Mediapipe {
         output.WriteRawTag(16);
         output.WriteEnum((int) GpuOrigin);
       }
+      if (HasInterpolation) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Interpolation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -229,6 +272,10 @@ namespace Mediapipe {
         output.WriteRawTag(16);
         output.WriteEnum((int) GpuOrigin);
       }
+      if (HasInterpolation) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Interpolation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -244,6 +291,9 @@ namespace Mediapipe {
       }
       if (HasGpuOrigin) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GpuOrigin);
+      }
+      if (HasInterpolation) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Interpolation);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -262,6 +312,9 @@ namespace Mediapipe {
       }
       if (other.HasGpuOrigin) {
         GpuOrigin = other.GpuOrigin;
+      }
+      if (other.HasInterpolation) {
+        Interpolation = other.Interpolation;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -284,6 +337,10 @@ namespace Mediapipe {
           }
           case 16: {
             GpuOrigin = (global::Mediapipe.GpuOrigin.Types.Mode) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Interpolation = (global::Mediapipe.WarpAffineCalculatorOptions.Types.Interpolation) input.ReadEnum();
             break;
           }
         }
@@ -309,6 +366,10 @@ namespace Mediapipe {
             GpuOrigin = (global::Mediapipe.GpuOrigin.Types.Mode) input.ReadEnum();
             break;
           }
+          case 24: {
+            Interpolation = (global::Mediapipe.WarpAffineCalculatorOptions.Types.Interpolation) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -326,6 +387,15 @@ namespace Mediapipe {
         [pbr::OriginalName("BORDER_UNSPECIFIED")] BorderUnspecified = 0,
         [pbr::OriginalName("BORDER_ZERO")] BorderZero = 1,
         [pbr::OriginalName("BORDER_REPLICATE")] BorderReplicate = 2,
+      }
+
+      /// <summary>
+      /// Pixel sampling interpolation methods. See @interpolation.
+      /// </summary>
+      public enum Interpolation {
+        [pbr::OriginalName("INTER_UNSPECIFIED")] InterUnspecified = 0,
+        [pbr::OriginalName("INTER_LINEAR")] InterLinear = 1,
+        [pbr::OriginalName("INTER_CUBIC")] InterCubic = 2,
       }
 
     }

@@ -34,8 +34,7 @@ namespace Mediapipe {
             "KAg6BHRydWUSIAoRdXBkYXRlX2ZyYW1lX3JhdGUYBiABKAg6BWZhbHNlIiIK",
             "C1RoaW5uZXJUeXBlEgkKBUFTWU5DEAESCAoEU1lOQxACMlgKA2V4dBIcLm1l",
             "ZGlhcGlwZS5DYWxjdWxhdG9yT3B0aW9ucxiE2MqJASABKAsyKS5tZWRpYXBp",
-            "cGUuUGFja2V0VGhpbm5lckNhbGN1bGF0b3JPcHRpb25zQgyiAglNZWRpYVBp",
-            "cGU="));
+            "cGUuUGFja2V0VGhpbm5lckNhbGN1bGF0b3JPcHRpb25z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

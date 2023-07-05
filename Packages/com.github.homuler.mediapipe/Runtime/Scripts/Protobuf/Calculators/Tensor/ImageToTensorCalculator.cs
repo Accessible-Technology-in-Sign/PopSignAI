@@ -125,6 +125,10 @@ namespace Mediapipe {
     private readonly static int OutputTensorWidthDefaultValue = 0;
 
     private int outputTensorWidth_;
+    /// <summary>
+    /// The width and height of output tensor. The output tensor would have the
+    /// input image width/height if not set.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int OutputTensorWidth {

@@ -26,7 +26,7 @@ namespace Mediapipe {
           string.Concat(
             "CkNtZWRpYXBpcGUvY2FsY3VsYXRvcnMvdGVuc29yL3RlbnNvcnNfdG9fZGV0",
             "ZWN0aW9uc19jYWxjdWxhdG9yLnByb3RvEgltZWRpYXBpcGUaJG1lZGlhcGlw",
-            "ZS9mcmFtZXdvcmsvY2FsY3VsYXRvci5wcm90byL9CAokVGVuc29yc1RvRGV0",
+            "ZS9mcmFtZXdvcmsvY2FsY3VsYXRvci5wcm90byKVCgokVGVuc29yc1RvRGV0",
             "ZWN0aW9uc0NhbGN1bGF0b3JPcHRpb25zEhMKC251bV9jbGFzc2VzGAEgASgF",
             "EhEKCW51bV9ib3hlcxgCIAEoBRISCgpudW1fY29vcmRzGAMgASgFEh0KFWtl",
             "eXBvaW50X2Nvb3JkX29mZnNldBgJIAEoBRIYCg1udW1fa2V5cG9pbnRzGAog",
@@ -43,20 +43,23 @@ namespace Mediapipe {
             "ASgLMj0ubWVkaWFwaXBlLlRlbnNvcnNUb0RldGVjdGlvbnNDYWxjdWxhdG9y",
             "T3B0aW9ucy5UZW5zb3JNYXBwaW5nEmYKFmJveF9ib3VuZGFyaWVzX2luZGlj",
             "ZXMYFyABKAsyRC5tZWRpYXBpcGUuVGVuc29yc1RvRGV0ZWN0aW9uc0NhbGN1",
-            "bGF0b3JPcHRpb25zLkJveEJvdW5kYXJpZXNJbmRpY2VzSAAargEKDVRlbnNv",
-            "ck1hcHBpbmcSHwoXZGV0ZWN0aW9uc190ZW5zb3JfaW5kZXgYASABKAUSHAoU",
-            "Y2xhc3Nlc190ZW5zb3JfaW5kZXgYAiABKAUSGwoTc2NvcmVzX3RlbnNvcl9p",
-            "bmRleBgDIAEoBRIjChtudW1fZGV0ZWN0aW9uc190ZW5zb3JfaW5kZXgYBCAB",
-            "KAUSHAoUYW5jaG9yc190ZW5zb3JfaW5kZXgYBSABKAUaWgoUQm94Qm91bmRh",
-            "cmllc0luZGljZXMSDwoEeW1pbhgBIAEoBToBMBIPCgR4bWluGAIgASgFOgEx",
-            "Eg8KBHltYXgYAyABKAU6ATISDwoEeG1heBgEIAEoBToBMzJeCgNleHQSHC5t",
-            "ZWRpYXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMYr42MoAEgASgLMi8ubWVkaWFw",
-            "aXBlLlRlbnNvcnNUb0RldGVjdGlvbnNDYWxjdWxhdG9yT3B0aW9uc0INCgti",
-            "b3hfaW5kaWNlcw=="));
+            "bGF0b3JPcHRpb25zLkJveEJvdW5kYXJpZXNJbmRpY2VzSAASWgoKYm94X2Zv",
+            "cm1hdBgYIAEoDjI5Lm1lZGlhcGlwZS5UZW5zb3JzVG9EZXRlY3Rpb25zQ2Fs",
+            "Y3VsYXRvck9wdGlvbnMuQm94Rm9ybWF0OgtVTlNQRUNJRklFRBquAQoNVGVu",
+            "c29yTWFwcGluZxIfChdkZXRlY3Rpb25zX3RlbnNvcl9pbmRleBgBIAEoBRIc",
+            "ChRjbGFzc2VzX3RlbnNvcl9pbmRleBgCIAEoBRIbChNzY29yZXNfdGVuc29y",
+            "X2luZGV4GAMgASgFEiMKG251bV9kZXRlY3Rpb25zX3RlbnNvcl9pbmRleBgE",
+            "IAEoBRIcChRhbmNob3JzX3RlbnNvcl9pbmRleBgFIAEoBRpaChRCb3hCb3Vu",
+            "ZGFyaWVzSW5kaWNlcxIPCgR5bWluGAEgASgFOgEwEg8KBHhtaW4YAiABKAU6",
+            "ATESDwoEeW1heBgDIAEoBToBMhIPCgR4bWF4GAQgASgFOgEzIjoKCUJveEZv",
+            "cm1hdBIPCgtVTlNQRUNJRklFRBAAEggKBFlYSFcQARIICgRYWVdIEAISCAoE",
+            "WFlYWRADMl4KA2V4dBIcLm1lZGlhcGlwZS5DYWxjdWxhdG9yT3B0aW9ucxiv",
+            "jYygASABKAsyLy5tZWRpYXBpcGUuVGVuc29yc1RvRGV0ZWN0aW9uc0NhbGN1",
+            "bGF0b3JPcHRpb25zQg0KC2JveF9pbmRpY2Vz"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.TensorsToDetectionsCalculatorOptions), global::Mediapipe.TensorsToDetectionsCalculatorOptions.Parser, new[]{ "NumClasses", "NumBoxes", "NumCoords", "KeypointCoordOffset", "NumKeypoints", "NumValuesPerKeypoint", "BoxCoordOffset", "XScale", "YScale", "WScale", "HScale", "ApplyExponentialOnBoxSize", "ReverseOutputOrder", "IgnoreClasses", "AllowClasses", "SigmoidScore", "ScoreClippingThresh", "FlipVertically", "MinScoreThresh", "MaxResults", "TensorMapping", "BoxBoundariesIndices" }, new[]{ "BoxIndices" }, null, new pb::Extension[] { global::Mediapipe.TensorsToDetectionsCalculatorOptions.Extensions.Ext }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.TensorMapping), global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.TensorMapping.Parser, new[]{ "DetectionsTensorIndex", "ClassesTensorIndex", "ScoresTensorIndex", "NumDetectionsTensorIndex", "AnchorsTensorIndex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.TensorsToDetectionsCalculatorOptions), global::Mediapipe.TensorsToDetectionsCalculatorOptions.Parser, new[]{ "NumClasses", "NumBoxes", "NumCoords", "KeypointCoordOffset", "NumKeypoints", "NumValuesPerKeypoint", "BoxCoordOffset", "XScale", "YScale", "WScale", "HScale", "ApplyExponentialOnBoxSize", "ReverseOutputOrder", "IgnoreClasses", "AllowClasses", "SigmoidScore", "ScoreClippingThresh", "FlipVertically", "MinScoreThresh", "MaxResults", "TensorMapping", "BoxBoundariesIndices", "BoxFormat" }, new[]{ "BoxIndices" }, new[]{ typeof(global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.BoxFormat) }, new pb::Extension[] { global::Mediapipe.TensorsToDetectionsCalculatorOptions.Extensions.Ext }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.TensorMapping), global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.TensorMapping.Parser, new[]{ "DetectionsTensorIndex", "ClassesTensorIndex", "ScoresTensorIndex", "NumDetectionsTensorIndex", "AnchorsTensorIndex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.BoxBoundariesIndices), global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.BoxBoundariesIndices.Parser, new[]{ "Ymin", "Xmin", "Ymax", "Xmax" }, null, null, null, null)})
           }));
     }
@@ -121,6 +124,7 @@ namespace Mediapipe {
       minScoreThresh_ = other.minScoreThresh_;
       maxResults_ = other.maxResults_;
       tensorMapping_ = other.tensorMapping_ != null ? other.tensorMapping_.Clone() : null;
+      boxFormat_ = other.boxFormat_;
       switch (other.BoxIndicesCase) {
         case BoxIndicesOneofCase.BoxBoundariesIndices:
           BoxBoundariesIndices = other.BoxBoundariesIndices.Clone();
@@ -495,6 +499,7 @@ namespace Mediapipe {
     /// Whether to reverse the order of predicted x, y from output.
     /// If false, the order is [y_center, x_center, h, w], if true the order is
     /// [x_center, y_center, w, h].
+    /// DEPRECATED. Use `box_format` instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -727,6 +732,33 @@ namespace Mediapipe {
       }
     }
 
+    /// <summary>Field number for the "box_format" field.</summary>
+    public const int BoxFormatFieldNumber = 24;
+    private readonly static global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.BoxFormat BoxFormatDefaultValue = global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.BoxFormat.Unspecified;
+
+    private global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.BoxFormat boxFormat_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.BoxFormat BoxFormat {
+      get { if ((_hasBits0 & 262144) != 0) { return boxFormat_; } else { return BoxFormatDefaultValue; } }
+      set {
+        _hasBits0 |= 262144;
+        boxFormat_ = value;
+      }
+    }
+    /// <summary>Gets whether the "box_format" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBoxFormat {
+      get { return (_hasBits0 & 262144) != 0; }
+    }
+    /// <summary>Clears the value of the "box_format" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBoxFormat() {
+      _hasBits0 &= ~262144;
+    }
+
     private object boxIndices_;
     /// <summary>Enum of possible cases for the "box_indices" oneof.</summary>
     public enum BoxIndicesOneofCase {
@@ -784,6 +816,7 @@ namespace Mediapipe {
       if (MaxResults != other.MaxResults) return false;
       if (!object.Equals(TensorMapping, other.TensorMapping)) return false;
       if (!object.Equals(BoxBoundariesIndices, other.BoxBoundariesIndices)) return false;
+      if (BoxFormat != other.BoxFormat) return false;
       if (BoxIndicesCase != other.BoxIndicesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -814,6 +847,7 @@ namespace Mediapipe {
       if (HasMaxResults) hash ^= MaxResults.GetHashCode();
       if (tensorMapping_ != null) hash ^= TensorMapping.GetHashCode();
       if (boxIndicesCase_ == BoxIndicesOneofCase.BoxBoundariesIndices) hash ^= BoxBoundariesIndices.GetHashCode();
+      if (HasBoxFormat) hash ^= BoxFormat.GetHashCode();
       hash ^= (int) boxIndicesCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -915,6 +949,10 @@ namespace Mediapipe {
         output.WriteRawTag(186, 1);
         output.WriteMessage(BoxBoundariesIndices);
       }
+      if (HasBoxFormat) {
+        output.WriteRawTag(192, 1);
+        output.WriteEnum((int) BoxFormat);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1007,6 +1045,10 @@ namespace Mediapipe {
         output.WriteRawTag(186, 1);
         output.WriteMessage(BoxBoundariesIndices);
       }
+      if (HasBoxFormat) {
+        output.WriteRawTag(192, 1);
+        output.WriteEnum((int) BoxFormat);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1078,6 +1120,9 @@ namespace Mediapipe {
       }
       if (boxIndicesCase_ == BoxIndicesOneofCase.BoxBoundariesIndices) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(BoxBoundariesIndices);
+      }
+      if (HasBoxFormat) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) BoxFormat);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1152,6 +1197,9 @@ namespace Mediapipe {
           TensorMapping = new global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.TensorMapping();
         }
         TensorMapping.MergeFrom(other.TensorMapping);
+      }
+      if (other.HasBoxFormat) {
+        BoxFormat = other.BoxFormat;
       }
       switch (other.BoxIndicesCase) {
         case BoxIndicesOneofCase.BoxBoundariesIndices:
@@ -1275,6 +1323,10 @@ namespace Mediapipe {
             BoxBoundariesIndices = subBuilder;
             break;
           }
+          case 192: {
+            BoxFormat = (global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.BoxFormat) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -1388,6 +1440,10 @@ namespace Mediapipe {
             BoxBoundariesIndices = subBuilder;
             break;
           }
+          case 192: {
+            BoxFormat = (global::Mediapipe.TensorsToDetectionsCalculatorOptions.Types.BoxFormat) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -1398,6 +1454,31 @@ namespace Mediapipe {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Tells the calculator how to convert the detector output to bounding boxes.
+      /// Replaces `reverse_output_order` to support more bbox output formats.
+      /// As with `reverse_output_order`, this also informs calculator the order
+      /// of keypoint predictions.
+      /// </summary>
+      public enum BoxFormat {
+        /// <summary>
+        /// if UNSPECIFIED, the calculator assumes YXHW
+        /// </summary>
+        [pbr::OriginalName("UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// bbox [y_center, x_center, height, width], keypoint [y, x]
+        /// </summary>
+        [pbr::OriginalName("YXHW")] Yxhw = 1,
+        /// <summary>
+        /// bbox [x_center, y_center, width, height], keypoint [x, y]
+        /// </summary>
+        [pbr::OriginalName("XYWH")] Xywh = 2,
+        /// <summary>
+        /// bbox [xmin, ymin, xmax, ymax], keypoint [x, y]
+        /// </summary>
+        [pbr::OriginalName("XYXY")] Xyxy = 3,
+      }
+
       /// <summary>
       /// The custom model output tensor mapping.
       /// The indices of the "detections" tensor and the "scores" tensor are always

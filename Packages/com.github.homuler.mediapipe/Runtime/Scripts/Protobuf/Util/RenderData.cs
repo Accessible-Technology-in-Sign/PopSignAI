@@ -28,7 +28,7 @@ namespace Mediapipe {
             "GhptZWRpYXBpcGUvdXRpbC9jb2xvci5wcm90byKNAQoKUmVuZGVyRGF0YRI3",
             "ChJyZW5kZXJfYW5ub3RhdGlvbnMYASADKAsyGy5tZWRpYXBpcGUuUmVuZGVy",
             "QW5ub3RhdGlvbhITCgtzY2VuZV9jbGFzcxgCIAEoCRIxCg5zY2VuZV92aWV3",
-            "cG9ydBgDIAEoCzIZLm1lZGlhcGlwZS5SZW5kZXJWaWV3cG9ydCKzEQoQUmVu",
+            "cG9ydBgDIAEoCzIZLm1lZGlhcGlwZS5SZW5kZXJWaWV3cG9ydCLyEgoQUmVu",
             "ZGVyQW5ub3RhdGlvbhI6CglyZWN0YW5nbGUYASABKAsyJS5tZWRpYXBpcGUu",
             "UmVuZGVyQW5ub3RhdGlvbi5SZWN0YW5nbGVIABJHChBmaWxsZWRfcmVjdGFu",
             "Z2xlGAIgASgLMisubWVkaWFwaXBlLlJlbmRlckFubm90YXRpb24uRmlsbGVk",
@@ -44,48 +44,53 @@ namespace Mediapipe {
             "ChhmaWxsZWRfcm91bmRlZF9yZWN0YW5nbGUYCiABKAsyMi5tZWRpYXBpcGUu",
             "UmVuZGVyQW5ub3RhdGlvbi5GaWxsZWRSb3VuZGVkUmVjdGFuZ2xlSAASQQoN",
             "Z3JhZGllbnRfbGluZRgOIAEoCzIoLm1lZGlhcGlwZS5SZW5kZXJBbm5vdGF0",
-            "aW9uLkdyYWRpZW50TGluZUgAEhQKCXRoaWNrbmVzcxgLIAEoAToBMRIfCgVj",
-            "b2xvchgMIAEoCzIQLm1lZGlhcGlwZS5Db2xvchIRCglzY2VuZV90YWcYDSAB",
-            "KAkajgEKCVJlY3RhbmdsZRIMCgRsZWZ0GAEgASgBEgsKA3RvcBgCIAEoARIN",
-            "CgVyaWdodBgDIAEoARIOCgZib3R0b20YBCABKAESGQoKbm9ybWFsaXplZBgF",
-            "IAEoCDoFZmFsc2USEAoIcm90YXRpb24YBiABKAESGgoSdG9wX2xlZnRfdGhp",
-            "Y2tuZXNzGAcgASgBGnEKD0ZpbGxlZFJlY3RhbmdsZRI4CglyZWN0YW5nbGUY",
-            "ASABKAsyJS5tZWRpYXBpcGUuUmVuZGVyQW5ub3RhdGlvbi5SZWN0YW5nbGUS",
-            "JAoKZmlsbF9jb2xvchgCIAEoCzIQLm1lZGlhcGlwZS5Db2xvchp8ChBSb3Vu",
-            "ZGVkUmVjdGFuZ2xlEjgKCXJlY3RhbmdsZRgBIAEoCzIlLm1lZGlhcGlwZS5S",
-            "ZW5kZXJBbm5vdGF0aW9uLlJlY3RhbmdsZRIYCg1jb3JuZXJfcmFkaXVzGAIg",
-            "ASgFOgEwEhQKCWxpbmVfdHlwZRgDIAEoBToBNBqHAQoWRmlsbGVkUm91bmRl",
-            "ZFJlY3RhbmdsZRJHChFyb3VuZGVkX3JlY3RhbmdsZRgBIAEoCzIsLm1lZGlh",
-            "cGlwZS5SZW5kZXJBbm5vdGF0aW9uLlJvdW5kZWRSZWN0YW5nbGUSJAoKZmls",
-            "bF9jb2xvchgCIAEoCzIQLm1lZGlhcGlwZS5Db2xvchpACgRPdmFsEjgKCXJl",
-            "Y3RhbmdsZRgBIAEoCzIlLm1lZGlhcGlwZS5SZW5kZXJBbm5vdGF0aW9uLlJl",
-            "Y3RhbmdsZRpiCgpGaWxsZWRPdmFsEi4KBG92YWwYASABKAsyIC5tZWRpYXBp",
-            "cGUuUmVuZGVyQW5ub3RhdGlvbi5PdmFsEiQKCmZpbGxfY29sb3IYAiABKAsy",
-            "EC5tZWRpYXBpcGUuQ29sb3IaOAoFUG9pbnQSCQoBeBgBIAEoARIJCgF5GAIg",
-            "ASgBEhkKCm5vcm1hbGl6ZWQYAyABKAg6BWZhbHNlGtYBCgRMaW5lEg8KB3hf",
-            "c3RhcnQYASABKAESDwoHeV9zdGFydBgCIAEoARINCgV4X2VuZBgDIAEoARIN",
-            "CgV5X2VuZBgEIAEoARIZCgpub3JtYWxpemVkGAUgASgIOgVmYWxzZRJDCgls",
-            "aW5lX3R5cGUYBiABKA4yKS5tZWRpYXBpcGUuUmVuZGVyQW5ub3RhdGlvbi5M",
-            "aW5lLkxpbmVUeXBlOgVTT0xJRCIuCghMaW5lVHlwZRILCgdVTktOT1dOEAAS",
-            "CQoFU09MSUQQARIKCgZEQVNIRUQQAhqtAQoMR3JhZGllbnRMaW5lEg8KB3hf",
-            "c3RhcnQYASABKAESDwoHeV9zdGFydBgCIAEoARINCgV4X2VuZBgDIAEoARIN",
-            "CgV5X2VuZBgEIAEoARIZCgpub3JtYWxpemVkGAUgASgIOgVmYWxzZRIgCgZj",
-            "b2xvcjEYBiABKAsyEC5tZWRpYXBpcGUuQ29sb3ISIAoGY29sb3IyGAcgASgL",
-            "MhAubWVkaWFwaXBlLkNvbG9yGmIKBUFycm93Eg8KB3hfc3RhcnQYASABKAES",
-            "DwoHeV9zdGFydBgCIAEoARINCgV4X2VuZBgDIAEoARINCgV5X2VuZBgEIAEo",
-            "ARIZCgpub3JtYWxpemVkGAUgASgIOgVmYWxzZRrLAQoEVGV4dBIUCgxkaXNw",
-            "bGF5X3RleHQYASABKAkSDAoEbGVmdBgCIAEoARIQCghiYXNlbGluZRgDIAEo",
-            "ARIWCgtmb250X2hlaWdodBgEIAEoAToBOBIZCgpub3JtYWxpemVkGAUgASgI",
-            "OgVmYWxzZRIUCglmb250X2ZhY2UYBiABKAU6ATASIgoTY2VudGVyX2hvcml6",
-            "b250YWxseRgHIAEoCDoFZmFsc2USIAoRY2VudGVyX3ZlcnRpY2FsbHkYCCAB",
-            "KAg6BWZhbHNlQgYKBGRhdGEiWwoOUmVuZGVyVmlld3BvcnQSCgoCaWQYASAB",
-            "KAkSEAoId2lkdGhfcHgYAiABKAUSEQoJaGVpZ2h0X3B4GAMgASgFEhgKEGNv",
-            "bXBvc2Vfb25fdmlkZW8YBCABKAg="));
+            "aW9uLkdyYWRpZW50TGluZUgAEjgKCHNjcmliYmxlGA8gASgLMiQubWVkaWFw",
+            "aXBlLlJlbmRlckFubm90YXRpb24uU2NyaWJibGVIABIUCgl0aGlja25lc3MY",
+            "CyABKAE6ATESHwoFY29sb3IYDCABKAsyEC5tZWRpYXBpcGUuQ29sb3ISEQoJ",
+            "c2NlbmVfdGFnGA0gASgJGo4BCglSZWN0YW5nbGUSDAoEbGVmdBgBIAEoARIL",
+            "CgN0b3AYAiABKAESDQoFcmlnaHQYAyABKAESDgoGYm90dG9tGAQgASgBEhkK",
+            "Cm5vcm1hbGl6ZWQYBSABKAg6BWZhbHNlEhAKCHJvdGF0aW9uGAYgASgBEhoK",
+            "EnRvcF9sZWZ0X3RoaWNrbmVzcxgHIAEoARpxCg9GaWxsZWRSZWN0YW5nbGUS",
+            "OAoJcmVjdGFuZ2xlGAEgASgLMiUubWVkaWFwaXBlLlJlbmRlckFubm90YXRp",
+            "b24uUmVjdGFuZ2xlEiQKCmZpbGxfY29sb3IYAiABKAsyEC5tZWRpYXBpcGUu",
+            "Q29sb3IafAoQUm91bmRlZFJlY3RhbmdsZRI4CglyZWN0YW5nbGUYASABKAsy",
+            "JS5tZWRpYXBpcGUuUmVuZGVyQW5ub3RhdGlvbi5SZWN0YW5nbGUSGAoNY29y",
+            "bmVyX3JhZGl1cxgCIAEoBToBMBIUCglsaW5lX3R5cGUYAyABKAU6ATQahwEK",
+            "FkZpbGxlZFJvdW5kZWRSZWN0YW5nbGUSRwoRcm91bmRlZF9yZWN0YW5nbGUY",
+            "ASABKAsyLC5tZWRpYXBpcGUuUmVuZGVyQW5ub3RhdGlvbi5Sb3VuZGVkUmVj",
+            "dGFuZ2xlEiQKCmZpbGxfY29sb3IYAiABKAsyEC5tZWRpYXBpcGUuQ29sb3Ia",
+            "QAoET3ZhbBI4CglyZWN0YW5nbGUYASABKAsyJS5tZWRpYXBpcGUuUmVuZGVy",
+            "QW5ub3RhdGlvbi5SZWN0YW5nbGUaYgoKRmlsbGVkT3ZhbBIuCgRvdmFsGAEg",
+            "ASgLMiAubWVkaWFwaXBlLlJlbmRlckFubm90YXRpb24uT3ZhbBIkCgpmaWxs",
+            "X2NvbG9yGAIgASgLMhAubWVkaWFwaXBlLkNvbG9yGjgKBVBvaW50EgkKAXgY",
+            "ASABKAESCQoBeRgCIAEoARIZCgpub3JtYWxpemVkGAMgASgIOgVmYWxzZRrW",
+            "AQoETGluZRIPCgd4X3N0YXJ0GAEgASgBEg8KB3lfc3RhcnQYAiABKAESDQoF",
+            "eF9lbmQYAyABKAESDQoFeV9lbmQYBCABKAESGQoKbm9ybWFsaXplZBgFIAEo",
+            "CDoFZmFsc2USQwoJbGluZV90eXBlGAYgASgOMikubWVkaWFwaXBlLlJlbmRl",
+            "ckFubm90YXRpb24uTGluZS5MaW5lVHlwZToFU09MSUQiLgoITGluZVR5cGUS",
+            "CwoHVU5LTk9XThAAEgkKBVNPTElEEAESCgoGREFTSEVEEAIarQEKDEdyYWRp",
+            "ZW50TGluZRIPCgd4X3N0YXJ0GAEgASgBEg8KB3lfc3RhcnQYAiABKAESDQoF",
+            "eF9lbmQYAyABKAESDQoFeV9lbmQYBCABKAESGQoKbm9ybWFsaXplZBgFIAEo",
+            "CDoFZmFsc2USIAoGY29sb3IxGAYgASgLMhAubWVkaWFwaXBlLkNvbG9yEiAK",
+            "BmNvbG9yMhgHIAEoCzIQLm1lZGlhcGlwZS5Db2xvcho8CghTY3JpYmJsZRIw",
+            "CgVwb2ludBgBIAMoCzIhLm1lZGlhcGlwZS5SZW5kZXJBbm5vdGF0aW9uLlBv",
+            "aW50GmIKBUFycm93Eg8KB3hfc3RhcnQYASABKAESDwoHeV9zdGFydBgCIAEo",
+            "ARINCgV4X2VuZBgDIAEoARINCgV5X2VuZBgEIAEoARIZCgpub3JtYWxpemVk",
+            "GAUgASgIOgVmYWxzZRqSAgoEVGV4dBIUCgxkaXNwbGF5X3RleHQYASABKAkS",
+            "DAoEbGVmdBgCIAEoARIQCghiYXNlbGluZRgDIAEoARIWCgtmb250X2hlaWdo",
+            "dBgEIAEoAToBOBIZCgpub3JtYWxpemVkGAUgASgIOgVmYWxzZRIUCglmb250",
+            "X2ZhY2UYBiABKAU6ATASIgoTY2VudGVyX2hvcml6b250YWxseRgHIAEoCDoF",
+            "ZmFsc2USIAoRY2VudGVyX3ZlcnRpY2FsbHkYCCABKAg6BWZhbHNlEhwKEW91",
+            "dGxpbmVfdGhpY2tuZXNzGAsgASgBOgEwEicKDW91dGxpbmVfY29sb3IYDCAB",
+            "KAsyEC5tZWRpYXBpcGUuQ29sb3JCBgoEZGF0YSJbCg5SZW5kZXJWaWV3cG9y",
+            "dBIKCgJpZBgBIAEoCRIQCgh3aWR0aF9weBgCIAEoBRIRCgloZWlnaHRfcHgY",
+            "AyABKAUSGAoQY29tcG9zZV9vbl92aWRlbxgEIAEoCEIyCh9jb20uZ29vZ2xl",
+            "Lm1lZGlhcGlwZS51dGlsLnByb3RvQg9SZW5kZXJEYXRhUHJvdG8="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.ColorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderData), global::Mediapipe.RenderData.Parser, new[]{ "RenderAnnotations", "SceneClass", "SceneViewport" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation), global::Mediapipe.RenderAnnotation.Parser, new[]{ "Rectangle", "FilledRectangle", "Oval", "FilledOval", "Point", "Line", "Arrow", "Text", "RoundedRectangle", "FilledRoundedRectangle", "GradientLine", "Thickness", "Color", "SceneTag" }, new[]{ "Data" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.Rectangle), global::Mediapipe.RenderAnnotation.Types.Rectangle.Parser, new[]{ "Left", "Top", "Right", "Bottom", "Normalized", "Rotation", "TopLeftThickness" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation), global::Mediapipe.RenderAnnotation.Parser, new[]{ "Rectangle", "FilledRectangle", "Oval", "FilledOval", "Point", "Line", "Arrow", "Text", "RoundedRectangle", "FilledRoundedRectangle", "GradientLine", "Scribble", "Thickness", "Color", "SceneTag" }, new[]{ "Data" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.Rectangle), global::Mediapipe.RenderAnnotation.Types.Rectangle.Parser, new[]{ "Left", "Top", "Right", "Bottom", "Normalized", "Rotation", "TopLeftThickness" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.FilledRectangle), global::Mediapipe.RenderAnnotation.Types.FilledRectangle.Parser, new[]{ "Rectangle", "FillColor" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.RoundedRectangle), global::Mediapipe.RenderAnnotation.Types.RoundedRectangle.Parser, new[]{ "Rectangle", "CornerRadius", "LineType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.FilledRoundedRectangle), global::Mediapipe.RenderAnnotation.Types.FilledRoundedRectangle.Parser, new[]{ "RoundedRectangle", "FillColor" }, null, null, null, null),
@@ -94,8 +99,9 @@ namespace Mediapipe {
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.Point), global::Mediapipe.RenderAnnotation.Types.Point.Parser, new[]{ "X", "Y", "Normalized" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.Line), global::Mediapipe.RenderAnnotation.Types.Line.Parser, new[]{ "XStart", "YStart", "XEnd", "YEnd", "Normalized", "LineType" }, null, new[]{ typeof(global::Mediapipe.RenderAnnotation.Types.Line.Types.LineType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.GradientLine), global::Mediapipe.RenderAnnotation.Types.GradientLine.Parser, new[]{ "XStart", "YStart", "XEnd", "YEnd", "Normalized", "Color1", "Color2" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.Scribble), global::Mediapipe.RenderAnnotation.Types.Scribble.Parser, new[]{ "Point" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.Arrow), global::Mediapipe.RenderAnnotation.Types.Arrow.Parser, new[]{ "XStart", "YStart", "XEnd", "YEnd", "Normalized" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.Text), global::Mediapipe.RenderAnnotation.Types.Text.Parser, new[]{ "DisplayText", "Left", "Baseline", "FontHeight", "Normalized", "FontFace", "CenterHorizontally", "CenterVertically" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderAnnotation.Types.Text), global::Mediapipe.RenderAnnotation.Types.Text.Parser, new[]{ "DisplayText", "Left", "Baseline", "FontHeight", "Normalized", "FontFace", "CenterHorizontally", "CenterVertically", "OutlineThickness", "OutlineColor" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RenderViewport), global::Mediapipe.RenderViewport.Parser, new[]{ "Id", "WidthPx", "HeightPx", "ComposeOnVideo" }, null, null, null, null)
           }));
     }
@@ -466,6 +472,9 @@ namespace Mediapipe {
         case DataOneofCase.GradientLine:
           GradientLine = other.GradientLine.Clone();
           break;
+        case DataOneofCase.Scribble:
+          Scribble = other.Scribble.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -609,6 +618,18 @@ namespace Mediapipe {
       }
     }
 
+    /// <summary>Field number for the "scribble" field.</summary>
+    public const int ScribbleFieldNumber = 15;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Mediapipe.RenderAnnotation.Types.Scribble Scribble {
+      get { return dataCase_ == DataOneofCase.Scribble ? (global::Mediapipe.RenderAnnotation.Types.Scribble) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Scribble;
+      }
+    }
+
     /// <summary>Field number for the "thickness" field.</summary>
     public const int ThicknessFieldNumber = 11;
     private readonly static double ThicknessDefaultValue = 1D;
@@ -700,6 +721,7 @@ namespace Mediapipe {
       RoundedRectangle = 9,
       FilledRoundedRectangle = 10,
       GradientLine = 14,
+      Scribble = 15,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -741,6 +763,7 @@ namespace Mediapipe {
       if (!object.Equals(RoundedRectangle, other.RoundedRectangle)) return false;
       if (!object.Equals(FilledRoundedRectangle, other.FilledRoundedRectangle)) return false;
       if (!object.Equals(GradientLine, other.GradientLine)) return false;
+      if (!object.Equals(Scribble, other.Scribble)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Thickness, other.Thickness)) return false;
       if (!object.Equals(Color, other.Color)) return false;
       if (SceneTag != other.SceneTag) return false;
@@ -763,6 +786,7 @@ namespace Mediapipe {
       if (dataCase_ == DataOneofCase.RoundedRectangle) hash ^= RoundedRectangle.GetHashCode();
       if (dataCase_ == DataOneofCase.FilledRoundedRectangle) hash ^= FilledRoundedRectangle.GetHashCode();
       if (dataCase_ == DataOneofCase.GradientLine) hash ^= GradientLine.GetHashCode();
+      if (dataCase_ == DataOneofCase.Scribble) hash ^= Scribble.GetHashCode();
       if (HasThickness) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Thickness);
       if (color_ != null) hash ^= Color.GetHashCode();
       if (HasSceneTag) hash ^= SceneTag.GetHashCode();
@@ -841,6 +865,10 @@ namespace Mediapipe {
         output.WriteRawTag(114);
         output.WriteMessage(GradientLine);
       }
+      if (dataCase_ == DataOneofCase.Scribble) {
+        output.WriteRawTag(122);
+        output.WriteMessage(Scribble);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -907,6 +935,10 @@ namespace Mediapipe {
         output.WriteRawTag(114);
         output.WriteMessage(GradientLine);
       }
+      if (dataCase_ == DataOneofCase.Scribble) {
+        output.WriteRawTag(122);
+        output.WriteMessage(Scribble);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -949,6 +981,9 @@ namespace Mediapipe {
       }
       if (dataCase_ == DataOneofCase.GradientLine) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GradientLine);
+      }
+      if (dataCase_ == DataOneofCase.Scribble) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scribble);
       }
       if (HasThickness) {
         size += 1 + 8;
@@ -1049,6 +1084,12 @@ namespace Mediapipe {
             GradientLine = new global::Mediapipe.RenderAnnotation.Types.GradientLine();
           }
           GradientLine.MergeFrom(other.GradientLine);
+          break;
+        case DataOneofCase.Scribble:
+          if (Scribble == null) {
+            Scribble = new global::Mediapipe.RenderAnnotation.Types.Scribble();
+          }
+          Scribble.MergeFrom(other.Scribble);
           break;
       }
 
@@ -1181,6 +1222,15 @@ namespace Mediapipe {
             GradientLine = subBuilder;
             break;
           }
+          case 122: {
+            global::Mediapipe.RenderAnnotation.Types.Scribble subBuilder = new global::Mediapipe.RenderAnnotation.Types.Scribble();
+            if (dataCase_ == DataOneofCase.Scribble) {
+              subBuilder.MergeFrom(Scribble);
+            }
+            input.ReadMessage(subBuilder);
+            Scribble = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1308,6 +1358,15 @@ namespace Mediapipe {
             }
             input.ReadMessage(subBuilder);
             GradientLine = subBuilder;
+            break;
+          }
+          case 122: {
+            global::Mediapipe.RenderAnnotation.Types.Scribble subBuilder = new global::Mediapipe.RenderAnnotation.Types.Scribble();
+            if (dataCase_ == DataOneofCase.Scribble) {
+              subBuilder.MergeFrom(Scribble);
+            }
+            input.ReadMessage(subBuilder);
+            Scribble = subBuilder;
             break;
           }
         }
@@ -4413,6 +4472,184 @@ namespace Mediapipe {
 
       }
 
+      public sealed partial class Scribble : pb::IMessage<Scribble>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Scribble> _parser = new pb::MessageParser<Scribble>(() => new Scribble());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Scribble> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Mediapipe.RenderAnnotation.Descriptor.NestedTypes[9]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Scribble() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Scribble(Scribble other) : this() {
+          point_ = other.point_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Scribble Clone() {
+          return new Scribble(this);
+        }
+
+        /// <summary>Field number for the "point" field.</summary>
+        public const int PointFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Mediapipe.RenderAnnotation.Types.Point> _repeated_point_codec
+            = pb::FieldCodec.ForMessage(10, global::Mediapipe.RenderAnnotation.Types.Point.Parser);
+        private readonly pbc::RepeatedField<global::Mediapipe.RenderAnnotation.Types.Point> point_ = new pbc::RepeatedField<global::Mediapipe.RenderAnnotation.Types.Point>();
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Mediapipe.RenderAnnotation.Types.Point> Point {
+          get { return point_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Scribble);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Scribble other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!point_.Equals(other.point_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= point_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          point_.WriteTo(output, _repeated_point_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          point_.WriteTo(ref output, _repeated_point_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += point_.CalculateSize(_repeated_point_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Scribble other) {
+          if (other == null) {
+            return;
+          }
+          point_.Add(other.point_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                point_.AddEntriesFrom(input, _repeated_point_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                point_.AddEntriesFrom(ref input, _repeated_point_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
       public sealed partial class Arrow : pb::IMessage<Arrow>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4428,7 +4665,7 @@ namespace Mediapipe {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Mediapipe.RenderAnnotation.Descriptor.NestedTypes[9]; }
+          get { return global::Mediapipe.RenderAnnotation.Descriptor.NestedTypes[10]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4845,7 +5082,7 @@ namespace Mediapipe {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Mediapipe.RenderAnnotation.Descriptor.NestedTypes[10]; }
+          get { return global::Mediapipe.RenderAnnotation.Descriptor.NestedTypes[11]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4874,6 +5111,8 @@ namespace Mediapipe {
           fontFace_ = other.fontFace_;
           centerHorizontally_ = other.centerHorizontally_;
           centerVertically_ = other.centerVertically_;
+          outlineThickness_ = other.outlineThickness_;
+          outlineColor_ = other.outlineColor_ != null ? other.outlineColor_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -5123,6 +5362,51 @@ namespace Mediapipe {
           _hasBits0 &= ~64;
         }
 
+        /// <summary>Field number for the "outline_thickness" field.</summary>
+        public const int OutlineThicknessFieldNumber = 11;
+        private readonly static double OutlineThicknessDefaultValue = 0D;
+
+        private double outlineThickness_;
+        /// <summary>
+        /// Thickness of the text outline.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double OutlineThickness {
+          get { if ((_hasBits0 & 128) != 0) { return outlineThickness_; } else { return OutlineThicknessDefaultValue; } }
+          set {
+            _hasBits0 |= 128;
+            outlineThickness_ = value;
+          }
+        }
+        /// <summary>Gets whether the "outline_thickness" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasOutlineThickness {
+          get { return (_hasBits0 & 128) != 0; }
+        }
+        /// <summary>Clears the value of the "outline_thickness" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearOutlineThickness() {
+          _hasBits0 &= ~128;
+        }
+
+        /// <summary>Field number for the "outline_color" field.</summary>
+        public const int OutlineColorFieldNumber = 12;
+        private global::Mediapipe.Color outlineColor_;
+        /// <summary>
+        /// Color of the text outline.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Mediapipe.Color OutlineColor {
+          get { return outlineColor_; }
+          set {
+            outlineColor_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -5146,6 +5430,8 @@ namespace Mediapipe {
           if (FontFace != other.FontFace) return false;
           if (CenterHorizontally != other.CenterHorizontally) return false;
           if (CenterVertically != other.CenterVertically) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(OutlineThickness, other.OutlineThickness)) return false;
+          if (!object.Equals(OutlineColor, other.OutlineColor)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -5161,6 +5447,8 @@ namespace Mediapipe {
           if (HasFontFace) hash ^= FontFace.GetHashCode();
           if (HasCenterHorizontally) hash ^= CenterHorizontally.GetHashCode();
           if (HasCenterVertically) hash ^= CenterVertically.GetHashCode();
+          if (HasOutlineThickness) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(OutlineThickness);
+          if (outlineColor_ != null) hash ^= OutlineColor.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -5211,6 +5499,14 @@ namespace Mediapipe {
             output.WriteRawTag(64);
             output.WriteBool(CenterVertically);
           }
+          if (HasOutlineThickness) {
+            output.WriteRawTag(89);
+            output.WriteDouble(OutlineThickness);
+          }
+          if (outlineColor_ != null) {
+            output.WriteRawTag(98);
+            output.WriteMessage(OutlineColor);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -5253,6 +5549,14 @@ namespace Mediapipe {
             output.WriteRawTag(64);
             output.WriteBool(CenterVertically);
           }
+          if (HasOutlineThickness) {
+            output.WriteRawTag(89);
+            output.WriteDouble(OutlineThickness);
+          }
+          if (outlineColor_ != null) {
+            output.WriteRawTag(98);
+            output.WriteMessage(OutlineColor);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -5286,6 +5590,12 @@ namespace Mediapipe {
           }
           if (HasCenterVertically) {
             size += 1 + 1;
+          }
+          if (HasOutlineThickness) {
+            size += 1 + 8;
+          }
+          if (outlineColor_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutlineColor);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -5322,6 +5632,15 @@ namespace Mediapipe {
           }
           if (other.HasCenterVertically) {
             CenterVertically = other.CenterVertically;
+          }
+          if (other.HasOutlineThickness) {
+            OutlineThickness = other.OutlineThickness;
+          }
+          if (other.outlineColor_ != null) {
+            if (outlineColor_ == null) {
+              OutlineColor = new global::Mediapipe.Color();
+            }
+            OutlineColor.MergeFrom(other.OutlineColor);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -5370,6 +5689,17 @@ namespace Mediapipe {
                 CenterVertically = input.ReadBool();
                 break;
               }
+              case 89: {
+                OutlineThickness = input.ReadDouble();
+                break;
+              }
+              case 98: {
+                if (outlineColor_ == null) {
+                  OutlineColor = new global::Mediapipe.Color();
+                }
+                input.ReadMessage(OutlineColor);
+                break;
+              }
             }
           }
         #endif
@@ -5415,6 +5745,17 @@ namespace Mediapipe {
               }
               case 64: {
                 CenterVertically = input.ReadBool();
+                break;
+              }
+              case 89: {
+                OutlineThickness = input.ReadDouble();
+                break;
+              }
+              case 98: {
+                if (outlineColor_ == null) {
+                  OutlineColor = new global::Mediapipe.Color();
+                }
+                input.ReadMessage(OutlineColor);
                 break;
               }
             }

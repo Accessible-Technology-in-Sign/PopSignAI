@@ -26,15 +26,15 @@ namespace Mediapipe {
           string.Concat(
             "CjptZWRpYXBpcGUvY2FsY3VsYXRvcnMvY29yZS9zZXF1ZW5jZV9zaGlmdF9j",
             "YWxjdWxhdG9yLnByb3RvEgltZWRpYXBpcGUaJG1lZGlhcGlwZS9mcmFtZXdv",
-            "cmsvY2FsY3VsYXRvci5wcm90byKUAQoeU2VxdWVuY2VTaGlmdENhbGN1bGF0",
-            "b3JPcHRpb25zEhkKDXBhY2tldF9vZmZzZXQYASABKAU6Ai0xMlcKA2V4dBIc",
-            "Lm1lZGlhcGlwZS5DYWxjdWxhdG9yT3B0aW9ucxiHuqkzIAEoCzIpLm1lZGlh",
-            "cGlwZS5TZXF1ZW5jZVNoaWZ0Q2FsY3VsYXRvck9wdGlvbnNCDKICCU1lZGlh",
-            "UGlwZQ=="));
+            "cmsvY2FsY3VsYXRvci5wcm90byLLAQoeU2VxdWVuY2VTaGlmdENhbGN1bGF0",
+            "b3JPcHRpb25zEhkKDXBhY2tldF9vZmZzZXQYASABKAU6Ai0xEjUKJmVtaXRf",
+            "ZW1wdHlfcGFja2V0c19iZWZvcmVfZmlyc3RfcGFja2V0GAIgASgIOgVmYWxz",
+            "ZTJXCgNleHQSHC5tZWRpYXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMYh7qpMyAB",
+            "KAsyKS5tZWRpYXBpcGUuU2VxdWVuY2VTaGlmdENhbGN1bGF0b3JPcHRpb25z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.SequenceShiftCalculatorOptions), global::Mediapipe.SequenceShiftCalculatorOptions.Parser, new[]{ "PacketOffset" }, null, null, new pb::Extension[] { global::Mediapipe.SequenceShiftCalculatorOptions.Extensions.Ext }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.SequenceShiftCalculatorOptions), global::Mediapipe.SequenceShiftCalculatorOptions.Parser, new[]{ "PacketOffset", "EmitEmptyPacketsBeforeFirstPacket" }, null, null, new pb::Extension[] { global::Mediapipe.SequenceShiftCalculatorOptions.Extensions.Ext }, null)
           }));
     }
     #endregion
@@ -78,6 +78,7 @@ namespace Mediapipe {
     public SequenceShiftCalculatorOptions(SequenceShiftCalculatorOptions other) : this() {
       _hasBits0 = other._hasBits0;
       packetOffset_ = other.packetOffset_;
+      emitEmptyPacketsBeforeFirstPacket_ = other.emitEmptyPacketsBeforeFirstPacket_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -114,6 +115,37 @@ namespace Mediapipe {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "emit_empty_packets_before_first_packet" field.</summary>
+    public const int EmitEmptyPacketsBeforeFirstPacketFieldNumber = 2;
+    private readonly static bool EmitEmptyPacketsBeforeFirstPacketDefaultValue = false;
+
+    private bool emitEmptyPacketsBeforeFirstPacket_;
+    /// <summary>
+    /// Emits empty packets before the first delayed packet is emitted. Takes
+    /// effect only when packet offset is set to positive.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EmitEmptyPacketsBeforeFirstPacket {
+      get { if ((_hasBits0 & 2) != 0) { return emitEmptyPacketsBeforeFirstPacket_; } else { return EmitEmptyPacketsBeforeFirstPacketDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        emitEmptyPacketsBeforeFirstPacket_ = value;
+      }
+    }
+    /// <summary>Gets whether the "emit_empty_packets_before_first_packet" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEmitEmptyPacketsBeforeFirstPacket {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "emit_empty_packets_before_first_packet" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEmitEmptyPacketsBeforeFirstPacket() {
+      _hasBits0 &= ~2;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -130,6 +162,7 @@ namespace Mediapipe {
         return true;
       }
       if (PacketOffset != other.PacketOffset) return false;
+      if (EmitEmptyPacketsBeforeFirstPacket != other.EmitEmptyPacketsBeforeFirstPacket) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -138,6 +171,7 @@ namespace Mediapipe {
     public override int GetHashCode() {
       int hash = 1;
       if (HasPacketOffset) hash ^= PacketOffset.GetHashCode();
+      if (HasEmitEmptyPacketsBeforeFirstPacket) hash ^= EmitEmptyPacketsBeforeFirstPacket.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -160,6 +194,10 @@ namespace Mediapipe {
         output.WriteRawTag(8);
         output.WriteInt32(PacketOffset);
       }
+      if (HasEmitEmptyPacketsBeforeFirstPacket) {
+        output.WriteRawTag(16);
+        output.WriteBool(EmitEmptyPacketsBeforeFirstPacket);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -174,6 +212,10 @@ namespace Mediapipe {
         output.WriteRawTag(8);
         output.WriteInt32(PacketOffset);
       }
+      if (HasEmitEmptyPacketsBeforeFirstPacket) {
+        output.WriteRawTag(16);
+        output.WriteBool(EmitEmptyPacketsBeforeFirstPacket);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -186,6 +228,9 @@ namespace Mediapipe {
       int size = 0;
       if (HasPacketOffset) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PacketOffset);
+      }
+      if (HasEmitEmptyPacketsBeforeFirstPacket) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -201,6 +246,9 @@ namespace Mediapipe {
       }
       if (other.HasPacketOffset) {
         PacketOffset = other.PacketOffset;
+      }
+      if (other.HasEmitEmptyPacketsBeforeFirstPacket) {
+        EmitEmptyPacketsBeforeFirstPacket = other.EmitEmptyPacketsBeforeFirstPacket;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -221,6 +269,10 @@ namespace Mediapipe {
             PacketOffset = input.ReadInt32();
             break;
           }
+          case 16: {
+            EmitEmptyPacketsBeforeFirstPacket = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -238,6 +290,10 @@ namespace Mediapipe {
             break;
           case 8: {
             PacketOffset = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            EmitEmptyPacketsBeforeFirstPacket = input.ReadBool();
             break;
           }
         }

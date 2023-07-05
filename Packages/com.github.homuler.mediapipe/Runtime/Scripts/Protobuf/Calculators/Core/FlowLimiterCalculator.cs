@@ -26,12 +26,13 @@ namespace Mediapipe {
           string.Concat(
             "CjhtZWRpYXBpcGUvY2FsY3VsYXRvcnMvY29yZS9mbG93X2xpbWl0ZXJfY2Fs",
             "Y3VsYXRvci5wcm90bxIJbWVkaWFwaXBlGiRtZWRpYXBpcGUvZnJhbWV3b3Jr",
-            "L2NhbGN1bGF0b3IucHJvdG8izQEKHEZsb3dMaW1pdGVyQ2FsY3VsYXRvck9w",
+            "L2NhbGN1bGF0b3IucHJvdG8ixwEKHEZsb3dMaW1pdGVyQ2FsY3VsYXRvck9w",
             "dGlvbnMSGAoNbWF4X2luX2ZsaWdodBgBIAEoBToBMRIXCgxtYXhfaW5fcXVl",
-            "dWUYAiABKAU6ATASIgoRaW5fZmxpZ2h0X3RpbWVvdXQYAyABKAM6BzEwMDAw",
-            "MDAyVgoDZXh0EhwubWVkaWFwaXBlLkNhbGN1bGF0b3JPcHRpb25zGPig9JsB",
-            "IAEoCzInLm1lZGlhcGlwZS5GbG93TGltaXRlckNhbGN1bGF0b3JPcHRpb25z",
-            "QgyiAglNZWRpYVBpcGU="));
+            "dWUYAiABKAU6ATASHAoRaW5fZmxpZ2h0X3RpbWVvdXQYAyABKAM6ATAyVgoD",
+            "ZXh0EhwubWVkaWFwaXBlLkNhbGN1bGF0b3JPcHRpb25zGPig9JsBIAEoCzIn",
+            "Lm1lZGlhcGlwZS5GbG93TGltaXRlckNhbGN1bGF0b3JPcHRpb25zQkMKJWNv",
+            "bS5nb29nbGUubWVkaWFwaXBlLmNhbGN1bGF0b3IucHJvdG9CGkZsb3dMaW1p",
+            "dGVyQ2FsY3VsYXRvclByb3Rv"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -154,13 +155,12 @@ namespace Mediapipe {
 
     /// <summary>Field number for the "in_flight_timeout" field.</summary>
     public const int InFlightTimeoutFieldNumber = 3;
-    private readonly static long InFlightTimeoutDefaultValue = 1000000L;
+    private readonly static long InFlightTimeoutDefaultValue = 0L;
 
     private long inFlightTimeout_;
     /// <summary>
     /// The maximum time in microseconds to wait for a frame to finish processing.
-    /// The default value stops waiting after 1 sec.
-    /// The value 0 specifies no timeout.
+    /// The default value 0 specifies no timeout.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

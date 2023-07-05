@@ -25,202 +25,33 @@ namespace Mediapipe {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CkFtZWRpYXBpcGUvY2FsY3VsYXRvcnMvaW1hZ2UvaW1hZ2VfdHJhbnNmb3Jt",
-            "YXRpb25fY2FsY3VsYXRvci5wcm90bxIJbWVkaWFwaXBlGiRtZWRpYXBpcGUv",
-            "ZnJhbWV3b3JrL2NhbGN1bGF0b3IucHJvdG8aHm1lZGlhcGlwZS9ncHUvc2Nh",
-            "bGVfbW9kZS5wcm90byJoCgxSb3RhdGlvbk1vZGUiWAoETW9kZRILCgdVTktO",
-            "T1dOEAASDgoKUk9UQVRJT05fMBABEg8KC1JPVEFUSU9OXzkwEAISEAoMUk9U",
-            "QVRJT05fMTgwEAMSEAoMUk9UQVRJT05fMjcwEAQi/gIKJEltYWdlVHJhbnNm",
-            "b3JtYXRpb25DYWxjdWxhdG9yT3B0aW9ucxIXCgxvdXRwdXRfd2lkdGgYASAB",
-            "KAU6ATASGAoNb3V0cHV0X2hlaWdodBgCIAEoBToBMBIzCg1yb3RhdGlvbl9t",
-            "b2RlGAMgASgOMhwubWVkaWFwaXBlLlJvdGF0aW9uTW9kZS5Nb2RlEh4KD2Zs",
-            "aXBfdmVydGljYWxseRgEIAEoCDoFZmFsc2USIAoRZmxpcF9ob3Jpem9udGFs",
-            "bHkYBSABKAg6BWZhbHNlEi0KCnNjYWxlX21vZGUYBiABKA4yGS5tZWRpYXBp",
-            "cGUuU2NhbGVNb2RlLk1vZGUSHgoQY29uc3RhbnRfcGFkZGluZxgHIAEoCDoE",
-            "dHJ1ZTJdCgNleHQSHC5tZWRpYXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMYvv2R",
-            "eCABKAsyLy5tZWRpYXBpcGUuSW1hZ2VUcmFuc2Zvcm1hdGlvbkNhbGN1bGF0",
-            "b3JPcHRpb25z"));
+            "YXRpb25fY2FsY3VsYXRvci5wcm90bxIJbWVkaWFwaXBlGi9tZWRpYXBpcGUv",
+            "Y2FsY3VsYXRvcnMvaW1hZ2Uvcm90YXRpb25fbW9kZS5wcm90bxokbWVkaWFw",
+            "aXBlL2ZyYW1ld29yay9jYWxjdWxhdG9yLnByb3RvGh5tZWRpYXBpcGUvZ3B1",
+            "L3NjYWxlX21vZGUucHJvdG8iiAQKJEltYWdlVHJhbnNmb3JtYXRpb25DYWxj",
+            "dWxhdG9yT3B0aW9ucxIXCgxvdXRwdXRfd2lkdGgYASABKAU6ATASGAoNb3V0",
+            "cHV0X2hlaWdodBgCIAEoBToBMBIzCg1yb3RhdGlvbl9tb2RlGAMgASgOMhwu",
+            "bWVkaWFwaXBlLlJvdGF0aW9uTW9kZS5Nb2RlEh4KD2ZsaXBfdmVydGljYWxs",
+            "eRgEIAEoCDoFZmFsc2USIAoRZmxpcF9ob3Jpem9udGFsbHkYBSABKAg6BWZh",
+            "bHNlEi0KCnNjYWxlX21vZGUYBiABKA4yGS5tZWRpYXBpcGUuU2NhbGVNb2Rl",
+            "Lk1vZGUSHgoQY29uc3RhbnRfcGFkZGluZxgHIAEoCDoEdHJ1ZRJMCg1wYWRk",
+            "aW5nX2NvbG9yGAggASgLMjUubWVkaWFwaXBlLkltYWdlVHJhbnNmb3JtYXRp",
+            "b25DYWxjdWxhdG9yT3B0aW9ucy5Db2xvcho6CgVDb2xvchIOCgNyZWQYASAB",
+            "KAU6ATASEAoFZ3JlZW4YAiABKAU6ATASDwoEYmx1ZRgDIAEoBToBMDJdCgNl",
+            "eHQSHC5tZWRpYXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMYvv2ReCABKAsyLy5t",
+            "ZWRpYXBpcGUuSW1hZ2VUcmFuc2Zvcm1hdGlvbkNhbGN1bGF0b3JPcHRpb25z",
+            "QlIKJWNvbS5nb29nbGUubWVkaWFwaXBlLmNhbGN1bGF0b3IucHJvdG9CKUlt",
+            "YWdlVHJhbnNmb3JtYXRpb25DYWxjdWxhdG9yT3B0aW9uc1Byb3Rv"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, global::Mediapipe.ScaleModeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Mediapipe.RotationModeReflection.Descriptor, global::Mediapipe.CalculatorReflection.Descriptor, global::Mediapipe.ScaleModeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.RotationMode), global::Mediapipe.RotationMode.Parser, null, null, new[]{ typeof(global::Mediapipe.RotationMode.Types.Mode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.ImageTransformationCalculatorOptions), global::Mediapipe.ImageTransformationCalculatorOptions.Parser, new[]{ "OutputWidth", "OutputHeight", "RotationMode", "FlipVertically", "FlipHorizontally", "ScaleMode", "ConstantPadding" }, null, null, new pb::Extension[] { global::Mediapipe.ImageTransformationCalculatorOptions.Extensions.Ext }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.ImageTransformationCalculatorOptions), global::Mediapipe.ImageTransformationCalculatorOptions.Parser, new[]{ "OutputWidth", "OutputHeight", "RotationMode", "FlipVertically", "FlipHorizontally", "ScaleMode", "ConstantPadding", "PaddingColor" }, null, null, new pb::Extension[] { global::Mediapipe.ImageTransformationCalculatorOptions.Extensions.Ext }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.ImageTransformationCalculatorOptions.Types.Color), global::Mediapipe.ImageTransformationCalculatorOptions.Types.Color.Parser, new[]{ "Red", "Green", "Blue" }, null, null, null, null)})
           }));
     }
     #endregion
 
   }
   #region Messages
-  /// <summary>
-  /// Counterclockwise rotation.
-  /// </summary>
-  public sealed partial class RotationMode : pb::IMessage<RotationMode>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<RotationMode> _parser = new pb::MessageParser<RotationMode>(() => new RotationMode());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<RotationMode> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mediapipe.ImageTransformationCalculatorReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RotationMode() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RotationMode(RotationMode other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RotationMode Clone() {
-      return new RotationMode(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as RotationMode);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(RotationMode other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(RotationMode other) {
-      if (other == null) {
-        return;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-        }
-      }
-    }
-    #endif
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the RotationMode message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static partial class Types {
-      public enum Mode {
-        [pbr::OriginalName("UNKNOWN")] Unknown = 0,
-        [pbr::OriginalName("ROTATION_0")] Rotation0 = 1,
-        [pbr::OriginalName("ROTATION_90")] Rotation90 = 2,
-        [pbr::OriginalName("ROTATION_180")] Rotation180 = 3,
-        [pbr::OriginalName("ROTATION_270")] Rotation270 = 4,
-      }
-
-    }
-    #endregion
-
-  }
-
   public sealed partial class ImageTransformationCalculatorOptions : pb::IMessage<ImageTransformationCalculatorOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -236,7 +67,7 @@ namespace Mediapipe {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Mediapipe.ImageTransformationCalculatorReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Mediapipe.ImageTransformationCalculatorReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -264,6 +95,7 @@ namespace Mediapipe {
       flipHorizontally_ = other.flipHorizontally_;
       scaleMode_ = other.scaleMode_;
       constantPadding_ = other.constantPadding_;
+      paddingColor_ = other.paddingColor_ != null ? other.paddingColor_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -482,6 +314,22 @@ namespace Mediapipe {
       _hasBits0 &= ~64;
     }
 
+    /// <summary>Field number for the "padding_color" field.</summary>
+    public const int PaddingColorFieldNumber = 8;
+    private global::Mediapipe.ImageTransformationCalculatorOptions.Types.Color paddingColor_;
+    /// <summary>
+    /// The color for the padding. This option is only used when the scale mode is
+    /// FIT. Default is black. This is for CPU only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Mediapipe.ImageTransformationCalculatorOptions.Types.Color PaddingColor {
+      get { return paddingColor_; }
+      set {
+        paddingColor_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -504,6 +352,7 @@ namespace Mediapipe {
       if (FlipHorizontally != other.FlipHorizontally) return false;
       if (ScaleMode != other.ScaleMode) return false;
       if (ConstantPadding != other.ConstantPadding) return false;
+      if (!object.Equals(PaddingColor, other.PaddingColor)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -518,6 +367,7 @@ namespace Mediapipe {
       if (HasFlipHorizontally) hash ^= FlipHorizontally.GetHashCode();
       if (HasScaleMode) hash ^= ScaleMode.GetHashCode();
       if (HasConstantPadding) hash ^= ConstantPadding.GetHashCode();
+      if (paddingColor_ != null) hash ^= PaddingColor.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -564,6 +414,10 @@ namespace Mediapipe {
         output.WriteRawTag(56);
         output.WriteBool(ConstantPadding);
       }
+      if (paddingColor_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PaddingColor);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -602,6 +456,10 @@ namespace Mediapipe {
         output.WriteRawTag(56);
         output.WriteBool(ConstantPadding);
       }
+      if (paddingColor_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PaddingColor);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -632,6 +490,9 @@ namespace Mediapipe {
       }
       if (HasConstantPadding) {
         size += 1 + 1;
+      }
+      if (paddingColor_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PaddingColor);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -665,6 +526,12 @@ namespace Mediapipe {
       }
       if (other.HasConstantPadding) {
         ConstantPadding = other.ConstantPadding;
+      }
+      if (other.paddingColor_ != null) {
+        if (paddingColor_ == null) {
+          PaddingColor = new global::Mediapipe.ImageTransformationCalculatorOptions.Types.Color();
+        }
+        PaddingColor.MergeFrom(other.PaddingColor);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -707,6 +574,13 @@ namespace Mediapipe {
           }
           case 56: {
             ConstantPadding = input.ReadBool();
+            break;
+          }
+          case 66: {
+            if (paddingColor_ == null) {
+              PaddingColor = new global::Mediapipe.ImageTransformationCalculatorOptions.Types.Color();
+            }
+            input.ReadMessage(PaddingColor);
             break;
           }
         }
@@ -752,10 +626,338 @@ namespace Mediapipe {
             ConstantPadding = input.ReadBool();
             break;
           }
+          case 66: {
+            if (paddingColor_ == null) {
+              PaddingColor = new global::Mediapipe.ImageTransformationCalculatorOptions.Types.Color();
+            }
+            input.ReadMessage(PaddingColor);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ImageTransformationCalculatorOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// RGB values in range of 0 - 255
+      /// </summary>
+      public sealed partial class Color : pb::IMessage<Color>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Color> _parser = new pb::MessageParser<Color>(() => new Color());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Color> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Mediapipe.ImageTransformationCalculatorOptions.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Color() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Color(Color other) : this() {
+          _hasBits0 = other._hasBits0;
+          red_ = other.red_;
+          green_ = other.green_;
+          blue_ = other.blue_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Color Clone() {
+          return new Color(this);
+        }
+
+        /// <summary>Field number for the "red" field.</summary>
+        public const int RedFieldNumber = 1;
+        private readonly static int RedDefaultValue = 0;
+
+        private int red_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int Red {
+          get { if ((_hasBits0 & 1) != 0) { return red_; } else { return RedDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            red_ = value;
+          }
+        }
+        /// <summary>Gets whether the "red" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasRed {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "red" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearRed() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "green" field.</summary>
+        public const int GreenFieldNumber = 2;
+        private readonly static int GreenDefaultValue = 0;
+
+        private int green_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int Green {
+          get { if ((_hasBits0 & 2) != 0) { return green_; } else { return GreenDefaultValue; } }
+          set {
+            _hasBits0 |= 2;
+            green_ = value;
+          }
+        }
+        /// <summary>Gets whether the "green" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGreen {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "green" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGreen() {
+          _hasBits0 &= ~2;
+        }
+
+        /// <summary>Field number for the "blue" field.</summary>
+        public const int BlueFieldNumber = 3;
+        private readonly static int BlueDefaultValue = 0;
+
+        private int blue_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int Blue {
+          get { if ((_hasBits0 & 4) != 0) { return blue_; } else { return BlueDefaultValue; } }
+          set {
+            _hasBits0 |= 4;
+            blue_ = value;
+          }
+        }
+        /// <summary>Gets whether the "blue" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasBlue {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "blue" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearBlue() {
+          _hasBits0 &= ~4;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Color);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Color other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Red != other.Red) return false;
+          if (Green != other.Green) return false;
+          if (Blue != other.Blue) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasRed) hash ^= Red.GetHashCode();
+          if (HasGreen) hash ^= Green.GetHashCode();
+          if (HasBlue) hash ^= Blue.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasRed) {
+            output.WriteRawTag(8);
+            output.WriteInt32(Red);
+          }
+          if (HasGreen) {
+            output.WriteRawTag(16);
+            output.WriteInt32(Green);
+          }
+          if (HasBlue) {
+            output.WriteRawTag(24);
+            output.WriteInt32(Blue);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasRed) {
+            output.WriteRawTag(8);
+            output.WriteInt32(Red);
+          }
+          if (HasGreen) {
+            output.WriteRawTag(16);
+            output.WriteInt32(Green);
+          }
+          if (HasBlue) {
+            output.WriteRawTag(24);
+            output.WriteInt32(Blue);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasRed) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Red);
+          }
+          if (HasGreen) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Green);
+          }
+          if (HasBlue) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Blue);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Color other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasRed) {
+            Red = other.Red;
+          }
+          if (other.HasGreen) {
+            Green = other.Green;
+          }
+          if (other.HasBlue) {
+            Blue = other.Blue;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Red = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                Green = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                Blue = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Red = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                Green = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                Blue = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
     #region Extensions
     /// <summary>Container for extensions for other messages declared in the ImageTransformationCalculatorOptions message type.</summary>

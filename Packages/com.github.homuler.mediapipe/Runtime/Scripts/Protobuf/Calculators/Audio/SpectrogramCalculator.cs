@@ -26,7 +26,7 @@ namespace Mediapipe {
           string.Concat(
             "CjhtZWRpYXBpcGUvY2FsY3VsYXRvcnMvYXVkaW8vc3BlY3Ryb2dyYW1fY2Fs",
             "Y3VsYXRvci5wcm90bxIJbWVkaWFwaXBlGiRtZWRpYXBpcGUvZnJhbWV3b3Jr",
-            "L2NhbGN1bGF0b3IucHJvdG8i7wQKHFNwZWN0cm9ncmFtQ2FsY3VsYXRvck9w",
+            "L2NhbGN1bGF0b3IucHJvdG8i/gQKHFNwZWN0cm9ncmFtQ2FsY3VsYXRvck9w",
             "dGlvbnMSHgoWZnJhbWVfZHVyYXRpb25fc2Vjb25kcxgBIAEoARIgChVmcmFt",
             "ZV9vdmVybGFwX3NlY29uZHMYAiABKAE6ATASHgoQcGFkX2ZpbmFsX3BhY2tl",
             "dBgDIAEoCDoEdHJ1ZRJaCgtvdXRwdXRfdHlwZRgEIAEoDjIyLm1lZGlhcGlw",
@@ -37,10 +37,10 @@ namespace Mediapipe {
             "EhcKDG91dHB1dF9zY2FsZRgHIAEoAToBMRIiChN1c2VfbG9jYWxfdGltZXN0",
             "YW1wGAggASgIOgVmYWxzZSJUCgpPdXRwdXRUeXBlEhUKEVNRVUFSRURfTUFH",
             "TklUVURFEAASFAoQTElORUFSX01BR05JVFVERRABEgwKCERFQ0lCRUxTEAIS",
-            "CwoHQ09NUExFWBADIi8KCldpbmRvd1R5cGUSCAoESEFOThAAEgsKB0hBTU1J",
-            "TkcQARIKCgZDT1NJTkUQAjJVCgNleHQSHC5tZWRpYXBpcGUuQ2FsY3VsYXRv",
-            "ck9wdGlvbnMYwIiqJCABKAsyJy5tZWRpYXBpcGUuU3BlY3Ryb2dyYW1DYWxj",
-            "dWxhdG9yT3B0aW9ucw=="));
+            "CwoHQ09NUExFWBADIj4KCldpbmRvd1R5cGUSCAoESEFOThAAEgsKB0hBTU1J",
+            "TkcQARIKCgZDT1NJTkUQAhINCglTUVJUX0hBTk4QBDJVCgNleHQSHC5tZWRp",
+            "YXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMYwIiqJCABKAsyJy5tZWRpYXBpcGUu",
+            "U3BlY3Ryb2dyYW1DYWxjdWxhdG9yT3B0aW9ucw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -144,7 +144,11 @@ namespace Mediapipe {
     /// <summary>
     /// Duration of overlap between adjacent windows.
     /// Hence, frame_rate = 1/(frame_duration_seconds - frame_overlap_seconds).
-    /// Required that 0 &lt;= frame_overlap_seconds &lt;  frame_duration_seconds.
+    /// Note the frame_rate here is not the MediaPipe packet rate, the frame here
+    /// means each Fourier transform analysis waveform frame, the output MediaPipe
+    /// packet rate will the the same as input, if frame rate is lower than input
+    /// packet rate, will result in intermittent empty output packets. Required
+    /// that 0 &lt;= frame_overlap_seconds &lt;  frame_duration_seconds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -658,6 +662,11 @@ namespace Mediapipe {
       /// <summary>
       /// Output value type can be squared-magnitude, linear-magnitude,
       /// deciBels (dB, = 20*log10(linear_magnitude)), or std::complex.
+      /// Their relationship:
+      /// COMPLEX c = Re + Im*i;
+      /// SQUARED_MAGNITUDE = Re^2 + Im^2;
+      /// LINEAR_MAGNITUDE = sqrt(SQUARED_MAGNITUDE);
+      /// DECIBELS = 20*log10(LINEAR_MAGNITUDE) = 10*log10(SQUARED_MAGNITUDE);
       /// </summary>
       public enum OutputType {
         [pbr::OriginalName("SQUARED_MAGNITUDE")] SquaredMagnitude = 0,
@@ -673,6 +682,7 @@ namespace Mediapipe {
         [pbr::OriginalName("HANN")] Hann = 0,
         [pbr::OriginalName("HAMMING")] Hamming = 1,
         [pbr::OriginalName("COSINE")] Cosine = 2,
+        [pbr::OriginalName("SQRT_HANN")] SqrtHann = 4,
       }
 
     }

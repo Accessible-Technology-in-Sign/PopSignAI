@@ -1972,7 +1972,6 @@ GameObject:
   m_Component:
   - component: {fileID: 259292328}
   - component: {fileID: 259292330}
-  - component: {fileID: 259292329}
   m_Layer: 14
   m_Name: borderForRoundedLevels
   m_TagString: Untagged
@@ -1995,18 +1994,6 @@ Transform:
   m_Father: {fileID: 729910742}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &259292329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259292327}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b63ac9a9e6d3041449e68322a3d6fec7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &259292330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2813,9 +2800,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130, y: -15}
+  m_AnchoredPosition: {x: 176.39, y: -169.35999}
   m_SizeDelta: {x: 1920, y: 1079.9999}
-  m_Pivot: {x: 1, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &399984492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2828,7 +2815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08567ddcd5175eeebafe07a630413ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fitMode: 1
+  _fitMode: 0
 --- !u!114 &399984493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7976,6 +7963,8 @@ MonoBehaviour:
   _height: 1080
   _fps: 30
   _multiHandLandmarksAnnotationController: {fileID: 1320290061}
+  enableCoordinateDebugging: 1
+  coordinateDebugger: {fileID: 325114868}
 --- !u!114 &1270330340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13042,7 +13031,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1976780667}
   - component: {fileID: 1976780668}
-  - component: {fileID: 1976780669}
   m_Layer: 0
   m_Name: GameOverBorder
   m_TagString: Untagged
@@ -13091,18 +13079,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1976780669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976780666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b63ac9a9e6d3041449e68322a3d6fec7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1986329172
 GameObject:
   m_ObjectHideFlags: 0

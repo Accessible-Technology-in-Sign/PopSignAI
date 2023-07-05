@@ -26,14 +26,15 @@ namespace Mediapipe {
           string.Concat(
             "Cj1tZWRpYXBpcGUvY2FsY3VsYXRvcnMvdXRpbC9maWx0ZXJfZGV0ZWN0aW9u",
             "c19jYWxjdWxhdG9yLnByb3RvEgltZWRpYXBpcGUaJG1lZGlhcGlwZS9mcmFt",
-            "ZXdvcmsvY2FsY3VsYXRvci5wcm90byKTAQohRmlsdGVyRGV0ZWN0aW9uc0Nh",
-            "bGN1bGF0b3JPcHRpb25zEhEKCW1pbl9zY29yZRgBIAEoAjJbCgNleHQSHC5t",
-            "ZWRpYXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMY9IjKvAEgASgLMiwubWVkaWFw",
-            "aXBlLkZpbHRlckRldGVjdGlvbnNDYWxjdWxhdG9yT3B0aW9ucw=="));
+            "ZXdvcmsvY2FsY3VsYXRvci5wcm90byLDAQohRmlsdGVyRGV0ZWN0aW9uc0Nh",
+            "bGN1bGF0b3JPcHRpb25zEhEKCW1pbl9zY29yZRgBIAEoAhIWCg5taW5fcGl4",
+            "ZWxfc2l6ZRgCIAEoAhIWCg5tYXhfcGl4ZWxfc2l6ZRgDIAEoAjJbCgNleHQS",
+            "HC5tZWRpYXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMY9IjKvAEgASgLMiwubWVk",
+            "aWFwaXBlLkZpbHRlckRldGVjdGlvbnNDYWxjdWxhdG9yT3B0aW9ucw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.FilterDetectionsCalculatorOptions), global::Mediapipe.FilterDetectionsCalculatorOptions.Parser, new[]{ "MinScore" }, null, null, new pb::Extension[] { global::Mediapipe.FilterDetectionsCalculatorOptions.Extensions.Ext }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.FilterDetectionsCalculatorOptions), global::Mediapipe.FilterDetectionsCalculatorOptions.Parser, new[]{ "MinScore", "MinPixelSize", "MaxPixelSize" }, null, null, new pb::Extension[] { global::Mediapipe.FilterDetectionsCalculatorOptions.Extensions.Ext }, null)
           }));
     }
     #endregion
@@ -77,6 +78,8 @@ namespace Mediapipe {
     public FilterDetectionsCalculatorOptions(FilterDetectionsCalculatorOptions other) : this() {
       _hasBits0 = other._hasBits0;
       minScore_ = other.minScore_;
+      minPixelSize_ = other.minPixelSize_;
+      maxPixelSize_ = other.maxPixelSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -116,6 +119,66 @@ namespace Mediapipe {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "min_pixel_size" field.</summary>
+    public const int MinPixelSizeFieldNumber = 2;
+    private readonly static float MinPixelSizeDefaultValue = 0F;
+
+    private float minPixelSize_;
+    /// <summary>
+    /// Detections smaller than this size *in pixels* get filtered out.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float MinPixelSize {
+      get { if ((_hasBits0 & 2) != 0) { return minPixelSize_; } else { return MinPixelSizeDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        minPixelSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "min_pixel_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMinPixelSize {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "min_pixel_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMinPixelSize() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "max_pixel_size" field.</summary>
+    public const int MaxPixelSizeFieldNumber = 3;
+    private readonly static float MaxPixelSizeDefaultValue = 0F;
+
+    private float maxPixelSize_;
+    /// <summary>
+    /// Detections larger than this size *in pixels* get filtered out.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float MaxPixelSize {
+      get { if ((_hasBits0 & 4) != 0) { return maxPixelSize_; } else { return MaxPixelSizeDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        maxPixelSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_pixel_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxPixelSize {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "max_pixel_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxPixelSize() {
+      _hasBits0 &= ~4;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -132,6 +195,8 @@ namespace Mediapipe {
         return true;
       }
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MinScore, other.MinScore)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MinPixelSize, other.MinPixelSize)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MaxPixelSize, other.MaxPixelSize)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -140,6 +205,8 @@ namespace Mediapipe {
     public override int GetHashCode() {
       int hash = 1;
       if (HasMinScore) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MinScore);
+      if (HasMinPixelSize) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MinPixelSize);
+      if (HasMaxPixelSize) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MaxPixelSize);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -162,6 +229,14 @@ namespace Mediapipe {
         output.WriteRawTag(13);
         output.WriteFloat(MinScore);
       }
+      if (HasMinPixelSize) {
+        output.WriteRawTag(21);
+        output.WriteFloat(MinPixelSize);
+      }
+      if (HasMaxPixelSize) {
+        output.WriteRawTag(29);
+        output.WriteFloat(MaxPixelSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -176,6 +251,14 @@ namespace Mediapipe {
         output.WriteRawTag(13);
         output.WriteFloat(MinScore);
       }
+      if (HasMinPixelSize) {
+        output.WriteRawTag(21);
+        output.WriteFloat(MinPixelSize);
+      }
+      if (HasMaxPixelSize) {
+        output.WriteRawTag(29);
+        output.WriteFloat(MaxPixelSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -187,6 +270,12 @@ namespace Mediapipe {
     public int CalculateSize() {
       int size = 0;
       if (HasMinScore) {
+        size += 1 + 4;
+      }
+      if (HasMinPixelSize) {
+        size += 1 + 4;
+      }
+      if (HasMaxPixelSize) {
         size += 1 + 4;
       }
       if (_unknownFields != null) {
@@ -203,6 +292,12 @@ namespace Mediapipe {
       }
       if (other.HasMinScore) {
         MinScore = other.MinScore;
+      }
+      if (other.HasMinPixelSize) {
+        MinPixelSize = other.MinPixelSize;
+      }
+      if (other.HasMaxPixelSize) {
+        MaxPixelSize = other.MaxPixelSize;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -223,6 +318,14 @@ namespace Mediapipe {
             MinScore = input.ReadFloat();
             break;
           }
+          case 21: {
+            MinPixelSize = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            MaxPixelSize = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -240,6 +343,14 @@ namespace Mediapipe {
             break;
           case 13: {
             MinScore = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            MinPixelSize = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            MaxPixelSize = input.ReadFloat();
             break;
           }
         }

@@ -39,15 +39,13 @@ namespace Mediapipe {
   }
   #region Messages
   /// <summary>
-  /// Options for Calculators. Each Calculator implementation should
-  /// have its own options proto, which should look like this:
+  /// Options for Calculators, DEPRECATED. New calculators are encouraged to use
+  /// proto3 syntax options:
   ///
   /// message MyCalculatorOptions {
-  ///   extend CalculatorOptions {
-  ///     optional MyCalculatorOptions ext = &lt;unique id, e.g. the CL#>;
-  ///   }
-  ///   optional string field_needed_by_my_calculator = 1;
-  ///   optional int32 another_field = 2;
+  ///   // proto3 does not expect "optional"
+  ///   string field_needed_by_my_calculator = 1;
+  ///   int32 another_field = 2;
   ///   // etc
   /// }
   /// </summary>

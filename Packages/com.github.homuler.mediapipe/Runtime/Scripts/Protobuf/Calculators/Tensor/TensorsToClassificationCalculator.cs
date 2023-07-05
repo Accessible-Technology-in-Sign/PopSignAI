@@ -26,21 +26,29 @@ namespace Mediapipe {
           string.Concat(
             "CkdtZWRpYXBpcGUvY2FsY3VsYXRvcnMvdGVuc29yL3RlbnNvcnNfdG9fY2xh",
             "c3NpZmljYXRpb25fY2FsY3VsYXRvci5wcm90bxIJbWVkaWFwaXBlGiRtZWRp",
-            "YXBpcGUvZnJhbWV3b3JrL2NhbGN1bGF0b3IucHJvdG8iyAMKKFRlbnNvcnNU",
-            "b0NsYXNzaWZpY2F0aW9uQ2FsY3VsYXRvck9wdGlvbnMSGwoTbWluX3Njb3Jl",
-            "X3RocmVzaG9sZBgBIAEoAhINCgV0b3BfaxgCIAEoBRIWCg5sYWJlbF9tYXBf",
-            "cGF0aBgDIAEoCRJPCglsYWJlbF9tYXAYBSABKAsyPC5tZWRpYXBpcGUuVGVu",
-            "c29yc1RvQ2xhc3NpZmljYXRpb25DYWxjdWxhdG9yT3B0aW9ucy5MYWJlbE1h",
-            "cBIdChViaW5hcnlfY2xhc3NpZmljYXRpb24YBCABKAgagwEKCExhYmVsTWFw",
-            "ElMKB2VudHJpZXMYASADKAsyQi5tZWRpYXBpcGUuVGVuc29yc1RvQ2xhc3Np",
-            "ZmljYXRpb25DYWxjdWxhdG9yT3B0aW9ucy5MYWJlbE1hcC5FbnRyeRoiCgVF",
-            "bnRyeRIKCgJpZBgBIAEoBRINCgVsYWJlbBgCIAEoCTJiCgNleHQSHC5tZWRp",
-            "YXBpcGUuQ2FsY3VsYXRvck9wdGlvbnMYro2MoAEgASgLMjMubWVkaWFwaXBl",
-            "LlRlbnNvcnNUb0NsYXNzaWZpY2F0aW9uQ2FsY3VsYXRvck9wdGlvbnM="));
+            "YXBpcGUvZnJhbWV3b3JrL2NhbGN1bGF0b3IucHJvdG8aHm1lZGlhcGlwZS91",
+            "dGlsL2xhYmVsX21hcC5wcm90byLHBQooVGVuc29yc1RvQ2xhc3NpZmljYXRp",
+            "b25DYWxjdWxhdG9yT3B0aW9ucxIbChNtaW5fc2NvcmVfdGhyZXNob2xkGAEg",
+            "ASgCEg0KBXRvcF9rGAIgASgFEiAKGHNvcnRfYnlfZGVzY2VuZGluZ19zY29y",
+            "ZRgJIAEoCBIWCg5sYWJlbF9tYXBfcGF0aBgDIAEoCRJPCglsYWJlbF9tYXAY",
+            "BSABKAsyPC5tZWRpYXBpcGUuVGVuc29yc1RvQ2xhc3NpZmljYXRpb25DYWxj",
+            "dWxhdG9yT3B0aW9ucy5MYWJlbE1hcBJYCgtsYWJlbF9pdGVtcxgGIAMoCzJD",
+            "Lm1lZGlhcGlwZS5UZW5zb3JzVG9DbGFzc2lmaWNhdGlvbkNhbGN1bGF0b3JP",
+            "cHRpb25zLkxhYmVsSXRlbXNFbnRyeRIdChViaW5hcnlfY2xhc3NpZmljYXRp",
+            "b24YBCABKAgSGgoOaWdub3JlX2NsYXNzZXMYByADKAVCAhABEhkKDWFsbG93",
+            "X2NsYXNzZXMYCCADKAVCAhABGoMBCghMYWJlbE1hcBJTCgdlbnRyaWVzGAEg",
+            "AygLMkIubWVkaWFwaXBlLlRlbnNvcnNUb0NsYXNzaWZpY2F0aW9uQ2FsY3Vs",
+            "YXRvck9wdGlvbnMuTGFiZWxNYXAuRW50cnkaIgoFRW50cnkSCgoCaWQYASAB",
+            "KAUSDQoFbGFiZWwYAiABKAkaSgoPTGFiZWxJdGVtc0VudHJ5EgsKA2tleRgB",
+            "IAEoAxImCgV2YWx1ZRgCIAEoCzIXLm1lZGlhcGlwZS5MYWJlbE1hcEl0ZW06",
+            "AjgBMmIKA2V4dBIcLm1lZGlhcGlwZS5DYWxjdWxhdG9yT3B0aW9ucxiujYyg",
+            "ASABKAsyMy5tZWRpYXBpcGUuVGVuc29yc1RvQ2xhc3NpZmljYXRpb25DYWxj",
+            "dWxhdG9yT3B0aW9ucw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Mediapipe.CalculatorReflection.Descriptor, global::Mediapipe.LabelMapReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.TensorsToClassificationCalculatorOptions), global::Mediapipe.TensorsToClassificationCalculatorOptions.Parser, new[]{ "MinScoreThreshold", "TopK", "LabelMapPath", "LabelMap", "BinaryClassification" }, null, null, new pb::Extension[] { global::Mediapipe.TensorsToClassificationCalculatorOptions.Extensions.Ext }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.TensorsToClassificationCalculatorOptions.Types.LabelMap), global::Mediapipe.TensorsToClassificationCalculatorOptions.Types.LabelMap.Parser, new[]{ "Entries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.TensorsToClassificationCalculatorOptions.Types.LabelMap.Types.Entry), global::Mediapipe.TensorsToClassificationCalculatorOptions.Types.LabelMap.Types.Entry.Parser, new[]{ "Id", "Label" }, null, null, null, null)})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.TensorsToClassificationCalculatorOptions), global::Mediapipe.TensorsToClassificationCalculatorOptions.Parser, new[]{ "MinScoreThreshold", "TopK", "SortByDescendingScore", "LabelMapPath", "LabelMap", "LabelItems", "BinaryClassification", "IgnoreClasses", "AllowClasses" }, null, null, new pb::Extension[] { global::Mediapipe.TensorsToClassificationCalculatorOptions.Extensions.Ext }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.TensorsToClassificationCalculatorOptions.Types.LabelMap), global::Mediapipe.TensorsToClassificationCalculatorOptions.Types.LabelMap.Parser, new[]{ "Entries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.TensorsToClassificationCalculatorOptions.Types.LabelMap.Types.Entry), global::Mediapipe.TensorsToClassificationCalculatorOptions.Types.LabelMap.Types.Entry.Parser, new[]{ "Id", "Label" }, null, null, null, null)}),
+            null, })
           }));
     }
     #endregion
@@ -85,9 +93,13 @@ namespace Mediapipe {
       _hasBits0 = other._hasBits0;
       minScoreThreshold_ = other.minScoreThreshold_;
       topK_ = other.topK_;
+      sortByDescendingScore_ = other.sortByDescendingScore_;
       labelMapPath_ = other.labelMapPath_;
       labelMap_ = other.labelMap_ != null ? other.labelMap_.Clone() : null;
+      labelItems_ = other.labelItems_.Clone();
       binaryClassification_ = other.binaryClassification_;
+      ignoreClasses_ = other.ignoreClasses_.Clone();
+      allowClasses_ = other.allowClasses_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -158,6 +170,38 @@ namespace Mediapipe {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "sort_by_descending_score" field.</summary>
+    public const int SortByDescendingScoreFieldNumber = 9;
+    private readonly static bool SortByDescendingScoreDefaultValue = false;
+
+    private bool sortByDescendingScore_;
+    /// <summary>
+    /// Whether results should be sorted by descending score. By default, results
+    /// may or may not be sorted: setting this to true guarantees that the returned
+    /// results will be sorted by descending score.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SortByDescendingScore {
+      get { if ((_hasBits0 & 8) != 0) { return sortByDescendingScore_; } else { return SortByDescendingScoreDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        sortByDescendingScore_ = value;
+      }
+    }
+    /// <summary>Gets whether the "sort_by_descending_score" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSortByDescendingScore {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "sort_by_descending_score" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSortByDescendingScore() {
+      _hasBits0 &= ~8;
+    }
+
     /// <summary>Field number for the "label_map_path" field.</summary>
     public const int LabelMapPathFieldNumber = 3;
     private readonly static string LabelMapPathDefaultValue = "";
@@ -192,7 +236,9 @@ namespace Mediapipe {
     private global::Mediapipe.TensorsToClassificationCalculatorOptions.Types.LabelMap labelMap_;
     /// <summary>
     /// Label map. (Can be used instead of label_map_path.)
-    /// NOTE: "label_map_path", if specified, takes precedence over "label_map".
+    /// NOTE: either "label_map_path" or "label_items", if specified, takes
+    /// precedence over "label_map".
+    /// Deprecated: please use `label_items` instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -201,6 +247,21 @@ namespace Mediapipe {
       set {
         labelMap_ = value;
       }
+    }
+
+    /// <summary>Field number for the "label_items" field.</summary>
+    public const int LabelItemsFieldNumber = 6;
+    private static readonly pbc::MapField<long, global::Mediapipe.LabelMapItem>.Codec _map_labelItems_codec
+        = new pbc::MapField<long, global::Mediapipe.LabelMapItem>.Codec(pb::FieldCodec.ForInt64(8, 0L), pb::FieldCodec.ForMessage(18, global::Mediapipe.LabelMapItem.Parser), 50);
+    private readonly pbc::MapField<long, global::Mediapipe.LabelMapItem> labelItems_ = new pbc::MapField<long, global::Mediapipe.LabelMapItem>();
+    /// <summary>
+    /// Label items. (Can be used instead of label_map_path.)
+    /// NOTE: "label_map_path", if specified, takes precedence over "label_items".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<long, global::Mediapipe.LabelMapItem> LabelItems {
+      get { return labelItems_; }
     }
 
     /// <summary>Field number for the "binary_classification" field.</summary>
@@ -237,6 +298,40 @@ namespace Mediapipe {
       _hasBits0 &= ~4;
     }
 
+    /// <summary>Field number for the "ignore_classes" field.</summary>
+    public const int IgnoreClassesFieldNumber = 7;
+    private static readonly pb::FieldCodec<int> _repeated_ignoreClasses_codec
+        = pb::FieldCodec.ForInt32(58);
+    private readonly pbc::RepeatedField<int> ignoreClasses_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    /// The ids of classes that should be ignored during decoding the score for
+    /// each classification. If `ignore_classes` is specified, all the other
+    /// classes that are not in the `ignore_class` field will be considered during
+    /// decoding. `ignore_classes` and `allow_classes` are mutually  exclusive.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> IgnoreClasses {
+      get { return ignoreClasses_; }
+    }
+
+    /// <summary>Field number for the "allow_classes" field.</summary>
+    public const int AllowClassesFieldNumber = 8;
+    private static readonly pb::FieldCodec<int> _repeated_allowClasses_codec
+        = pb::FieldCodec.ForInt32(66);
+    private readonly pbc::RepeatedField<int> allowClasses_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    /// The ids of classes that will be allowed during decoding the score for
+    /// each classification. If `allow_classes` is specified, all the other classes
+    /// that are not in the `allow_classes` field will be completely ignored.
+    /// `ignore_classes` and `allow_classes` are mutually exclusive.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> AllowClasses {
+      get { return allowClasses_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -254,9 +349,13 @@ namespace Mediapipe {
       }
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MinScoreThreshold, other.MinScoreThreshold)) return false;
       if (TopK != other.TopK) return false;
+      if (SortByDescendingScore != other.SortByDescendingScore) return false;
       if (LabelMapPath != other.LabelMapPath) return false;
       if (!object.Equals(LabelMap, other.LabelMap)) return false;
+      if (!LabelItems.Equals(other.LabelItems)) return false;
       if (BinaryClassification != other.BinaryClassification) return false;
+      if(!ignoreClasses_.Equals(other.ignoreClasses_)) return false;
+      if(!allowClasses_.Equals(other.allowClasses_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -266,9 +365,13 @@ namespace Mediapipe {
       int hash = 1;
       if (HasMinScoreThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MinScoreThreshold);
       if (HasTopK) hash ^= TopK.GetHashCode();
+      if (HasSortByDescendingScore) hash ^= SortByDescendingScore.GetHashCode();
       if (HasLabelMapPath) hash ^= LabelMapPath.GetHashCode();
       if (labelMap_ != null) hash ^= LabelMap.GetHashCode();
+      hash ^= LabelItems.GetHashCode();
       if (HasBinaryClassification) hash ^= BinaryClassification.GetHashCode();
+      hash ^= ignoreClasses_.GetHashCode();
+      hash ^= allowClasses_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -307,6 +410,13 @@ namespace Mediapipe {
         output.WriteRawTag(42);
         output.WriteMessage(LabelMap);
       }
+      labelItems_.WriteTo(output, _map_labelItems_codec);
+      ignoreClasses_.WriteTo(output, _repeated_ignoreClasses_codec);
+      allowClasses_.WriteTo(output, _repeated_allowClasses_codec);
+      if (HasSortByDescendingScore) {
+        output.WriteRawTag(72);
+        output.WriteBool(SortByDescendingScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -337,6 +447,13 @@ namespace Mediapipe {
         output.WriteRawTag(42);
         output.WriteMessage(LabelMap);
       }
+      labelItems_.WriteTo(ref output, _map_labelItems_codec);
+      ignoreClasses_.WriteTo(ref output, _repeated_ignoreClasses_codec);
+      allowClasses_.WriteTo(ref output, _repeated_allowClasses_codec);
+      if (HasSortByDescendingScore) {
+        output.WriteRawTag(72);
+        output.WriteBool(SortByDescendingScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -353,15 +470,21 @@ namespace Mediapipe {
       if (HasTopK) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TopK);
       }
+      if (HasSortByDescendingScore) {
+        size += 1 + 1;
+      }
       if (HasLabelMapPath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LabelMapPath);
       }
       if (labelMap_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LabelMap);
       }
+      size += labelItems_.CalculateSize(_map_labelItems_codec);
       if (HasBinaryClassification) {
         size += 1 + 1;
       }
+      size += ignoreClasses_.CalculateSize(_repeated_ignoreClasses_codec);
+      size += allowClasses_.CalculateSize(_repeated_allowClasses_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -380,6 +503,9 @@ namespace Mediapipe {
       if (other.HasTopK) {
         TopK = other.TopK;
       }
+      if (other.HasSortByDescendingScore) {
+        SortByDescendingScore = other.SortByDescendingScore;
+      }
       if (other.HasLabelMapPath) {
         LabelMapPath = other.LabelMapPath;
       }
@@ -389,9 +515,12 @@ namespace Mediapipe {
         }
         LabelMap.MergeFrom(other.LabelMap);
       }
+      labelItems_.Add(other.labelItems_);
       if (other.HasBinaryClassification) {
         BinaryClassification = other.BinaryClassification;
       }
+      ignoreClasses_.Add(other.ignoreClasses_);
+      allowClasses_.Add(other.allowClasses_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -430,6 +559,24 @@ namespace Mediapipe {
             input.ReadMessage(LabelMap);
             break;
           }
+          case 50: {
+            labelItems_.AddEntriesFrom(input, _map_labelItems_codec);
+            break;
+          }
+          case 58:
+          case 56: {
+            ignoreClasses_.AddEntriesFrom(input, _repeated_ignoreClasses_codec);
+            break;
+          }
+          case 66:
+          case 64: {
+            allowClasses_.AddEntriesFrom(input, _repeated_allowClasses_codec);
+            break;
+          }
+          case 72: {
+            SortByDescendingScore = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -466,6 +613,24 @@ namespace Mediapipe {
               LabelMap = new global::Mediapipe.TensorsToClassificationCalculatorOptions.Types.LabelMap();
             }
             input.ReadMessage(LabelMap);
+            break;
+          }
+          case 50: {
+            labelItems_.AddEntriesFrom(ref input, _map_labelItems_codec);
+            break;
+          }
+          case 58:
+          case 56: {
+            ignoreClasses_.AddEntriesFrom(ref input, _repeated_ignoreClasses_codec);
+            break;
+          }
+          case 66:
+          case 64: {
+            allowClasses_.AddEntriesFrom(ref input, _repeated_allowClasses_codec);
+            break;
+          }
+          case 72: {
+            SortByDescendingScore = input.ReadBool();
             break;
           }
         }

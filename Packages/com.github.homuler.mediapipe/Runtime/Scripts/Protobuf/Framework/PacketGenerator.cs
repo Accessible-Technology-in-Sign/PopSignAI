@@ -25,16 +25,18 @@ namespace Mediapipe {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiptZWRpYXBpcGUvZnJhbWV3b3JrL3BhY2tldF9nZW5lcmF0b3IucHJvdG8S",
-            "CW1lZGlhcGlwZSIkChZQYWNrZXRHZW5lcmF0b3JPcHRpb25zKgoIoJwBEICA",
-            "gIACIs8BChVQYWNrZXRHZW5lcmF0b3JDb25maWcSGAoQcGFja2V0X2dlbmVy",
-            "YXRvchgBIAEoCRIZChFpbnB1dF9zaWRlX3BhY2tldBgCIAMoCRIXCg5leHRl",
-            "cm5hbF9pbnB1dBjqByADKAkSGgoSb3V0cHV0X3NpZGVfcGFja2V0GAMgAygJ",
-            "EhgKD2V4dGVybmFsX291dHB1dBjrByADKAkSMgoHb3B0aW9ucxgEIAEoCzIh",
-            "Lm1lZGlhcGlwZS5QYWNrZXRHZW5lcmF0b3JPcHRpb25z"));
+            "CW1lZGlhcGlwZSJEChZQYWNrZXRHZW5lcmF0b3JPcHRpb25zEhoKDG1lcmdl",
+            "X2ZpZWxkcxgBIAEoCDoEdHJ1ZSoKCKCcARCAgICAAjoCGAEi0wEKFVBhY2tl",
+            "dEdlbmVyYXRvckNvbmZpZxIYChBwYWNrZXRfZ2VuZXJhdG9yGAEgASgJEhkK",
+            "EWlucHV0X3NpZGVfcGFja2V0GAIgAygJEhcKDmV4dGVybmFsX2lucHV0GOoH",
+            "IAMoCRIaChJvdXRwdXRfc2lkZV9wYWNrZXQYAyADKAkSGAoPZXh0ZXJuYWxf",
+            "b3V0cHV0GOsHIAMoCRIyCgdvcHRpb25zGAQgASgLMiEubWVkaWFwaXBlLlBh",
+            "Y2tldEdlbmVyYXRvck9wdGlvbnM6AhgBQjIKGmNvbS5nb29nbGUubWVkaWFw",
+            "aXBlLnByb3RvQhRQYWNrZXRHZW5lcmF0b3JQcm90bw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.PacketGeneratorOptions), global::Mediapipe.PacketGeneratorOptions.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.PacketGeneratorOptions), global::Mediapipe.PacketGeneratorOptions.Parser, new[]{ "MergeFields" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Mediapipe.PacketGeneratorConfig), global::Mediapipe.PacketGeneratorConfig.Parser, new[]{ "PacketGenerator", "InputSidePacket", "ExternalInput", "OutputSidePacket", "ExternalOutput", "Options" }, null, null, null, null)
           }));
     }
@@ -45,6 +47,7 @@ namespace Mediapipe {
   /// <summary>
   /// Options used by a PacketGenerator.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class PacketGeneratorOptions : pb::IExtendableMessage<PacketGeneratorOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -54,6 +57,7 @@ namespace Mediapipe {
     private pb::UnknownFieldSet _unknownFields;
     private pb::ExtensionSet<PacketGeneratorOptions> _extensions;
     private pb::ExtensionSet<PacketGeneratorOptions> _Extensions { get { return _extensions; } }
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PacketGeneratorOptions> Parser { get { return _parser; } }
@@ -81,6 +85,8 @@ namespace Mediapipe {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PacketGeneratorOptions(PacketGeneratorOptions other) : this() {
+      _hasBits0 = other._hasBits0;
+      mergeFields_ = other.mergeFields_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
       _extensions = pb::ExtensionSet.Clone(other._extensions);
     }
@@ -89,6 +95,37 @@ namespace Mediapipe {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PacketGeneratorOptions Clone() {
       return new PacketGeneratorOptions(this);
+    }
+
+    /// <summary>Field number for the "merge_fields" field.</summary>
+    public const int MergeFieldsFieldNumber = 1;
+    private readonly static bool MergeFieldsDefaultValue = true;
+
+    private bool mergeFields_;
+    /// <summary>
+    /// If true, this proto specifies a subset of field values,
+    /// which should override corresponding field values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool MergeFields {
+      get { if ((_hasBits0 & 1) != 0) { return mergeFields_; } else { return MergeFieldsDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        mergeFields_ = value;
+      }
+    }
+    /// <summary>Gets whether the "merge_fields" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMergeFields {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "merge_fields" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMergeFields() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -106,6 +143,7 @@ namespace Mediapipe {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (MergeFields != other.MergeFields) return false;
       if (!Equals(_extensions, other._extensions)) {
         return false;
       }
@@ -116,6 +154,7 @@ namespace Mediapipe {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (HasMergeFields) hash ^= MergeFields.GetHashCode();
       if (_extensions != null) {
         hash ^= _extensions.GetHashCode();
       }
@@ -137,6 +176,10 @@ namespace Mediapipe {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (HasMergeFields) {
+        output.WriteRawTag(8);
+        output.WriteBool(MergeFields);
+      }
       if (_extensions != null) {
         _extensions.WriteTo(output);
       }
@@ -150,6 +193,10 @@ namespace Mediapipe {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasMergeFields) {
+        output.WriteRawTag(8);
+        output.WriteBool(MergeFields);
+      }
       if (_extensions != null) {
         _extensions.WriteTo(ref output);
       }
@@ -163,6 +210,9 @@ namespace Mediapipe {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (HasMergeFields) {
+        size += 1 + 1;
+      }
       if (_extensions != null) {
         size += _extensions.CalculateSize();
       }
@@ -177,6 +227,9 @@ namespace Mediapipe {
     public void MergeFrom(PacketGeneratorOptions other) {
       if (other == null) {
         return;
+      }
+      if (other.HasMergeFields) {
+        MergeFields = other.MergeFields;
       }
       pb::ExtensionSet.MergeFrom(ref _extensions, other._extensions);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -196,6 +249,10 @@ namespace Mediapipe {
               _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             }
             break;
+          case 8: {
+            MergeFields = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -213,6 +270,10 @@ namespace Mediapipe {
               _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             }
             break;
+          case 8: {
+            MergeFields = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -245,6 +306,7 @@ namespace Mediapipe {
   /// <summary>
   /// The settings specifying a packet generator and how it is connected.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class PacketGeneratorConfig : pb::IMessage<PacketGeneratorConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -388,6 +450,7 @@ namespace Mediapipe {
     /// <summary>
     /// The options for the packet generator.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Mediapipe.PacketGeneratorOptions Options {

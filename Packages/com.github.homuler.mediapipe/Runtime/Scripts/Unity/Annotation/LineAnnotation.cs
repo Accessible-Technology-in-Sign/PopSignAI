@@ -17,13 +17,11 @@ namespace Mediapipe.Unity
     [SerializeField] private LineRenderer _lineRenderer;
     [SerializeField] private Color _color = Color.green;
     [SerializeField, Range(0, 1)] private float _lineWidth = 1.0f;
-    private string _layer = "VideoLayer";
 
     private void OnEnable()
     {
       ApplyColor(_color);
       ApplyLineWidth(_lineWidth);
-      ApplyLayer(_layer);
     }
 
     private void OnDisable()
@@ -31,11 +29,16 @@ namespace Mediapipe.Unity
       ApplyLineWidth(0.0f);
     }
 
+#if UNITY_EDITOR
     private void OnValidate()
     {
-      ApplyColor(_color);
-      ApplyLineWidth(_lineWidth);
+      if (!UnityEditor.PrefabUtility.IsPartOfAnyPrefab(this))
+      {
+        ApplyColor(_color);
+        ApplyLineWidth(_lineWidth);
+      }
     }
+#endif
 
     public void SetColor(Color color)
     {
@@ -47,12 +50,6 @@ namespace Mediapipe.Unity
     {
       _lineWidth = lineWidth;
       ApplyLineWidth(_lineWidth);
-    }
-
-    public void SetLineLayer(string layer)
-    {
-      _layer = layer;
-      ApplyLayer(_layer);
     }
 
     public void Draw(Vector3 a, Vector3 b)
@@ -80,14 +77,6 @@ namespace Mediapipe.Unity
       {
         _lineRenderer.startWidth = lineWidth;
         _lineRenderer.endWidth = lineWidth;
-      }
-    }
-
-    private void ApplyLayer(string layer)
-    {
-      if(_lineRenderer != null)
-      {
-        _lineRenderer.sortingLayerName = layer;
       }
     }
   }
