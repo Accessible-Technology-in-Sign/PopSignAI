@@ -110,7 +110,6 @@ namespace Mediapipe.Unity
 
     public ImageSource GetImageSource(ImageSourceType imageSourceType)
     {
-        
       switch (imageSourceType)
       {
         case ImageSourceType.WebCamera:

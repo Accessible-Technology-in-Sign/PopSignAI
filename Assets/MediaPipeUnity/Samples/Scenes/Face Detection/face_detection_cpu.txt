@@ -12,16 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# MediaPipe graph that performs face mesh with TensorFlow Lite on GPU.
+# Copied from mediapipe/graphs/face_detection/face_detection_desktop_live.pbtxt
+#
+# CHANGES:
+#   - Add ImageTransformationCalculator and rotate the input
+#   - Switch models
+#   - Remove AnnotationOverlayCalculator
 
-# Input image. (GpuBuffer)
+# CPU buffer. (ImageFrame)
 input_stream: "input_video"
 
-# Output image with rendered results. (GpuBuffer)
-output_stream: "output_video"
-# Collection of detected/processed faces, each represented as a list of
-# landmarks. (std::vector<NormalizedLandmarkList>)
-output_stream: "multi_face_landmarks"
+# Detected faces. (std::vector<Detection>)
+output_stream: "face_detections"
 
 # Throttles the images flowing downstream for flow control. It passes through
 # the very first incoming image unaltered, and waits for downstream nodes
@@ -36,7 +38,7 @@ output_stream: "multi_face_landmarks"
 node {
   calculator: "FlowLimiterCalculator"
   input_stream: "input_video"
-  input_stream: "FINISHED:output_video"
+  input_stream: "FINISHED:face_detections"
   input_stream_info: {
     tag_index: "FINISHED"
     back_edge: true
@@ -44,37 +46,32 @@ node {
   output_stream: "throttled_input_video"
 }
 
-# Defines side packets for further use in the graph.
-node {
-  calculator: "ConstantSidePacketCalculator"
-  output_side_packet: "PACKET:0:num_faces"
-  output_side_packet: "PACKET:1:with_attention"
-  node_options: {
-    [type.googleapis.com/mediapipe.ConstantSidePacketCalculatorOptions]: {
-      packet { int_value: 1 }
-      packet { bool_value: true }
-    }
-  }
+node: {
+  calculator: "ImageTransformationCalculator"
+  input_stream: "IMAGE:throttled_input_video"
+  input_side_packet: "ROTATION_DEGREES:input_rotation"
+  input_side_packet: "FLIP_HORIZONTALLY:input_horizontally_flipped"
+  input_side_packet: "FLIP_VERTICALLY:input_vertically_flipped"
+  output_stream: "IMAGE:transformed_input_video"
 }
 
-# Subgraph that detects faces and corresponding landmarks.
+# Detects faces.
 node {
-  calculator: "FaceLandmarkFrontGpu"
-  input_stream: "IMAGE:throttled_input_video"
-  input_side_packet: "NUM_FACES:num_faces"
-  input_side_packet: "WITH_ATTENTION:with_attention"
-  output_stream: "LANDMARKS:multi_face_landmarks"
-  output_stream: "ROIS_FROM_LANDMARKS:face_rects_from_landmarks"
-  output_stream: "DETECTIONS:face_detections"
-  output_stream: "ROIS_FROM_DETECTIONS:face_rects_from_detections"
+  calculator: "FaceDetectionShortRangeCpu"
+  input_stream: "IMAGE:transformed_input_video"
+  output_stream: "DETECTIONS:short_range_detections"
 }
 
-# Subgraph that renders face-landmark annotation onto the input image.
 node {
-  calculator: "FaceRendererGpu"
-  input_stream: "IMAGE:throttled_input_video"
-  input_stream: "LANDMARKS:multi_face_landmarks"
-  input_stream: "NORM_RECTS:face_rects_from_landmarks"
-  input_stream: "DETECTIONS:face_detections"
-  output_stream: "IMAGE:output_video"
+  calculator: "FaceDetectionFullRangeCpu"
+  input_stream: "IMAGE:transformed_input_video"
+  output_stream: "DETECTIONS:full_range_detections"
+}
+
+node {
+  calculator: "SwitchMuxCalculator"
+  input_side_packet: "SELECT:model_type"
+  input_stream: "C0__FUNC_INPUT:short_range_detections"
+  input_stream: "C1__FUNC_INPUT:full_range_detections"
+  output_stream: "FUNC_INPUT:face_detections"
 }

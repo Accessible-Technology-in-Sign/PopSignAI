@@ -197,7 +197,7 @@ public class HandsMediaPipe : MonoBehaviour
                         }
                     }
                 }
-                _multiHandLandmarksAnnotationController.DrawNow(handLandmarks);
+                _multiHandLandmarksAnnotationController.DrawNow(handLandmarks, handedness);
             }
             else
             {

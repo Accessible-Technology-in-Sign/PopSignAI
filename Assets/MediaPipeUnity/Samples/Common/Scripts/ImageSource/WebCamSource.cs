@@ -132,24 +132,11 @@ namespace Mediapipe.Unity
         yield break;
       }
 
-            Debug.Log("LOOOKING FOR WEBCAM BITTTTTTTCHHHHHH ");
-
       availableSources = WebCamTexture.devices;
 
       if (availableSources != null && availableSources.Length > 0)
       {
-                int defaultSource = 0;
-
-                for (int i = 0; i < WebCamTexture.devices.Length; i++)
-                {
-                    if (WebCamTexture.devices[i].isFrontFacing == true)
-                    {
-                        defaultSource = i;
-                        break;
-                    }
-                }
-
-                webCamDevice = WebCamTexture.devices[defaultSource];
+        webCamDevice = availableSources[0];
       }
 
       _isInitialized = true;

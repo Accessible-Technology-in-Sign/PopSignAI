@@ -21,16 +21,7 @@ namespace Mediapipe.Unity
 
     [SerializeField] private FitMode _fitMode;
 
-        private void Start()
-        {
-            // For some reason iOS camera feed isn't flipped like androids, so we want to undo flipping the feed to the user.
-#if UNITY_IOS
-            var rectTransform = GetComponent<RectTransform>();
-            rectTransform.rotation = Quaternion.Euler(0f, 0f, -90f);
-#endif
-        }
-
-        private void LateUpdate()
+    private void LateUpdate()
     {
       var rectTransform = GetComponent<RectTransform>();
       if (rectTransform.rect.width == 0 || rectTransform.rect.height == 0)
