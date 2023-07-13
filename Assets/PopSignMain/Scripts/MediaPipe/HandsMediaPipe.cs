@@ -13,8 +13,7 @@ public class HandsMediaPipe : MonoBehaviour
     [SerializeField] private TextAsset _configAssetCPU;
     [SerializeField] private TextAsset _configAssetGPU;
     [SerializeField] private RawImage _screen;
-    [SerializeField] private int _width;
-    [SerializeField] private int _height;
+    [SerializeField] private int _targetHeight;
     [SerializeField] private int _fps;
     [SerializeField] private MultiHandLandmarkListAnnotationController _multiHandLandmarksAnnotationController;
 
@@ -36,8 +35,6 @@ public class HandsMediaPipe : MonoBehaviour
 
     void Awake()
     {
-        if(UnityEngine.Screen.height >= 2300)
-            _screen.gameObject.transform.localScale = new Vector3(0.34f, 0.34f, 0.34f);
 
     }
 
@@ -60,30 +57,38 @@ public class HandsMediaPipe : MonoBehaviour
         }
 
         var webcamDevice = WebCamTexture.devices[defaultSource];
+        float cameraHeight = 0f;
+        float cameraWidth = 0f;
+        float resolutionDowngradeMultiplier = 1f;
 
 #if UNITY_EDITOR
         Debug.LogWarning("HandsMediaPipe: DOWNGRADING CAMERA IN EDITOR!");
-        _width = 1280;
-        _height = 720;
+        cameraHeight = 720f;
+        cameraWidth = 1280f;
 
 #else
-        float maxres = 0f;
-        foreach (var res in webcamDevice.availableResolutions)
+
+        Debug.Log("Res Widths " + webcamDevice.availableResolutions[0].width + " Res h " + webcamDevice.availableResolutions[0].height);
+        
+        foreach(var res in webcamDevice.availableResolutions)
         {
-            if(res.height > maxres)
+            if (res.height > cameraHeight)
             {
-                Debug.Log("Res Widths " + res.width + " Res h " + res.height);
-                maxres = res.height;
+                cameraHeight = res.height;
+                cameraWidth = res.width;
             }
         }
-        if (maxres < _height)
-        {
-            Debug.LogWarning("HandsMediaPipe: CAMERA TOO LOW RES! DOWNGRADING TO 720P!");
-            _width = 1280;
-            _height = 720;
-        }
-#endif
 
+        if (enableCoordinateDebugging && coordinateDebugger != null)
+        {
+            //StartCoroutine(ResolutionPrinter(webcamDevice.availableResolutions));
+            coordinateDebugger.text = cameraHeight + ", " + cameraWidth;
+        }
+        resolutionDowngradeMultiplier = _targetHeight / cameraHeight;
+#endif
+        int _height = (int)(cameraHeight * resolutionDowngradeMultiplier);
+        int _width = (int)(cameraWidth * resolutionDowngradeMultiplier);
+        Debug.Log(" Widths " + _width + " h " + _height);
         _webCamTexture = new WebCamTexture(webcamDevice.name, _width, _height, _fps);
         _webCamTexture.Play();
 
@@ -97,13 +102,23 @@ public class HandsMediaPipe : MonoBehaviour
                 throw new System.Exception("Failed to initialize GPU resources");
             }
         }
+        
+        float flipdegree = _webCamTexture.videoVerticallyMirrored ? 0f : 180f;
 
-        _screen.rectTransform.sizeDelta = new Vector2(_width, _height);
+        _screen.rectTransform.localEulerAngles = new Vector3(0, flipdegree, 360 - _webCamTexture.videoRotationAngle);
+
+        var heightofScreen = (_screen.rectTransform.rect.width/_width) * _height;
+        //Debug.LogWarning("heightofScreen " + heightofScreen);
+        var parentrect = _screen.rectTransform.parent.GetComponent<RectTransform>();
+        parentrect.sizeDelta = new Vector2(_screen.rectTransform.rect.width, heightofScreen);
+        //Debug.LogWarning(_screen.rectTransform.rect.width + ", " + _screen.rectTransform.rect.height);
+        //coordinateDebugger.text = _webCamTexture.videoVerticallyMirrored + ", " + _webCamTexture.videoRotationAngle;
+
+        _screen.texture = _webCamTexture;
 
         _inputTexture = new Texture2D(_width, _height, TextureFormat.RGBA32, false);
         _inputPixelData = new Color32[_width * _height];
 
-        _screen.texture = _webCamTexture;
 
         yield return MediapipeResourceManager.Instance.resourceManager.PrepareAssetAsync("hand_landmark_full.bytes");
         yield return MediapipeResourceManager.Instance.resourceManager.PrepareAssetAsync("palm_detection_full.bytes");
@@ -130,11 +145,7 @@ public class HandsMediaPipe : MonoBehaviour
         var sidePacket = new SidePacket();
         sidePacket.Emplace("input_horizontally_flipped", new BoolPacket(false));
         sidePacket.Emplace("input_rotation", new IntPacket(0));
-#if UNITY_IOS
-        sidePacket.Emplace("input_vertically_flipped", new BoolPacket(false));
-#else
-        sidePacket.Emplace("input_vertically_flipped", new BoolPacket(true));
-#endif
+        sidePacket.Emplace("input_vertically_flipped", new BoolPacket(!_webCamTexture.videoVerticallyMirrored));
         sidePacket.Emplace("num_hands", new IntPacket(1));
 
         _graph.StartRun(sidePacket).AssertOk();
@@ -227,6 +238,15 @@ public class HandsMediaPipe : MonoBehaviour
         if (useGPU)
         {
             GpuManager.Shutdown();
+        }
+    }
+
+    IEnumerator ResolutionPrinter(Resolution[] resList)
+    {
+        foreach (var res in resList)
+        {
+            coordinateDebugger.text = res.width + ", " + res.height;
+            yield return new WaitForSeconds(2f);
         }
     }
 }
