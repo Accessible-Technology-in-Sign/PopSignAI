@@ -7896,7 +7896,7 @@ MonoBehaviour:
   _targetHeight: 1080
   _fps: 30
   _multiHandLandmarksAnnotationController: {fileID: 1320290061}
-  enableCoordinateDebugging: 1
+  enableCoordinateDebugging: 0
   coordinateDebugger: {fileID: 325114868}
 --- !u!114 &1270330340
 MonoBehaviour:
