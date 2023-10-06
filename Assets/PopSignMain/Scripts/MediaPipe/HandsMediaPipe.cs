@@ -14,6 +14,7 @@ public class HandsMediaPipe : MonoBehaviour
     [SerializeField] private TextAsset _configAssetGPU;
     [SerializeField] private RawImage _screen;
     [SerializeField] private int _targetHeight;
+    [SerializeField] private int _targetWidth;
     [SerializeField] private int _fps;
     [SerializeField] private MultiHandLandmarkListAnnotationController _multiHandLandmarksAnnotationController;
 
@@ -59,7 +60,8 @@ public class HandsMediaPipe : MonoBehaviour
         var webcamDevice = WebCamTexture.devices[defaultSource];
         float cameraHeight = 0f;
         float cameraWidth = 0f;
-        float resolutionDowngradeMultiplier = 1f;
+        float resolutionDowngradeMultiplierHeight = 1f;
+        float resolutionDowngradeMultiplierWidth = 1f;
 
 #if UNITY_EDITOR
         Debug.LogWarning("HandsMediaPipe: DOWNGRADING CAMERA IN EDITOR!");
@@ -84,10 +86,11 @@ public class HandsMediaPipe : MonoBehaviour
             //StartCoroutine(ResolutionPrinter(webcamDevice.availableResolutions));
             coordinateDebugger.text = cameraHeight + ", " + cameraWidth;
         }
-        resolutionDowngradeMultiplier = _targetHeight / cameraHeight;
+        resolutionDowngradeMultiplierHeight = _targetHeight / cameraHeight;
+        resolutionDowngradeMultiplierWidth = _targetWidth / cameraWidth;
 #endif
-        int _height = (int)(cameraHeight * resolutionDowngradeMultiplier);
-        int _width = (int)(cameraWidth * resolutionDowngradeMultiplier);
+        int _height = (int)(cameraHeight * resolutionDowngradeMultiplierHeight);
+        int _width = (int)(cameraWidth * resolutionDowngradeMultiplierWidth);
         Debug.Log(" Widths " + _width + " h " + _height);
         _webCamTexture = new WebCamTexture(webcamDevice.name, _width, _height, _fps);
         _webCamTexture.Play();

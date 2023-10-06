@@ -7894,6 +7894,7 @@ MonoBehaviour:
   _configAssetGPU: {fileID: 4900000, guid: d1c2a5074cb12172d9cbc3098fe038ba, type: 3}
   _screen: {fileID: 399984493}
   _targetHeight: 1080
+  _targetWidth: 1440
   _fps: 30
   _multiHandLandmarksAnnotationController: {fileID: 1320290061}
   enableCoordinateDebugging: 0
